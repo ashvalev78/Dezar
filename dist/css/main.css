@@ -71,7 +71,14 @@ button {
   top: 3.125rem;
 }
 
-/* line 30, src/sass/components/startingPage.scss */
+@media (max-width: 400px) {
+  /* line 25, src/sass/components/startingPage.scss */
+  #logo-img {
+    top: 1.5625rem;
+  }
+}
+
+/* line 34, src/sass/components/startingPage.scss */
 .enter-span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,7 +89,7 @@ button {
   margin-right: 0.625rem;
 }
 
-/* line 36, src/sass/components/startingPage.scss */
+/* line 40, src/sass/components/startingPage.scss */
 .logo_part {
   height: 50%;
   -webkit-box-pack: center;
@@ -93,7 +100,7 @@ button {
           align-items: center;
 }
 
-/* line 42, src/sass/components/startingPage.scss */
+/* line 46, src/sass/components/startingPage.scss */
 .bottom_part {
   height: 50%;
   min-height: 25rem;
@@ -110,13 +117,13 @@ button {
 }
 
 @media (min-width: 750px) {
-  /* line 42, src/sass/components/startingPage.scss */
+  /* line 46, src/sass/components/startingPage.scss */
   .bottom_part {
     margin-bottom: 3.125rem;
   }
 }
 
-/* line 53, src/sass/components/startingPage.scss */
+/* line 57, src/sass/components/startingPage.scss */
 .input, .vk-enter, .inst-enter {
   color: white;
   background-color: #6083BB;
@@ -130,12 +137,12 @@ button {
   opacity: 0.8;
 }
 
-/* line 64, src/sass/components/startingPage.scss */
+/* line 68, src/sass/components/startingPage.scss */
 .input:hover, .vk-enter:hover, .inst-enter:hover {
   background: #6083EE;
 }
 
-/* line 68, src/sass/components/startingPage.scss */
+/* line 72, src/sass/components/startingPage.scss */
 .input::-webkit-input-placeholder, .vk-enter::-webkit-input-placeholder, .inst-enter::-webkit-input-placeholder {
   color: white;
 }
@@ -149,7 +156,7 @@ button {
   color: white;
 }
 
-/* line 73, src/sass/components/startingPage.scss */
+/* line 77, src/sass/components/startingPage.scss */
 .inst-enter, .vk-enter {
   cursor: pointer;
   display: -webkit-box;
@@ -163,7 +170,7 @@ button {
           align-items: center;
 }
 
-/* line 80, src/sass/components/startingPage.scss */
+/* line 84, src/sass/components/startingPage.scss */
 .input_wrapper {
   z-index: 10000;
   border-style: none;
@@ -176,14 +183,14 @@ button {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 80, src/sass/components/startingPage.scss */
+  /* line 84, src/sass/components/startingPage.scss */
   .input_wrapper {
     height: 3.125rem;
     width: 25rem;
   }
 }
 
-/* line 96, src/sass/components/startingPage.scss */
+/* line 100, src/sass/components/startingPage.scss */
 .enter-btn {
   z-index: 10000;
   color: red;
@@ -192,12 +199,12 @@ button {
   width: auto;
 }
 
-/* line 101, src/sass/components/startingPage.scss */
+/* line 105, src/sass/components/startingPage.scss */
 .enter-btn:hover {
   color: #C1272D;
 }
 
-/* line 106, src/sass/components/startingPage.scss */
+/* line 110, src/sass/components/startingPage.scss */
 .register-btn {
   z-index: 10000;
   -ms-flex-item-align: center;
@@ -205,12 +212,12 @@ button {
   color: red;
 }
 
-/* line 110, src/sass/components/startingPage.scss */
+/* line 114, src/sass/components/startingPage.scss */
 .register-btn:hover {
   color: #C1272D;
 }
 
-/* line 115, src/sass/components/startingPage.scss */
+/* line 119, src/sass/components/startingPage.scss */
 .input-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,7 +229,7 @@ button {
           flex-flow: column;
 }
 
-/* line 121, src/sass/components/startingPage.scss */
+/* line 125, src/sass/components/startingPage.scss */
 .socials-form {
   display: -webkit-box;
   display: -ms-flexbox;
