@@ -19,32 +19,34 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  min-height: 500px;
 }
 
-/* line 8, src/sass/components/startingPage.scss */
+/* line 10, src/sass/components/startingPage.scss */
 .bg-container {
   position: absolute;
   left: 0;
   height: 100vh;
 }
 
-/* line 15, src/sass/components/startingPage.scss */
+/* line 17, src/sass/components/startingPage.scss */
 .social-icon {
   height: remy(29);
 }
 
-/* line 19, src/sass/components/startingPage.scss */
+/* line 21, src/sass/components/startingPage.scss */
 .logo_part {
   position: relative;
 }
 
-/* line 23, src/sass/components/startingPage.scss */
+/* line 25, src/sass/components/startingPage.scss */
 #logo-img {
   position: absolute;
   top: remy(50);
 }
 
-/* line 28, src/sass/components/startingPage.scss */
+/* line 30, src/sass/components/startingPage.scss */
 .enter-span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,7 +57,7 @@
   margin-right: remy(10);
 }
 
-/* line 34, src/sass/components/startingPage.scss */
+/* line 36, src/sass/components/startingPage.scss */
 .logo_part {
   height: 50%;
   -webkit-box-pack: center;
@@ -66,9 +68,10 @@
           align-items: center;
 }
 
-/* line 40, src/sass/components/startingPage.scss */
+/* line 42, src/sass/components/startingPage.scss */
 .bottom_part {
   height: 50%;
+  min-height: remy(400);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,13 +85,13 @@
 }
 
 @media (min-width: 750px) {
-  /* line 40, src/sass/components/startingPage.scss */
+  /* line 42, src/sass/components/startingPage.scss */
   .bottom_part {
     margin-bottom: remy(50);
   }
 }
 
-/* line 50, src/sass/components/startingPage.scss */
+/* line 53, src/sass/components/startingPage.scss */
 .input, .vk-enter, .inst-enter {
   color: white;
   background-color: #6083BB;
@@ -102,12 +105,12 @@
   opacity: 0.8;
 }
 
-/* line 61, src/sass/components/startingPage.scss */
+/* line 64, src/sass/components/startingPage.scss */
 .input:hover, .vk-enter:hover, .inst-enter:hover {
   background: #6083EE;
 }
 
-/* line 65, src/sass/components/startingPage.scss */
+/* line 68, src/sass/components/startingPage.scss */
 .input::-webkit-input-placeholder, .vk-enter::-webkit-input-placeholder, .inst-enter::-webkit-input-placeholder {
   color: white;
 }
@@ -121,7 +124,7 @@
   color: white;
 }
 
-/* line 70, src/sass/components/startingPage.scss */
+/* line 73, src/sass/components/startingPage.scss */
 .inst-enter, .vk-enter {
   cursor: pointer;
   display: -webkit-box;
@@ -135,7 +138,7 @@
           align-items: center;
 }
 
-/* line 77, src/sass/components/startingPage.scss */
+/* line 80, src/sass/components/startingPage.scss */
 .input_wrapper {
   z-index: 10000;
   border-style: none;
@@ -148,14 +151,14 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 77, src/sass/components/startingPage.scss */
+  /* line 80, src/sass/components/startingPage.scss */
   .input_wrapper {
     height: remy(50);
     width: remy(400);
   }
 }
 
-/* line 93, src/sass/components/startingPage.scss */
+/* line 96, src/sass/components/startingPage.scss */
 .enter-btn {
   z-index: 10000;
   color: red;
@@ -164,12 +167,12 @@
   width: auto;
 }
 
-/* line 98, src/sass/components/startingPage.scss */
+/* line 101, src/sass/components/startingPage.scss */
 .enter-btn:hover {
   color: #C1272D;
 }
 
-/* line 103, src/sass/components/startingPage.scss */
+/* line 106, src/sass/components/startingPage.scss */
 .register-btn {
   z-index: 10000;
   -ms-flex-item-align: center;
@@ -177,12 +180,12 @@
   color: red;
 }
 
-/* line 107, src/sass/components/startingPage.scss */
+/* line 110, src/sass/components/startingPage.scss */
 .register-btn:hover {
   color: #C1272D;
 }
 
-/* line 112, src/sass/components/startingPage.scss */
+/* line 115, src/sass/components/startingPage.scss */
 .input-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,7 +196,7 @@
           flex-flow: column;
 }
 
-/* line 117, src/sass/components/startingPage.scss */
+/* line 120, src/sass/components/startingPage.scss */
 .socials-form {
   display: -webkit-box;
   display: -ms-flexbox;
