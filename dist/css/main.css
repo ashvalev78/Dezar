@@ -9,14 +9,21 @@
 /**
  * @section Base Styles
  */
-/* line 5, src/sass/components/_base.scss */
+@media (min-width: 400px) {
+  /* line 4, src/sass/components/_base.scss */
+  html {
+    font-size: 15px;
+  }
+}
+
+/* line 10, src/sass/components/_base.scss */
 body {
   margin: 0 auto;
   min-height: 20rem;
   overflow: hidden;
 }
 
-/* line 11, src/sass/components/_base.scss */
+/* line 16, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -89,7 +96,6 @@ button {
 /* line 42, src/sass/components/startingPage.scss */
 .bottom_part {
   height: 50%;
-  min-height: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

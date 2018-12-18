@@ -71,7 +71,6 @@
 /* line 42, src/sass/components/startingPage.scss */
 .bottom_part {
   height: 50%;
-  min-height: remy(400);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,6 +1,11 @@
 /**
  * @section Base Styles
  */
+html {
+	@media (min-width: 400px) {
+		font-size: 15px;
+	}
+}
 
 body {
 	margin: 0 auto;
