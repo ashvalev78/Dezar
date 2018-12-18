@@ -9,7 +9,7 @@
 /**
  * @section Base Styles
  */
-@media (min-width: 400px) {
+@media (max-width: 450px) {
   /* line 4, src/sass/components/_base.scss */
   html {
     font-size: 14px;
@@ -167,7 +167,7 @@ button {
 .input_wrapper {
   z-index: 10000;
   border-style: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   padding: 1px;
   border: solid #6083BB 1px;
   height: 2.8125rem;

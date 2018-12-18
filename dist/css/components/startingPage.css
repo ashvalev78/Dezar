@@ -142,7 +142,7 @@
 .input_wrapper {
   z-index: 10000;
   border-style: none;
-  border-radius: 12px;
+  border-radius: remy(12);
   padding: 1px;
   border: solid #6083BB 1px;
   height: remy(45);
