@@ -71,6 +71,7 @@
 /* line 42, src/sass/components/startingPage.scss */
 .bottom_part {
   height: 50%;
+  min-height: remy(400);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,17 +190,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: remy(160);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
 }
 
-/* line 120, src/sass/components/startingPage.scss */
+/* line 121, src/sass/components/startingPage.scss */
 .socials-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: remy(160);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
