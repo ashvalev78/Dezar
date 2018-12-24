@@ -6,7 +6,14 @@
  * http://link-to-your-git-repo.com
  */
 
-document.addEventListener('click', (function (event) {
-	if (!event.target.matches('#click-me')) return;
-	alert('You clicked me!');
-}), false);
+var $registerButton = $('.register-btn');
+// alert($registerButton);
+
+$registerButton.click((function() {
+    console.log('fuck');
+    var $loginInputForm = $('.login-input-form');
+    var $hiddenButtonsBlock = $('.hidden_buttons_block');
+    $loginInputForm.hide();
+    $hiddenButtonsBlock.attr("style", "display: flex");
+    $hiddenButtonsBlock.show();
+}));

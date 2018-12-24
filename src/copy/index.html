@@ -15,35 +15,76 @@
 			<img id = "logo-img" src="./svg/logo.png" />
 		</div>
 		<div class = "bottom_part row align-items-end">
-			<div class="form-group input-form">
-				<div class = "input_wrapper">
-					<input class="input" name = "login" placeholder="Логин"/>
-				</div>
-				<div class = "input_wrapper">
-					<input class="input" name = "password" type = "password" placeholder="Пароль"/>	
-				</div>
-				<input name="enter" id="" class="enter-btn btn btn-link" type="button" value="Войти">
+            <div class = "hidden_buttons_block">
+                <div class="form-group input-form register-input-form">
+                        <div class = "input_wrapper">
+                            <input class="input" name = "login" placeholder="Логин"/>
+                        </div>
+                        <div class = "input_wrapper">
+                            <input class="input" name = "password" type = "password" placeholder="ФИО"/>	
+						</div>
+						<div class = "input_wrapper">
+                            <input class="input" name = "password" type = "password" placeholder="Номер телефона"/>	
+						</div>
+						<div class = "input_wrapper">
+                            <input class="input" name = "password" type = "password" placeholder="Пароль"/>	
+						</div>
+						<div class = "input_wrapper">
+                            <input class="input" name = "password" type = "password" placeholder="Повторите пароль"/>	
+                        </div>
+					</div>
+					<div class = "license-agreement-block">
+						<div class = "agreement_block_rules">
+							<span class = "license_text">Я согласен с правилами</span>
+							<span class = "license_text">Я согласен на обработку моих персональных данных</span>
+						</div>
+						<div class = "agreement_block_rules">
+								<label class="switch">
+										<input type="checkbox" name = "rules-agreement" class = "agreement_input">
+										<span class="slider round"></span>
+									</label>
+								<label class="switch">
+									<input type="checkbox" name = "process-agreement" class = "agreement_input">
+									<span class="slider round"></span>
+								</label>
+							</div>
+					</div>
 			</div>
-			
-			<div class = "log-socials_container">
-				<div class="form-group socials-form">
-					<div class = "input_wrapper">
-						<div class = "vk-enter">
-							<span class = "enter-span">Войти с помощью</span>
-							<img src="./svg/vk-social.svg" class = "social-icon"/>
+			<div class="login-input-form">
+				<div class="form-group input-form">
+						<div class = "input_wrapper">
+							<input class="input" name = "login" placeholder="Логин"/>
 						</div>
-					</div>
-					<div class = "input_wrapper">
-						<div class = "inst-enter">
-							<span class = "enter-span">Войти с помощью</span>
-							<img src="./svg/inst-social.svg" class = "social-icon"/>
+						<div class = "input_wrapper">
+							<input class="input" name = "password" type = "password" placeholder="Пароль"/>	
 						</div>
+						<input name="enter" class="enter-btn btn btn-link" type="button" value="Войти">
 					</div>
-					<input name="register" id="" class="register-btn btn btn-link" type="button" value="Зарегистрироваться">
+				
+				<div class = "log-socials_container">
+					<div class="form-group socials-form">
+						<div class = "input_wrapper">
+							<div class = "vk-enter">
+								<span class = "enter-span">Войти с помощью</span>
+								<img src="./svg/vk-social.svg" class = "social-icon"/>
+							</div>
+						</div>
+						<div class = "input_wrapper">
+							<div class = "inst-enter">
+								<span class = "enter-span">Войти с помощью</span>
+								<img src="./svg/inst-social.svg" class = "social-icon"/>
+							</div>
+						</div>
+						<a class="register-btn btn btn-link">Зарегистрироваться</a>>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
 	<script src="js/detects.js"></script>
 	<script src="js/another-file.js"></script>
 	<script src="js/main.polyfills.js"></script>
