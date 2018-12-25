@@ -346,27 +346,46 @@ input:checked + .slider {
 
 /* line 211, src/sass/components/startingPage.scss */
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #C1272D;
-          box-shadow: 0 0 1px #C1272D;
+  -webkit-box-shadow: 0 0 0 #C1272D;
+          box-shadow: 0 0 0 #C1272D;
 }
 
-/* line 215, src/sass/components/startingPage.scss */
-input:checked + .slider:before {
+/* line 216, src/sass/components/startingPage.scss */
+.popup_visible input:checked + .slider:before {
   -webkit-transform: translateX(1.25rem);
   transform: translateX(1.25rem);
 }
 
-/* line 221, src/sass/components/startingPage.scss */
+/* line 223, src/sass/components/startingPage.scss */
 .slider.round {
   border-radius: 2rem;
 }
 
-/* line 225, src/sass/components/startingPage.scss */
+/* line 227, src/sass/components/startingPage.scss */
 .slider.round:before {
   border-radius: 50%;
 }
 
-/* line 229, src/sass/components/startingPage.scss */
-.rules_popup {
+/* line 231, src/sass/components/startingPage.scss */
+.rules_popup, .process_popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: none;
+  position: fixed;
+  background-color: grey;
+  max-width: 31.25rem;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10001;
 }
