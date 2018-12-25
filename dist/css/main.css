@@ -340,33 +340,45 @@ button {
 }
 
 /* line 207, src/sass/components/startingPage.scss */
-input:checked + .slider {
+.agreement_input:checked + .slider {
   background-color: #C1272D;
 }
 
 /* line 211, src/sass/components/startingPage.scss */
-input:focus + .slider {
+.agreement_input:focus + .slider {
   -webkit-box-shadow: 0 0 0 #C1272D;
           box-shadow: 0 0 0 #C1272D;
 }
 
-/* line 216, src/sass/components/startingPage.scss */
-.popup_visible input:checked + .slider:before {
+/* line 215, src/sass/components/startingPage.scss */
+.agreement_input:checked + .slider:before {
   -webkit-transform: translateX(1.25rem);
   transform: translateX(1.25rem);
 }
 
-/* line 223, src/sass/components/startingPage.scss */
+/* line 221, src/sass/components/startingPage.scss */
 .slider.round {
   border-radius: 2rem;
 }
 
-/* line 227, src/sass/components/startingPage.scss */
+/* line 225, src/sass/components/startingPage.scss */
 .slider.round:before {
   border-radius: 50%;
 }
 
-/* line 231, src/sass/components/startingPage.scss */
+/* line 1, src/sass/components/rulesPopup.scss */
+.background_dimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(48, 47, 47, 0.7);
+  z-index: 10001;
+}
+
+/* line 12, src/sass/components/rulesPopup.scss */
 .rules_popup, .process_popup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,12 +392,69 @@ input:focus + .slider {
           align-items: center;
   display: none;
   position: fixed;
-  background-color: grey;
+  padding: 3.125rem;
+  background-color: white;
+  height: 80%;
+  width: 80%;
   max-width: 31.25rem;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 10001;
+  z-index: 10002;
+  border-radius: 1.875rem;
+}
+
+/* line 31, src/sass/components/rulesPopup.scss */
+.popup_rules {
+  height: 80%;
+  overflow: scroll;
+}
+
+/* line 36, src/sass/components/rulesPopup.scss */
+.popup_buttons {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.8125rem;
+  border-radius: 0 0 1.875rem 1.875rem;
+  border-top: solid grey 1px;
+}
+
+/* line 46, src/sass/components/rulesPopup.scss */
+.popup_cancel, .popup_accept {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  color: #6083BB;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 55, src/sass/components/rulesPopup.scss */
+.popup_cancel:hover, .popup_accept:hover {
+  background-color: #cccaca;
+}
+
+/* line 59, src/sass/components/rulesPopup.scss */
+.popup_cancel:active, .popup_accept:active {
+  outline: none;
+}
+
+/* line 64, src/sass/components/rulesPopup.scss */
+.popup_cancel {
+  border-radius: 0 0 0 1.875rem;
+  border-right: solid grey 1px;
+}
+
+/* line 69, src/sass/components/rulesPopup.scss */
+.popup_accept {
+  border-radius: 0 0 1.875rem 0;
 }

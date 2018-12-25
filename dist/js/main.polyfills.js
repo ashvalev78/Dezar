@@ -26,15 +26,26 @@ var $popupButton1 = $('.rules_popup_button_open');
 var $popupButton2 = $('.process_popup_button_open');
 var $rulesPopup = $('.rules_popup');
 var $processPopup = $('.process_popup');
+var checkboxRulesSwitcher = $('.agreement_input');
+var $backDimmer = $('.background_dimmer');
+var $agreementInput = $('.agreement_input');
+var slider = $('.slider');
+// var switcher1 = $('.');
 
 $popupButton1.click((function() {
     $rulesPopup.attr("style", "display: flex");
+    // console.log('alsdasd');
+    $popupButton1.toggleClass("slider_active");
+    $backDimmer.show();
 }));
 
 $('.popup_cancel').click((function() {
     $processPopup.hide();
     $rulesPopup.hide();
+    $backDimmer.hide();
     $popupButton1.attr("style", "display: flex");
+    // $agreementInput[0].removeAttr('checked');
+    // $agreementInput[1].removeAttr('checked');
 }));
 
 $popupButton2.click((function() {
