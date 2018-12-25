@@ -44,8 +44,9 @@ $('.popup_cancel').click((function() {
     $rulesPopup.hide();
     $backDimmer.hide();
     $popupButton1.attr("style", "display: flex");
-    // $agreementInput[0].removeAttr('checked');
-    // $agreementInput[1].removeAttr('checked');
+    var sliders = document.getElementsByClassName('agreement_input');
+    sliders[0].checked = false;
+    sliders[1].checked = false;
 }));
 
 $popupButton2.click((function() {
