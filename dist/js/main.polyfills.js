@@ -50,6 +50,7 @@ $('.popup_cancel').click((function() {
 
 $popupButton2.click((function() {
     $processPopup.attr("style", "display: flex");
+    $backDimmer.show();
 }));
 /**
  * Element.matches() polyfill (simple version)

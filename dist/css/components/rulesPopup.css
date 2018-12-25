@@ -48,11 +48,10 @@
 
 /* line 31, src/sass/components/rulesPopup.scss */
 .popup_rules {
-  height: 80%;
   overflow: scroll;
 }
 
-/* line 36, src/sass/components/rulesPopup.scss */
+/* line 35, src/sass/components/rulesPopup.scss */
 .popup_buttons {
   width: 100%;
   position: absolute;
@@ -65,7 +64,7 @@
   border-top: solid grey 1px;
 }
 
-/* line 46, src/sass/components/rulesPopup.scss */
+/* line 45, src/sass/components/rulesPopup.scss */
 .popup_cancel, .popup_accept {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -76,6 +75,7 @@
   height: 100%;
   text-align: center;
   cursor: pointer;
+  outline: 0 !important;
 }
 
 /* line 55, src/sass/components/rulesPopup.scss */
@@ -85,7 +85,7 @@
 
 /* line 59, src/sass/components/rulesPopup.scss */
 .popup_cancel:active, .popup_accept:active {
-  outline: none;
+  outline: 0 !important;
 }
 
 /* line 64, src/sass/components/rulesPopup.scss */
