@@ -56,7 +56,8 @@
 
 /* line 36, src/sass/components/rulesPopup.scss */
 .popup_rules {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: remy(30);
   width: 100%;
 }
@@ -68,7 +69,7 @@
   }
 }
 
-/* line 45, src/sass/components/rulesPopup.scss */
+/* line 46, src/sass/components/rulesPopup.scss */
 .popup_buttons {
   width: 100%;
   position: absolute;
@@ -81,7 +82,7 @@
   border-top: solid grey 1px;
 }
 
-/* line 55, src/sass/components/rulesPopup.scss */
+/* line 56, src/sass/components/rulesPopup.scss */
 .popup_cancel, .popup_accept {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -95,28 +96,28 @@
   outline: 0 !important;
 }
 
-/* line 65, src/sass/components/rulesPopup.scss */
+/* line 66, src/sass/components/rulesPopup.scss */
 .popup_cancel:hover, .popup_accept:hover {
   background-color: #cccaca;
 }
 
-/* line 69, src/sass/components/rulesPopup.scss */
+/* line 70, src/sass/components/rulesPopup.scss */
 .popup_cancel:active, .popup_accept:active {
   outline: 0 !important;
 }
 
-/* line 74, src/sass/components/rulesPopup.scss */
+/* line 75, src/sass/components/rulesPopup.scss */
 .popup_cancel {
   border-radius: 0 0 0 remy(30);
   border-right: solid grey 1px;
 }
 
-/* line 79, src/sass/components/rulesPopup.scss */
+/* line 80, src/sass/components/rulesPopup.scss */
 .popup_accept {
   border-radius: 0 0 remy(30) 0;
 }
 
-/* line 83, src/sass/components/rulesPopup.scss */
+/* line 84, src/sass/components/rulesPopup.scss */
 .popup_heading {
   font-size: remy(20);
   margin-top: remy(5);
