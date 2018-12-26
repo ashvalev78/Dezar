@@ -31,13 +31,14 @@ var $backDimmer = $('.background_dimmer');
 var sliders = document.getElementsByClassName('agreement_input');
 
 
-$popupButton1.click((function(e) {
-    if (!$popupButton1.hasClass('slider_active')) {
+$popupButton1.click((function() {
+    if (!sliders[0].checked) {
         $rulesPopup.attr("style", "display: flex");
         $popupButton1.toggleClass("slider_active");
         $backDimmer.show();
+        sliders[0].checked = true;
     } else {
-        $popupButton1.removeClass("slider_active");
+        sliders[0].checked = false;
     }
 }));
 
@@ -56,13 +57,13 @@ $('.popup_accept').click((function() {
     $backDimmer.hide();
 }));
 
-$popupButton2.click((function(e) {
-    if (!$popupButton2.hasClass('slider_active')) {
+$popupButton2.click((function() {
+    if (!sliders[1].checked) {
         $processPopup.attr("style", "display: flex");
-        $popupButton2.addClass("slider_active");
         $backDimmer.show();
+        sliders[1].checked = true;
     } else {
-        $popupButton2.removeClass("slider_active");
+        sliders[1].checked = false;
     }
 }));
 /**
