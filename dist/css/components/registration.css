@@ -177,6 +177,12 @@ ul {
 }
 
 /* line 102, src/sass/components/registration.scss */
+.rub_img {
+  width: remy(12);
+  height: remy(15);
+}
+
+/* line 107, src/sass/components/registration.scss */
 .client_registrations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,7 +203,7 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 102, src/sass/components/registration.scss */
+  /* line 107, src/sass/components/registration.scss */
   .client_registrations {
     height: remy(250);
     width: remy(305);
@@ -205,7 +211,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 102, src/sass/components/registration.scss */
+  /* line 107, src/sass/components/registration.scss */
   .client_registrations {
     width: remy(650);
     height: remy(240);
@@ -213,21 +219,21 @@ ul {
   }
 }
 
-/* line 126, src/sass/components/registration.scss */
+/* line 131, src/sass/components/registration.scss */
 .registration_title {
   color: #BB272D;
   font-size: remy(17);
   margin-bottom: remy(10);
 }
 
-/* line 132, src/sass/components/registration.scss */
+/* line 137, src/sass/components/registration.scss */
 .registrations_table {
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-/* line 138, src/sass/components/registration.scss */
+/* line 143, src/sass/components/registration.scss */
 .registration-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,7 +243,7 @@ ul {
       justify-content: space-around;
 }
 
-/* line 144, src/sass/components/registration.scss */
+/* line 149, src/sass/components/registration.scss */
 .cashback_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,7 +263,7 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 144, src/sass/components/registration.scss */
+  /* line 149, src/sass/components/registration.scss */
   .cashback_block {
     height: remy(250);
     width: remy(305);
@@ -265,7 +271,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 144, src/sass/components/registration.scss */
+  /* line 149, src/sass/components/registration.scss */
   .cashback_block {
     width: remy(650);
     height: remy(240);
@@ -274,13 +280,13 @@ ul {
   }
 }
 
-/* line 167, src/sass/components/registration.scss */
+/* line 172, src/sass/components/registration.scss */
 .cashback_title {
   color: #BB272D;
   margin-bottom: remy(19);
 }
 
-/* line 172, src/sass/components/registration.scss */
+/* line 177, src/sass/components/registration.scss */
 .cashback_balance {
   color: #BB272D;
   font-size: remy(21);
@@ -288,7 +294,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 172, src/sass/components/registration.scss */
+  /* line 177, src/sass/components/registration.scss */
   .cashback_balance {
     width: remy(650);
     height: remy(240);
@@ -312,7 +318,7 @@ ul {
   }
 }
 
-/* line 188, src/sass/components/registration.scss */
+/* line 193, src/sass/components/registration.scss */
 .cashback_description {
   text-align: center;
   font-size: remy(13);
@@ -320,7 +326,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 188, src/sass/components/registration.scss */
+  /* line 193, src/sass/components/registration.scss */
   .cashback_description {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -343,7 +349,7 @@ ul {
   }
 }
 
-/* line 203, src/sass/components/registration.scss */
+/* line 208, src/sass/components/registration.scss */
 .exit_button {
   color: #BB272D;
 }
