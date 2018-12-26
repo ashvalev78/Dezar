@@ -264,25 +264,43 @@
 
 /* line 159, src/sass/components/startingPage.scss */
 .license-agreement-block {
-  margin-top: remy(20);
   padding: remy(20);
   border-radius: remy(20);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: remy(334);
+  height: remy(100);
   background-color: rgba(255, 255, 255, 0.5);
-  border: double rgba(255, 255, 255, 0.5);
+  width: 100%;
 }
 
 @media (max-width: 400px) {
   /* line 159, src/sass/components/startingPage.scss */
   .license-agreement-block {
-    margin-top: remy(40);
+    padding: remy(10);
   }
 }
 
 /* line 174, src/sass/components/startingPage.scss */
+.license-agreement-block-wrapper {
+  height: remy(105);
+  width: remy(340);
+  border-radius: remy(20);
+  margin-bottom: remy(10);
+  margin-top: remy(20);
+  padding: remy(1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 400px) {
+  /* line 174, src/sass/components/startingPage.scss */
+  .license-agreement-block-wrapper {
+    margin-top: remy(40);
+  }
+}
+
+/* line 190, src/sass/components/startingPage.scss */
 .agreement_block_rules {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,13 +311,13 @@
           flex-flow: column;
 }
 
-/* line 179, src/sass/components/startingPage.scss */
+/* line 195, src/sass/components/startingPage.scss */
 .license_text {
   color: #C1272D;
   margin-bottom: remy(5);
 }
 
-/* line 184, src/sass/components/startingPage.scss */
+/* line 200, src/sass/components/startingPage.scss */
 .switch {
   position: relative;
   width: 47px;
@@ -307,14 +325,14 @@
   margin-bottom: remy(15);
 }
 
-/* line 191, src/sass/components/startingPage.scss */
+/* line 207, src/sass/components/startingPage.scss */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* line 197, src/sass/components/startingPage.scss */
+/* line 213, src/sass/components/startingPage.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -327,7 +345,7 @@
   transition: .4s;
 }
 
-/* line 209, src/sass/components/startingPage.scss */
+/* line 225, src/sass/components/startingPage.scss */
 .slider:before {
   position: absolute;
   content: "";
@@ -340,29 +358,29 @@
   transition: .4s;
 }
 
-/* line 221, src/sass/components/startingPage.scss */
+/* line 237, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider {
   background-color: #C1272D;
 }
 
-/* line 225, src/sass/components/startingPage.scss */
+/* line 241, src/sass/components/startingPage.scss */
 .agreement_input:focus + .slider {
   -webkit-box-shadow: 0 0 0 #C1272D;
           box-shadow: 0 0 0 #C1272D;
 }
 
-/* line 229, src/sass/components/startingPage.scss */
+/* line 245, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider:before {
   -webkit-transform: translateX(remy(20));
   transform: translateX(remy(20));
 }
 
-/* line 235, src/sass/components/startingPage.scss */
+/* line 251, src/sass/components/startingPage.scss */
 .slider.round {
   border-radius: remy(32);
 }
 
-/* line 239, src/sass/components/startingPage.scss */
+/* line 255, src/sass/components/startingPage.scss */
 .slider.round:before {
   border-radius: 50%;
 }
