@@ -58,9 +58,10 @@
 .popup_rules {
   overflow: scroll;
   padding: remy(30);
+  width: 100%;
 }
 
-@media (max-width: 321px) {
+@media (max-width: 400px) {
   /* line 36, src/sass/components/rulesPopup.scss */
   .popup_rules {
     padding: remy(15);
@@ -118,4 +119,5 @@
 /* line 83, src/sass/components/rulesPopup.scss */
 .popup_heading {
   font-size: remy(20);
+  margin-top: remy(5);
 }

@@ -255,7 +255,7 @@ button {
 @media (max-width: 400px) {
   /* line 135, src/sass/components/startingPage.scss */
   .input-form {
-    margin-bottom: 3.75rem;
+    margin-bottom: 0;
   }
 }
 
@@ -444,9 +444,10 @@ button {
 .popup_rules {
   overflow: scroll;
   padding: 1.875rem;
+  width: 100%;
 }
 
-@media (max-width: 321px) {
+@media (max-width: 400px) {
   /* line 36, src/sass/components/rulesPopup.scss */
   .popup_rules {
     padding: 0.9375rem;
@@ -504,6 +505,7 @@ button {
 /* line 83, src/sass/components/rulesPopup.scss */
 .popup_heading {
   font-size: 1.25rem;
+  margin-top: 0.3125rem;
 }
 
 /* line 1, src/sass/components/registration.scss */

@@ -230,7 +230,7 @@
 @media (max-width: 400px) {
   /* line 135, src/sass/components/startingPage.scss */
   .input-form {
-    margin-bottom: remy(60);
+    margin-bottom: 0;
   }
 }
 
