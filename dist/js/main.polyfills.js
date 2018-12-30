@@ -73,25 +73,6 @@ var $sliderHeight = $sliderServices.height();
 var $serviceDescription = $('.service_description');
 var $masterDescription = $('.master__description');
 
-// $serviceDescription.height($sliderHeight * 0.7);
-// $sliderElements.width($sliderWidth * 0.9);
-// $sliderElements.height($sliderHeight * 0.7);
-// $sliderServices.height($sliderWidth * 0.7);
-// $masterDescription.height($sliderHeight * 0.9);
-
-// if ($(document).width() < 330) {
-//     $sliderServices.height(330);
-// }
-
-// if ($sliderWidth > 600) {
-//     $sliderServices.height(650);
-//     $serviceDescription.height(500);
-//     $masterDescription.height(500);
-//     $sliderElements.height(500);
-//     $sliderElements.width(600);
-//     $masterDescription.height(400);
-//     $masterDescription.width(300);
-// }
 
 var $colItem = $('.service_description');
 
@@ -120,6 +101,12 @@ $careItem.click((function(e) {
 var $haircutItem = $('.haircut_description');
 
 $haircutItem.click((function(e) {
+    $(e.currentTarget).parent().toggleClass('selected');
+}));
+
+var $masterItem = $('.master__description');
+
+$masterItem.click((function(e) {
     $(e.currentTarget).parent().toggleClass('selected');
 }));
 // import Glide from '@glidejs/glide';
