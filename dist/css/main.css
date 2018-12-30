@@ -884,156 +884,130 @@ ul {
   color: #BB272D;
 }
 
-/* line 4, src/sass/components/services.scss */
+/* line 5, src/sass/components/services.scss */
+.back_button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #6083BB;
+  margin-top: 1.875rem;
+  margin-bottom: 3.125rem;
+}
+
+/* line 12, src/sass/components/services.scss */
+.slider_colorize {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  /* line 12, src/sass/components/services.scss */
+  .slider_colorize {
+    width: 42.5rem;
+  }
+}
+
+/* line 23, src/sass/components/services.scss */
+.service__selected {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 29, src/sass/components/services.scss */
+.slider_services {
+  margin-bottom: 1.875rem;
+}
+
+/* line 34, src/sass/components/services.scss */
+.slider_name {
+  margin-left: 1.25rem;
+  color: #BB272D;
+  margin-bottom: 1.25rem;
+}
+
+/* line 40, src/sass/components/services.scss */
+.colorize-item {
+  width: 21.25rem;
+  margin-right: 5%;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 47, src/sass/components/services.scss */
+.service_description {
+  color: #6A7F9D;
+  background: url(../svg/colorize-bg.png);
+  background-size: cover;
+  height: 10.125rem;
+  border-radius: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+/* line 55, src/sass/components/services.scss */
+.service_description .service_name, .service_description .service_time, .service_description .service_price {
+  width: 60%;
+  margin-top: 0.9375rem;
+  margin-bottom: 1.25rem;
+  margin-left: 0.9375rem;
+}
+
+/* line 63, src/sass/components/services.scss */
+.service_wrapper {
+  width: 100%;
+  height: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #6083BB;
+}
+
+/* line 72, src/sass/components/services.scss */
+.services__body {
+  overflow: scroll;
+}
+
+/* line 76, src/sass/components/services.scss */
 .wrapper_services {
   height: auto;
 }
 
-/* line 8, src/sass/components/services.scss */
-.services__body {
-  overflow-y: scroll;
-}
-
-/* line 12, src/sass/components/services.scss */
-.back_button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin-top: 1.25rem;
-}
-
-/* line 16, src/sass/components/services.scss */
-.back_button-name {
-  color: #6083BB;
-}
-
-/* line 21, src/sass/components/services.scss */
+/* line 80, src/sass/components/services.scss */
 .slider_services {
-  margin-top: 5rem;
-  width: 90% !important;
-  height: 18.75rem;
-}
-
-@media (min-width: 768px) {
-  /* line 21, src/sass/components/services.scss */
-  .slider_services {
-    height: 37.5rem;
-  }
-}
-
-/* line 31, src/sass/components/services.scss */
-.slider_name {
-  color: #BB272D;
-  margin-left: 1.25rem;
   width: 100%;
 }
 
-/* line 37, src/sass/components/services.scss */
-.service_name {
-  color: #6083EE;
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
-}
-
-@media (max-width: 420px) {
-  /* line 37, src/sass/components/services.scss */
-  .service_name {
-    width: 50%;
-  }
-}
-
-/* line 47, src/sass/components/services.scss */
-.service_time {
-  color: #6083EE;
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
-}
-
-/* line 53, src/sass/components/services.scss */
-.service_price {
-  color: #6083EE;
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
-}
-
-/* line 59, src/sass/components/services.scss */
-.colorize-item {
-  width: 37.5rem;
-  height: 75% !important;
-}
-
-/* line 71, src/sass/components/services.scss */
-.service_description {
-  background-size: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  background: url(../../svg/colorize-bg@4x.png);
-  height: 100%;
-  margin-bottom: 0.625rem;
-}
-
-@media (max-width: 420px) {
-  /* line 71, src/sass/components/services.scss */
-  .service_description {
-    background: url(../../svg/colorize-bg.png);
-    font-size: 13px;
-  }
-}
-
-/* line 91, src/sass/components/services.scss */
-.service_more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #6083EE;
-}
-
-/* line 98, src/sass/components/services.scss */
-.service_wrapper {
-  width: 100%;
-  height: 1.75rem;
-}
-
-@media (min-width: 768px) {
-  /* line 98, src/sass/components/services.scss */
-  .service_wrapper {
-    display: none;
-  }
-}
-
-/* line 107, src/sass/components/services.scss */
+/* line 84, src/sass/components/services.scss */
 .slider_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 112, src/sass/components/services.scss */
+/* line 92, src/sass/components/services.scss */
 .footer__services {
-  margin-top: 2.5rem;
+  margin-top: 1.875rem;
+  height: 3.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 3.75rem;
   background: black;
-  margin-bottom: 1.875rem;
 }
 
-/* line 124, src/sass/components/services.scss */
+/* line 102, src/sass/components/services.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1045,7 +1019,7 @@ ul {
   color: white;
 }
 
-/* line 130, src/sass/components/services.scss */
+/* line 108, src/sass/components/services.scss */
 .footer__next {
   color: #BB272D;
 }

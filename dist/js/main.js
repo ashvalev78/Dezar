@@ -66,6 +66,15 @@ $popupButton2.click((function() {
         sliders[1].checked = false;
     }
 }));
+var $sliderElements = $('.colorize-item');
+
+console.log($sliderElements);
+
+$sliderElements.each((function(element) {
+    // element.click(function() {
+    //     if (element.hasClass('selected'))
+    // });
+}));
 // import Glide from '@glidejs/glide';
 
-new Glide('.glide__track-colorize').mount();
+// new Glide('.glide__track-colorize').mount();
