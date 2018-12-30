@@ -67,8 +67,21 @@ $popupButton2.click((function() {
     }
 }));
 var $sliderElements = $('.colorize-item');
+var $sliderServices = $('.slider_services');
+var $sliderWidth = $sliderServices.width();
+var $sliderHeight = $sliderServices.height();
+var $serviseDescription = $('.service_description');
+$serviseDescription.height($sliderHeight * 0.9);
+$sliderElements.width($sliderWidth * 0.9);
+$sliderElements.height($sliderHeight * 0.9);
+$sliderServices.height($sliderWidth * 0.9);
 
-console.log($sliderElements);
+if ($sliderWidth > 600) {
+    $sliderServices.height(650);
+    $serviseDescription.height(500);
+    $sliderElements.height(500);
+    $sliderElements.width(600);
+}
 
 $sliderElements.each((function(element) {
     // element.click(function() {
