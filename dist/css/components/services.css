@@ -345,3 +345,56 @@
   right: -remy(15);
   position: absolute;
 }
+
+/* line 233, src/sass/components/services.scss */
+.popup__description {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: remy(20);
+  z-index: 10004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: remy(321);
+  display: none;
+}
+
+/* line 248, src/sass/components/services.scss */
+.popup__description-heading {
+  margin-top: remy(10);
+  font-weight: 600;
+}
+
+/* line 253, src/sass/components/services.scss */
+.popup__description-info {
+  padding: remy(20);
+  margin: 0;
+}
+
+/* line 258, src/sass/components/services.scss */
+.popup__description-back {
+  width: 100%;
+  border-top: 1px solid grey;
+  color: #6083BB;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 267, src/sass/components/services.scss */
+.visible_popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

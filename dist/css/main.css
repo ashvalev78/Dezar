@@ -1224,6 +1224,59 @@ ul {
   position: absolute;
 }
 
+/* line 233, src/sass/components/services.scss */
+.popup__description {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 1.25rem;
+  z-index: 10004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20.0625rem;
+  display: none;
+}
+
+/* line 248, src/sass/components/services.scss */
+.popup__description-heading {
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+/* line 253, src/sass/components/services.scss */
+.popup__description-info {
+  padding: 1.25rem;
+  margin: 0;
+}
+
+/* line 258, src/sass/components/services.scss */
+.popup__description-back {
+  width: 100%;
+  border-top: 1px solid grey;
+  color: #6083BB;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 267, src/sass/components/services.scss */
+.visible_popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* line 3, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
 .glide {
   position: relative;

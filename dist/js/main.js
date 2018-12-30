@@ -73,10 +73,10 @@ var $sliderHeight = $sliderServices.height();
 var $serviceDescription = $('.service_description');
 var $masterDescription = $('.master__description');
 
-$serviceDescription.height($sliderHeight * 0.9);
+$serviceDescription.height($sliderHeight * 0.7);
 $sliderElements.width($sliderWidth * 0.9);
-$sliderElements.height($sliderHeight * 0.9);
-$sliderServices.height($sliderWidth * 0.9);
+$sliderElements.height($sliderHeight * 0.7);
+$sliderServices.height($sliderWidth * 0.7);
 $masterDescription.height($sliderHeight * 0.9);
 
 if ($(document).width() < 330) {
@@ -93,10 +93,23 @@ if ($sliderWidth > 600) {
     $masterDescription.width(300);
 }
 
-var $colItem = $('.colorize-item');
+var $colItem = $('.service_description');
 
 $colItem.click((function(e) {
-    $(e.currentTarget).toggleClass('selected');
+    // console.log($(e.currentTarget).parrent());
+    $(e.currentTarget).parent().toggleClass('selected');
+}));
+
+var $popupButton = $('.service_wrapper');
+
+$popupButton.click((function() {
+    $('.popup__description').toggleClass("visible_popup");
+}));
+
+var $popupBackButton = $('.popup__description-back');
+
+$popupBackButton.click((function() {
+    $('.popup__description').toggleClass("visible_popup");
 }));
 // import Glide from '@glidejs/glide';
 
