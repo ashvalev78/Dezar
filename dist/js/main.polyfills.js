@@ -73,12 +73,15 @@ var $sliderHeight = $sliderServices.height();
 var $serviseDescription = $('.service_description');
 var $masterDescription = $('.master__description');
 
-
 $serviseDescription.height($sliderHeight * 0.9);
 $sliderElements.width($sliderWidth * 0.9);
 $sliderElements.height($sliderHeight * 0.9);
 $sliderServices.height($sliderWidth * 0.9);
 $masterDescription.height($sliderHeight * 0.9);
+
+if ($(document).width() < 330) {
+    $sliderServices.height(330);
+}
 
 if ($sliderWidth > 600) {
     $sliderServices.height(650);
