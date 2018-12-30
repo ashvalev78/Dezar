@@ -66,3 +66,6 @@ $popupButton2.click((function() {
         sliders[1].checked = false;
     }
 }));
+// import Glide from '@glidejs/glide';
+
+new Glide('.glide__track-colorize').mount();

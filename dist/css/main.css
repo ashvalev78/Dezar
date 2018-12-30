@@ -588,11 +588,20 @@ ul {
   background: url(../svg/Image4.png) center;
   background-size: cover;
   height: 4.0625rem;
-  color: white;
+  color: white !important;
   margin-bottom: 0.9375rem;
   border-radius: 0.625rem;
   border: none;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
@@ -611,14 +620,14 @@ ul {
   }
 }
 
-/* line 57, src/sass/components/registration.scss */
+/* line 60, src/sass/components/registration.scss */
 .registrations_list_wrapper {
   width: 100%;
   overflow-y: scroll;
 }
 
 @media (min-width: 1020px) {
-  /* line 57, src/sass/components/registration.scss */
+  /* line 60, src/sass/components/registration.scss */
   .registrations_list_wrapper {
     -webkit-column-count: 2;
             column-count: 2;
@@ -626,7 +635,7 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 66, src/sass/components/registration.scss */
+  /* line 69, src/sass/components/registration.scss */
   .convertion_part {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -642,7 +651,7 @@ ul {
   }
 }
 
-/* line 74, src/sass/components/registration.scss */
+/* line 77, src/sass/components/registration.scss */
 .convertion_part-cashback {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,7 +666,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 74, src/sass/components/registration.scss */
+  /* line 77, src/sass/components/registration.scss */
   .convertion_part-cashback {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -680,30 +689,30 @@ ul {
   }
 }
 
-/* line 90, src/sass/components/registration.scss */
+/* line 93, src/sass/components/registration.scss */
 .master_photo {
   width: 17.25rem;
 }
 
-/* line 94, src/sass/components/registration.scss */
+/* line 97, src/sass/components/registration.scss */
 .registration-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 98, src/sass/components/registration.scss */
+/* line 101, src/sass/components/registration.scss */
 .registration_time, .registration_date {
   color: #939393;
 }
 
-/* line 102, src/sass/components/registration.scss */
+/* line 105, src/sass/components/registration.scss */
 .rub_img {
   width: 0.75rem;
   height: 0.9375rem;
 }
 
-/* line 107, src/sass/components/registration.scss */
+/* line 110, src/sass/components/registration.scss */
 .client_registrations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -724,7 +733,7 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 107, src/sass/components/registration.scss */
+  /* line 110, src/sass/components/registration.scss */
   .client_registrations {
     height: 15.625rem;
     width: 19.0625rem;
@@ -732,7 +741,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 107, src/sass/components/registration.scss */
+  /* line 110, src/sass/components/registration.scss */
   .client_registrations {
     width: 40.625rem;
     height: 15rem;
@@ -740,21 +749,21 @@ ul {
   }
 }
 
-/* line 131, src/sass/components/registration.scss */
+/* line 134, src/sass/components/registration.scss */
 .registration_title {
   color: #BB272D;
   font-size: 1.0625rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 137, src/sass/components/registration.scss */
+/* line 140, src/sass/components/registration.scss */
 .registrations_table {
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-/* line 143, src/sass/components/registration.scss */
+/* line 146, src/sass/components/registration.scss */
 .registration-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -764,7 +773,7 @@ ul {
       justify-content: space-around;
 }
 
-/* line 149, src/sass/components/registration.scss */
+/* line 152, src/sass/components/registration.scss */
 .cashback_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -784,7 +793,7 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 149, src/sass/components/registration.scss */
+  /* line 152, src/sass/components/registration.scss */
   .cashback_block {
     height: 15.625rem;
     width: 19.0625rem;
@@ -792,7 +801,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 149, src/sass/components/registration.scss */
+  /* line 152, src/sass/components/registration.scss */
   .cashback_block {
     width: 40.625rem;
     height: 15rem;
@@ -801,13 +810,13 @@ ul {
   }
 }
 
-/* line 172, src/sass/components/registration.scss */
+/* line 175, src/sass/components/registration.scss */
 .cashback_title {
   color: #BB272D;
   margin-bottom: 1.1875rem;
 }
 
-/* line 177, src/sass/components/registration.scss */
+/* line 180, src/sass/components/registration.scss */
 .cashback_balance {
   color: #BB272D;
   font-size: 1.3125rem;
@@ -815,7 +824,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 177, src/sass/components/registration.scss */
+  /* line 180, src/sass/components/registration.scss */
   .cashback_balance {
     width: 40.625rem;
     height: 15rem;
@@ -839,7 +848,7 @@ ul {
   }
 }
 
-/* line 193, src/sass/components/registration.scss */
+/* line 196, src/sass/components/registration.scss */
 .cashback_description {
   text-align: center;
   font-size: 0.8125rem;
@@ -847,7 +856,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 193, src/sass/components/registration.scss */
+  /* line 196, src/sass/components/registration.scss */
   .cashback_description {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -870,7 +879,269 @@ ul {
   }
 }
 
-/* line 208, src/sass/components/registration.scss */
+/* line 211, src/sass/components/registration.scss */
 .exit_button {
   color: #BB272D;
+}
+
+/* line 4, src/sass/components/services.scss */
+.wrapper_services {
+  height: auto;
+}
+
+/* line 8, src/sass/components/services.scss */
+.services__body {
+  overflow-y: scroll;
+}
+
+/* line 12, src/sass/components/services.scss */
+.back_button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1.25rem;
+}
+
+/* line 16, src/sass/components/services.scss */
+.back_button-name {
+  color: #6083BB;
+}
+
+/* line 21, src/sass/components/services.scss */
+.slider_services {
+  margin-top: 5rem;
+  width: 90% !important;
+  height: 18.75rem;
+}
+
+@media (min-width: 768px) {
+  /* line 21, src/sass/components/services.scss */
+  .slider_services {
+    height: 37.5rem;
+  }
+}
+
+/* line 31, src/sass/components/services.scss */
+.slider_name {
+  color: #BB272D;
+  margin-left: 1.25rem;
+  width: 100%;
+}
+
+/* line 37, src/sass/components/services.scss */
+.service_name {
+  color: #6083EE;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+@media (max-width: 420px) {
+  /* line 37, src/sass/components/services.scss */
+  .service_name {
+    width: 50%;
+  }
+}
+
+/* line 47, src/sass/components/services.scss */
+.service_time {
+  color: #6083EE;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+/* line 53, src/sass/components/services.scss */
+.service_price {
+  color: #6083EE;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+/* line 59, src/sass/components/services.scss */
+.colorize-item {
+  width: 37.5rem;
+  height: 75% !important;
+}
+
+/* line 71, src/sass/components/services.scss */
+.service_description {
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background: url(../../svg/colorize-bg@4x.png);
+  height: 100%;
+  margin-bottom: 0.625rem;
+}
+
+@media (max-width: 420px) {
+  /* line 71, src/sass/components/services.scss */
+  .service_description {
+    background: url(../../svg/colorize-bg.png);
+    font-size: 13px;
+  }
+}
+
+/* line 91, src/sass/components/services.scss */
+.service_more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #6083EE;
+}
+
+/* line 98, src/sass/components/services.scss */
+.service_wrapper {
+  width: 100%;
+  height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  /* line 98, src/sass/components/services.scss */
+  .service_wrapper {
+    display: none;
+  }
+}
+
+/* line 107, src/sass/components/services.scss */
+.slider_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+/* line 112, src/sass/components/services.scss */
+.footer__services {
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 3.75rem;
+  background: black;
+  margin-bottom: 1.875rem;
+}
+
+/* line 124, src/sass/components/services.scss */
+.footer__cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  color: white;
+}
+
+/* line 130, src/sass/components/services.scss */
+.footer__next {
+  color: #BB272D;
+}
+
+/* line 3, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 13, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide * {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* line 17, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__track {
+  overflow: hidden;
+}
+
+/* line 21, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -ms-touch-action: pan-Y;
+      touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  will-change: transform;
+}
+
+/* line 35, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__slides--dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* line 40, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  white-space: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 49, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__slide a {
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* line 57, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* line 62, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* line 67, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide--rtl {
+  direction: rtl;
 }
