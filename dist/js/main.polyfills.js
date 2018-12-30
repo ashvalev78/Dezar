@@ -70,10 +70,10 @@ var $sliderElements = $('.colorize-item');
 var $sliderServices = $('.slider_services');
 var $sliderWidth = $sliderServices.width();
 var $sliderHeight = $sliderServices.height();
-var $serviseDescription = $('.service_description');
+var $serviceDescription = $('.service_description');
 var $masterDescription = $('.master__description');
 
-$serviseDescription.height($sliderHeight * 0.9);
+$serviceDescription.height($sliderHeight * 0.9);
 $sliderElements.width($sliderWidth * 0.9);
 $sliderElements.height($sliderHeight * 0.9);
 $sliderServices.height($sliderWidth * 0.9);
@@ -85,7 +85,7 @@ if ($(document).width() < 330) {
 
 if ($sliderWidth > 600) {
     $sliderServices.height(650);
-    $serviseDescription.height(500);
+    $serviceDescription.height(500);
     $masterDescription.height(500);
     $sliderElements.height(500);
     $sliderElements.width(600);
@@ -93,10 +93,10 @@ if ($sliderWidth > 600) {
     $masterDescription.width(300);
 }
 
-$sliderElements.each((function(element) {
-    // element.click(function() {
-    //     if (element.hasClass('selected'))
-    // });
+var $colItem = $('.colorize-item');
+
+$colItem.click((function(e) {
+    $(e.currentTarget).toggleClass('selected');
 }));
 // import Glide from '@glidejs/glide';
 

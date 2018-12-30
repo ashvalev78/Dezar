@@ -918,21 +918,27 @@ ul {
   position: absolute;
   top: -0.625rem;
   right: -0.625rem;
+  display: none;
 }
 
-/* line 31, src/sass/components/services.scss */
+/* line 33, src/sass/components/services.scss */
+.selected .service__selected {
+  display: block;
+}
+
+/* line 38, src/sass/components/services.scss */
 .slider_services {
   margin-bottom: 1.875rem;
 }
 
-/* line 35, src/sass/components/services.scss */
+/* line 42, src/sass/components/services.scss */
 .slider_name {
   margin-left: 1.25rem;
   color: #BB272D;
   margin-bottom: 1.25rem;
 }
 
-/* line 41, src/sass/components/services.scss */
+/* line 48, src/sass/components/services.scss */
 .colorize-item {
   width: 21.25rem;
   margin-right: 5%;
@@ -940,11 +946,11 @@ ul {
   position: relative;
 }
 
-/* line 48, src/sass/components/services.scss */
+/* line 55, src/sass/components/services.scss */
 .service_description {
   color: #6A7F9D;
   background: url(../svg/colorize-bg.png);
-  background-size: cover;
+  background-size: 100%;
   height: 10.125rem;
   border-radius: 1.25rem;
   margin-bottom: 1.25rem;
@@ -961,7 +967,7 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 48, src/sass/components/services.scss */
+  /* line 55, src/sass/components/services.scss */
   .service_description {
     height: 25rem;
     width: 36.25rem;
@@ -970,7 +976,7 @@ ul {
 }
 
 @media (max-width: 720px) {
-  /* line 67, src/sass/components/services.scss */
+  /* line 74, src/sass/components/services.scss */
   .service-group-part {
     height: 50%;
     display: -webkit-box;
@@ -985,7 +991,7 @@ ul {
   }
 }
 
-/* line 76, src/sass/components/services.scss */
+/* line 83, src/sass/components/services.scss */
 .service__description-small {
   height: 100%;
   width: 60%;
@@ -1003,7 +1009,7 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 76, src/sass/components/services.scss */
+  /* line 83, src/sass/components/services.scss */
   .service__description-small {
     height: 20%;
     -ms-flex-item-align: start;
@@ -1025,31 +1031,31 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 95, src/sass/components/services.scss */
+  /* line 102, src/sass/components/services.scss */
   .service_name {
     width: 50%;
   }
 }
 
-/* line 101, src/sass/components/services.scss */
+/* line 108, src/sass/components/services.scss */
 .service_time {
   margin-bottom: 0.625rem;
 }
 
-/* line 105, src/sass/components/services.scss */
+/* line 112, src/sass/components/services.scss */
 .service__description-full {
   margin-left: 1.5625rem;
   width: 60%;
 }
 
 @media (max-width: 720px) {
-  /* line 105, src/sass/components/services.scss */
+  /* line 112, src/sass/components/services.scss */
   .service__description-full {
     display: none;
   }
 }
 
-/* line 114, src/sass/components/services.scss */
+/* line 121, src/sass/components/services.scss */
 .service_wrapper {
   width: 100%;
   height: 1.875rem;
@@ -1066,18 +1072,18 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 114, src/sass/components/services.scss */
+  /* line 121, src/sass/components/services.scss */
   .service_wrapper {
     display: none;
   }
 }
 
-/* line 127, src/sass/components/services.scss */
+/* line 134, src/sass/components/services.scss */
 .services__body {
   overflow-y: scroll;
 }
 
-/* line 131, src/sass/components/services.scss */
+/* line 138, src/sass/components/services.scss */
 .wrapper_services {
   height: auto;
   display: -webkit-box;
@@ -1092,7 +1098,7 @@ ul {
           justify-content: center;
 }
 
-/* line 138, src/sass/components/services.scss */
+/* line 145, src/sass/components/services.scss */
 .slider_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1101,7 +1107,7 @@ ul {
   padding: 0;
 }
 
-/* line 144, src/sass/components/services.scss */
+/* line 151, src/sass/components/services.scss */
 .footer__services {
   margin-top: 1.875rem;
   height: 3.75rem;
@@ -1117,7 +1123,7 @@ ul {
   background: black;
 }
 
-/* line 154, src/sass/components/services.scss */
+/* line 161, src/sass/components/services.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1129,12 +1135,12 @@ ul {
   color: white;
 }
 
-/* line 160, src/sass/components/services.scss */
+/* line 167, src/sass/components/services.scss */
 .footer__next {
   color: #BB272D;
 }
 
-/* line 164, src/sass/components/services.scss */
+/* line 171, src/sass/components/services.scss */
 .slider_master {
   width: 100%;
   overflow-x: scroll;
@@ -1142,13 +1148,13 @@ ul {
 }
 
 @media (min-width: 770px) {
-  /* line 164, src/sass/components/services.scss */
+  /* line 171, src/sass/components/services.scss */
   .slider_master {
     width: 50rem;
   }
 }
 
-/* line 174, src/sass/components/services.scss */
+/* line 181, src/sass/components/services.scss */
 .master_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1156,7 +1162,7 @@ ul {
   padding: 0;
 }
 
-/* line 179, src/sass/components/services.scss */
+/* line 186, src/sass/components/services.scss */
 .master_wrapper {
   width: 100%;
   height: 1.875rem;
@@ -1173,11 +1179,11 @@ ul {
   cursor: pointer;
 }
 
-/* line 189, src/sass/components/services.scss */
+/* line 196, src/sass/components/services.scss */
 .master__description {
   width: 15rem;
-  padding-top: 15%;
-  padding-left: 20%;
+  padding-top: 10%;
+  padding-left: 10%;
   border-radius: 1.25rem;
   margin-bottom: 1.25rem;
   cursor: pointer;
@@ -1186,32 +1192,32 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 189, src/sass/components/services.scss */
+  /* line 196, src/sass/components/services.scss */
   .master__description {
     width: 26.25rem;
   }
 }
 
 @media (max-width: 360) {
-  /* line 189, src/sass/components/services.scss */
+  /* line 196, src/sass/components/services.scss */
   .master__description {
     height: 12.5rem;
   }
 }
 
-/* line 208, src/sass/components/services.scss */
+/* line 215, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 214, src/sass/components/services.scss */
+/* line 221, src/sass/components/services.scss */
 .master-item {
   margin-right: 1.25rem;
   position: relative;
 }
 
-/* line 219, src/sass/components/services.scss */
+/* line 226, src/sass/components/services.scss */
 .master__selected {
   top: -0.9375rem;
   right: -0.9375rem;
