@@ -15,39 +15,46 @@
   margin-bottom: remy(50);
 }
 
-/* line 12, src/sass/components/services.scss */
+@media (min-width: 770px) {
+  /* line 5, src/sass/components/services.scss */
+  .back_button {
+    margin-left: remy(100);
+  }
+}
+
+/* line 16, src/sass/components/services.scss */
 .slider_colorize {
   overflow-x: scroll;
   width: 100%;
 }
 
 @media (min-width: 770px) {
-  /* line 12, src/sass/components/services.scss */
+  /* line 16, src/sass/components/services.scss */
   .slider_colorize {
     width: remy(800);
   }
 }
 
-/* line 21, src/sass/components/services.scss */
+/* line 25, src/sass/components/services.scss */
 .service__selected {
   position: absolute;
   top: -remy(10);
   right: -remy(10);
 }
 
-/* line 27, src/sass/components/services.scss */
+/* line 31, src/sass/components/services.scss */
 .slider_services {
   margin-bottom: remy(30);
 }
 
-/* line 31, src/sass/components/services.scss */
+/* line 35, src/sass/components/services.scss */
 .slider_name {
   margin-left: remy(20);
   color: #BB272D;
   margin-bottom: remy(20);
 }
 
-/* line 37, src/sass/components/services.scss */
+/* line 41, src/sass/components/services.scss */
 .colorize-item {
   width: remy(340);
   margin-right: 5%;
@@ -55,7 +62,7 @@
   position: relative;
 }
 
-/* line 44, src/sass/components/services.scss */
+/* line 48, src/sass/components/services.scss */
 .service_description {
   color: #6A7F9D;
   background: url(../svg/colorize-bg.png);
@@ -72,10 +79,11 @@
           flex-flow: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  cursor: pointer;
 }
 
 @media (min-width: 720px) {
-  /* line 44, src/sass/components/services.scss */
+  /* line 48, src/sass/components/services.scss */
   .service_description {
     height: remy(400);
     width: remy(580);
@@ -84,7 +92,7 @@
 }
 
 @media (max-width: 720px) {
-  /* line 62, src/sass/components/services.scss */
+  /* line 67, src/sass/components/services.scss */
   .service-group-part {
     height: 50%;
     display: -webkit-box;
@@ -99,7 +107,7 @@
   }
 }
 
-/* line 71, src/sass/components/services.scss */
+/* line 76, src/sass/components/services.scss */
 .service__description-small {
   height: 100%;
   width: 60%;
@@ -117,7 +125,7 @@
 }
 
 @media (min-width: 720px) {
-  /* line 71, src/sass/components/services.scss */
+  /* line 76, src/sass/components/services.scss */
   .service__description-small {
     height: 20%;
     -ms-flex-item-align: start;
@@ -139,31 +147,31 @@
 }
 
 @media (min-width: 720px) {
-  /* line 90, src/sass/components/services.scss */
+  /* line 95, src/sass/components/services.scss */
   .service_name {
     width: 50%;
   }
 }
 
-/* line 96, src/sass/components/services.scss */
+/* line 101, src/sass/components/services.scss */
 .service_time {
   margin-bottom: remy(10);
 }
 
-/* line 100, src/sass/components/services.scss */
+/* line 105, src/sass/components/services.scss */
 .service__description-full {
   margin-left: remy(25);
   width: 60%;
 }
 
 @media (max-width: 720px) {
-  /* line 100, src/sass/components/services.scss */
+  /* line 105, src/sass/components/services.scss */
   .service__description-full {
     display: none;
   }
 }
 
-/* line 109, src/sass/components/services.scss */
+/* line 114, src/sass/components/services.scss */
 .service_wrapper {
   width: 100%;
   height: remy(30);
@@ -180,18 +188,18 @@
 }
 
 @media (min-width: 720px) {
-  /* line 109, src/sass/components/services.scss */
+  /* line 114, src/sass/components/services.scss */
   .service_wrapper {
     display: none;
   }
 }
 
-/* line 122, src/sass/components/services.scss */
+/* line 127, src/sass/components/services.scss */
 .services__body {
   overflow-y: scroll;
 }
 
-/* line 126, src/sass/components/services.scss */
+/* line 131, src/sass/components/services.scss */
 .wrapper_services {
   height: auto;
   display: -webkit-box;
@@ -206,7 +214,7 @@
           justify-content: center;
 }
 
-/* line 133, src/sass/components/services.scss */
+/* line 138, src/sass/components/services.scss */
 .slider_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -215,7 +223,7 @@
   padding: 0;
 }
 
-/* line 139, src/sass/components/services.scss */
+/* line 144, src/sass/components/services.scss */
 .footer__services {
   margin-top: remy(30);
   height: remy(60);
@@ -231,7 +239,7 @@
   background: black;
 }
 
-/* line 149, src/sass/components/services.scss */
+/* line 154, src/sass/components/services.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,25 +251,25 @@
   color: white;
 }
 
-/* line 155, src/sass/components/services.scss */
+/* line 160, src/sass/components/services.scss */
 .footer__next {
   color: #BB272D;
 }
 
-/* line 159, src/sass/components/services.scss */
+/* line 164, src/sass/components/services.scss */
 .slider_master {
   width: 100%;
   overflow-x: scroll;
 }
 
 @media (min-width: 770px) {
-  /* line 159, src/sass/components/services.scss */
+  /* line 164, src/sass/components/services.scss */
   .slider_master {
     width: 50rem;
   }
 }
 
-/* line 168, src/sass/components/services.scss */
+/* line 173, src/sass/components/services.scss */
 .master_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -269,37 +277,55 @@
   padding: 0;
 }
 
-/* line 173, src/sass/components/services.scss */
+/* line 178, src/sass/components/services.scss */
+.master_wrapper {
+  width: 100%;
+  height: remy(30);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #6083BB;
+  cursor: pointer;
+}
+
+/* line 188, src/sass/components/services.scss */
 .master__description {
   width: remy(240);
   padding-top: 15%;
   padding-left: 20%;
   border-radius: remy(20);
   margin-bottom: remy(20);
+  cursor: pointer;
   background: url(../svg/master.png);
   background-size: cover;
 }
 
 @media (min-width: 720px) {
-  /* line 173, src/sass/components/services.scss */
+  /* line 188, src/sass/components/services.scss */
   .master__description {
     width: remy(420);
   }
 }
 
-/* line 187, src/sass/components/services.scss */
+/* line 203, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 193, src/sass/components/services.scss */
+/* line 209, src/sass/components/services.scss */
 .master-item {
   margin-right: remy(20);
   position: relative;
 }
 
-/* line 198, src/sass/components/services.scss */
+/* line 214, src/sass/components/services.scss */
 .master__selected {
   top: -remy(15);
   right: -remy(15);
