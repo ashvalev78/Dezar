@@ -328,7 +328,7 @@
 @media (min-width: 720px) {
   /* line 199, src/sass/components/services.scss */
   .slider_master {
-    height: remy(500);
+    height: remy(550);
   }
 }
 
