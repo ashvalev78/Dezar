@@ -84,12 +84,16 @@ var $popupButton = $('.service_wrapper');
 
 $popupButton.click((function() {
     $('.popup__description').toggleClass("visible_popup");
+    $('.popup_blur').toggleClass('visible_popup');
+    $('.wrapper_services').toggleClass('blur');
 }));
 
 var $popupBackButton = $('.popup__description-back');
 
 $popupBackButton.click((function() {
     $('.popup__description').toggleClass("visible_popup");
+    $('.popup_blur').toggleClass('visible_popup');
+    $('.wrapper_services').toggleClass('blur');
 }));
 
 var $careItem = $('.care_description');
