@@ -52,40 +52,34 @@
       -ms-flex-align: center;
           align-items: center;
   color: #6A7F9D;
+  width: remy(280);
+  height: remy(35);
 }
 
-@media (max-width: 360px) {
-  /* line 35, src/sass/components/time.scss */
-  .timepicker__block-time {
-    width: remy(280);
-    height: remy(35);
-  }
-}
-
-/* line 53, src/sass/components/time.scss */
+/* line 54, src/sass/components/time.scss */
 .datepicker__block-table {
   width: remy(300);
 }
 
-/* line 57, src/sass/components/time.scss */
+/* line 58, src/sass/components/time.scss */
 .datepicker__block-switcher {
   color: #BB272D;
 }
 
-/* line 61, src/sass/components/time.scss */
+/* line 62, src/sass/components/time.scss */
 .datepicker__block .datepicker__days {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-/* line 66, src/sass/components/time.scss */
+/* line 67, src/sass/components/time.scss */
 .datepicker__block .datepicker__days-day {
   text-align: center;
-  color: #6A7F9D;
+  color: rgba(96, 131, 187, 0.46);
 }
 
-/* line 72, src/sass/components/time.scss */
+/* line 73, src/sass/components/time.scss */
 .datepicker__block .datepicker__dates {
   display: grid;
   width: 100%;
@@ -93,13 +87,19 @@
   border-top: 1px solid #6A7F9D;
 }
 
-/* line 78, src/sass/components/time.scss */
+/* line 79, src/sass/components/time.scss */
 .datepicker__block .datepicker__dates-date {
   text-align: center;
   color: #6083BB;
+  padding: remy(10);
 }
 
-/* line 85, src/sass/components/time.scss */
+/* line 86, src/sass/components/time.scss */
+.datepicker__block .selected-date {
+  color: #BB272D;
+}
+
+/* line 91, src/sass/components/time.scss */
 .footer__services {
   margin-top: remy(30);
   margin-bottom: remy(30);
@@ -116,7 +116,7 @@
   background: black;
 }
 
-/* line 96, src/sass/components/time.scss */
+/* line 102, src/sass/components/time.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,7 +128,7 @@
   color: white;
 }
 
-/* line 102, src/sass/components/time.scss */
+/* line 108, src/sass/components/time.scss */
 .footer__next {
   color: #BB272D;
 }
