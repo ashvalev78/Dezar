@@ -2,9 +2,13 @@
  * @section Base Styles
  */
 html {
-	@media (max-width: 450px) {
+	@media (max-width: 320px) {
 		font-size: 13px;
 	}
+
+	@media (min-width: 750px) and (max-width: 1019px) {
+        font-size: 15px;
+    }
 }
 
 body {

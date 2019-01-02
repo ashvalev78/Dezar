@@ -38,6 +38,7 @@ ul {
       align-self: flex-start;
   margin-top: remy(18);
   margin-bottom: remy(15);
+  margin-left: remy(40);
 }
 
 @media (min-width: 1020px) {
@@ -49,27 +50,28 @@ ul {
   }
 }
 
-/* line 24, src/sass/components/registration.scss */
+/* line 25, src/sass/components/registration.scss */
 .master_phone {
-  font-size: 11px;
+  font-size: 12px;
   color: #BB272D;
 }
 
-/* line 29, src/sass/components/registration.scss */
+/* line 30, src/sass/components/registration.scss */
 .master_name {
   font-size: remy(18);
 }
 
-/* line 34, src/sass/components/registration.scss */
+/* line 35, src/sass/components/registration.scss */
 .register_button-name {
   position: relative;
-  width: remy(290);
+  width: remy(330);
   background: url(../svg/Image4.png) center;
   background-size: cover;
   height: remy(65);
   color: white !important;
   margin-bottom: remy(15);
   border-radius: remy(10);
+  margin-bottom: remy(25);
   border: none;
   cursor: pointer;
   display: -webkit-box;
@@ -81,32 +83,34 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-decoration: none;
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 34, src/sass/components/registration.scss */
+  /* line 35, src/sass/components/registration.scss */
   .register_button-name {
     width: remy(640);
+    margin-bottom: remy(30);
   }
 }
 
 @media (min-width: 1020px) {
-  /* line 34, src/sass/components/registration.scss */
+  /* line 35, src/sass/components/registration.scss */
   .register_button-name {
-    width: remy(640);
+    width: remy(680);
     margin-bottom: remy(35);
     font-weight: bold;
   }
 }
 
-/* line 60, src/sass/components/registration.scss */
+/* line 64, src/sass/components/registration.scss */
 .registrations_list_wrapper {
   width: 100%;
   overflow-y: scroll;
 }
 
 @media (min-width: 1020px) {
-  /* line 60, src/sass/components/registration.scss */
+  /* line 64, src/sass/components/registration.scss */
   .registrations_list_wrapper {
     -webkit-column-count: 2;
             column-count: 2;
@@ -114,7 +118,7 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 69, src/sass/components/registration.scss */
+  /* line 73, src/sass/components/registration.scss */
   .convertion_part {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -123,14 +127,14 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    width: remy(640);
+    width: remy(650);
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
 
-/* line 77, src/sass/components/registration.scss */
+/* line 81, src/sass/components/registration.scss */
 .convertion_part-cashback {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,7 +149,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 77, src/sass/components/registration.scss */
+  /* line 81, src/sass/components/registration.scss */
   .convertion_part-cashback {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -168,30 +172,30 @@ ul {
   }
 }
 
-/* line 93, src/sass/components/registration.scss */
+/* line 97, src/sass/components/registration.scss */
 .master_photo {
   width: remy(276);
 }
 
-/* line 97, src/sass/components/registration.scss */
+/* line 101, src/sass/components/registration.scss */
 .registration-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 101, src/sass/components/registration.scss */
+/* line 105, src/sass/components/registration.scss */
 .registration_time, .registration_date {
   color: #939393;
 }
 
-/* line 105, src/sass/components/registration.scss */
+/* line 109, src/sass/components/registration.scss */
 .rub_img {
   width: remy(12);
   height: remy(15);
 }
 
-/* line 110, src/sass/components/registration.scss */
+/* line 114, src/sass/components/registration.scss */
 .client_registrations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,42 +211,42 @@ ul {
   height: remy(201);
   border: solid 1px #6083BB;
   border-radius: remy(15);
-  margin-bottom: remy(20);
   padding: remy(10) remy(15);
+  margin-bottom: remy(25);
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 110, src/sass/components/registration.scss */
+  /* line 114, src/sass/components/registration.scss */
   .client_registrations {
-    height: remy(250);
-    width: remy(305);
+    height: remy(230);
+    width: remy(280);
   }
 }
 
 @media (min-width: 1020px) {
-  /* line 110, src/sass/components/registration.scss */
+  /* line 114, src/sass/components/registration.scss */
   .client_registrations {
     width: remy(650);
-    height: remy(240);
+    height: remy(250);
     margin-bottom: remy(35);
   }
 }
 
-/* line 134, src/sass/components/registration.scss */
+/* line 138, src/sass/components/registration.scss */
 .registration_title {
   color: #BB272D;
   font-size: remy(17);
   margin-bottom: remy(10);
 }
 
-/* line 140, src/sass/components/registration.scss */
+/* line 144, src/sass/components/registration.scss */
 .registrations_table {
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-/* line 146, src/sass/components/registration.scss */
+/* line 150, src/sass/components/registration.scss */
 .registration-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,7 +256,7 @@ ul {
       justify-content: space-around;
 }
 
-/* line 152, src/sass/components/registration.scss */
+/* line 156, src/sass/components/registration.scss */
 .cashback_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,30 +276,44 @@ ul {
 }
 
 @media (min-width: 750px) and (max-width: 1019px) {
-  /* line 152, src/sass/components/registration.scss */
+  /* line 156, src/sass/components/registration.scss */
   .cashback_block {
-    height: remy(250);
-    width: remy(305);
+    height: remy(230);
+    width: remy(280);
   }
 }
 
 @media (min-width: 1020px) {
-  /* line 152, src/sass/components/registration.scss */
+  /* line 156, src/sass/components/registration.scss */
   .cashback_block {
     width: remy(650);
-    height: remy(240);
+    height: remy(250);
     margin-bottom: remy(35);
     font-weight: bold;
   }
 }
 
-/* line 175, src/sass/components/registration.scss */
+/* line 179, src/sass/components/registration.scss */
 .cashback_title {
   color: #BB272D;
   margin-bottom: remy(19);
 }
 
-/* line 180, src/sass/components/registration.scss */
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 179, src/sass/components/registration.scss */
+  .cashback_title {
+    margin-bottom: remy(30);
+  }
+}
+
+@media (min-width: 1020px) {
+  /* line 179, src/sass/components/registration.scss */
+  .cashback_title {
+    margin-top: remy(20);
+  }
+}
+
+/* line 192, src/sass/components/registration.scss */
 .cashback_balance {
   color: #BB272D;
   font-size: remy(21);
@@ -303,7 +321,7 @@ ul {
 }
 
 @media (min-width: 1020px) {
-  /* line 180, src/sass/components/registration.scss */
+  /* line 192, src/sass/components/registration.scss */
   .cashback_balance {
     width: remy(650);
     height: remy(240);
@@ -327,15 +345,22 @@ ul {
   }
 }
 
-/* line 196, src/sass/components/registration.scss */
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 192, src/sass/components/registration.scss */
+  .cashback_balance {
+    margin-bottom: remy(30);
+  }
+}
+
+/* line 212, src/sass/components/registration.scss */
 .cashback_description {
   text-align: center;
-  font-size: remy(13);
+  font-size: remy(14);
   line-height: 1;
 }
 
 @media (min-width: 1020px) {
-  /* line 196, src/sass/components/registration.scss */
+  /* line 212, src/sass/components/registration.scss */
   .cashback_description {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -358,7 +383,9 @@ ul {
   }
 }
 
-/* line 211, src/sass/components/registration.scss */
+/* line 227, src/sass/components/registration.scss */
 .exit_button {
   color: #BB272D;
+  position: absolute;
+  bottom: remy(40);
 }
