@@ -1,7 +1,7 @@
 /*!
  * project-name v0.0.1
  * A description for your project.
- * (c) 2018 YOUR NAME
+ * (c) 2019 YOUR NAME
  * MIT License
  * http://link-to-your-git-repo.com
  */
@@ -24,13 +24,30 @@
 }
 
 /* line 14, src/sass/components/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 19, src/sass/components/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 23, src/sass/components/_base.scss */
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 28, src/sass/components/_base.scss */
 body {
   margin: 0 auto;
   min-height: 20rem;
   overflow: hidden;
 }
 
-/* line 20, src/sass/components/_base.scss */
+/* line 34, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -1477,98 +1494,129 @@ ul {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 3, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide {
-  position: relative;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* line 13, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide * {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-/* line 17, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__track {
-  overflow: hidden;
-}
-
-/* line 21, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__slides {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -ms-touch-action: pan-Y;
-      touch-action: pan-Y;
-  overflow: hidden;
+/* line 5, src/sass/components/time.scss */
+.wrapper_time {
   padding: 0;
-  white-space: nowrap;
+  height: auto;
+}
+
+/* line 12, src/sass/components/time.scss */
+.map__block-address {
+  color: grey;
+}
+
+/* line 19, src/sass/components/time.scss */
+#map {
+  width: 17.5rem;
+  height: 10.625rem;
+  background-color: #6A7F9D;
+  border-radius: 0.625rem;
+}
+
+/* line 26, src/sass/components/time.scss */
+.timepicker__block {
+  width: 100%;
+  background-color: rgba(96, 131, 187, 0.1);
+}
+
+/* line 30, src/sass/components/time.scss */
+.timepicker__block-date {
+  color: #BB272D;
+  font-size: 1.5rem;
+}
+
+/* line 35, src/sass/components/time.scss */
+.timepicker__block-time {
+  border-radius: 0.625rem;
+  margin-bottom: 1.875rem;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  will-change: transform;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6A7F9D;
 }
 
-/* line 35, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__slides--dragging {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+@media (max-width: 360px) {
+  /* line 35, src/sass/components/time.scss */
+  .timepicker__block-time {
+    width: 17.5rem;
+    height: 2.1875rem;
+  }
 }
 
-/* line 40, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__slide {
+/* line 53, src/sass/components/time.scss */
+.datepicker__block-table {
+  width: 18.75rem;
+}
+
+/* line 57, src/sass/components/time.scss */
+.datepicker__block-switcher {
+  color: #BB272D;
+}
+
+/* line 61, src/sass/components/time.scss */
+.datepicker__block .datepicker__days {
   width: 100%;
-  height: 100%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  white-space: normal;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-/* line 49, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__slide a {
-  -webkit-user-select: none;
-          user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+/* line 66, src/sass/components/time.scss */
+.datepicker__block .datepicker__days-day {
+  text-align: center;
+  color: #6A7F9D;
 }
 
-/* line 57, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__arrows {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+/* line 72, src/sass/components/time.scss */
+.datepicker__block .datepicker__dates {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #6A7F9D;
 }
 
-/* line 62, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide__bullets {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+/* line 78, src/sass/components/time.scss */
+.datepicker__block .datepicker__dates-date {
+  text-align: center;
+  color: #6083BB;
 }
 
-/* line 67, node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
-.glide--rtl {
-  direction: rtl;
+/* line 85, src/sass/components/time.scss */
+.footer__services {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  height: 3.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+}
+
+/* line 96, src/sass/components/time.scss */
+.footer__cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  color: white;
+}
+
+/* line 102, src/sass/components/time.scss */
+.footer__next {
+  color: #BB272D;
 }

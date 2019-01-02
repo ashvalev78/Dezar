@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<title>Салон Красоты</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body class = "services__body">
+	<div class = "wrapper_time main_wrapper container-fluid">
+        <a class="back_button mt-3 ml-2" href="registration.html">
+            <img class="back_arrow" src="./svg/Back.svg"/>
+            <span class="back_button-name">Назад</span>
+        </a>
+        <div class="row map__block d-flex flex-column mb-4">
+            <div class="map__block-address">Адмирала Черокова 18/1 литера А</div>
+            <div class="map__block-map" id="map">
+
+            </div>
+        </div>
+        <div class="row datepicker__block d-flex flex-column mb-4 align-items-center">
+            <div class="datepicker__block-switcher d-flex">
+                <a href="#" class="datepicker__block-switcher-prev">
+                    <img src="./svg/ArrowLeft.svg" />
+                </a>
+                <div class="datepicker__block-switcher-month mr-3 ml-3">Сентябрь 2018</div>
+                <a href="#" class="datepicker__block-switcher-next">
+                    <img src="./svg/ArrowRight.svg" />
+                </a>
+            </div>
+            <div class="datepicker__block-table">
+                <ul class="datepicker__days">
+                    <li class="datepicker__days-day">Пн</li>
+                    <li class="datepicker__days-day">Вт</li>
+                    <li class="datepicker__days-day">Ср</li>
+                    <li class="datepicker__days-day">Чт</li>
+                    <li class="datepicker__days-day">Пт</li>
+                    <li class="datepicker__days-day">Сб</li>
+                    <li class="datepicker__days-day">Вс</li>
+                </ul>
+                <ul class="datepicker__dates">
+                    <li class="datepicker__dates-date">01</li>
+                    <li class="datepicker__dates-date">02</li>
+                    <li class="datepicker__dates-date">03</li>
+                    <li class="datepicker__dates-date">04</li>
+                    <li class="datepicker__dates-date">05</li>
+                    <li class="datepicker__dates-date">06</li>
+                    <li class="datepicker__dates-date">07</li>
+                    <li class="datepicker__dates-date">08</li>
+                    <li class="datepicker__dates-date">09</li>
+                    <li class="datepicker__dates-date">10</li>
+                    <li class="datepicker__dates-date">11</li>
+                    <li class="datepicker__dates-date">12</li>
+                    <li class="datepicker__dates-date">13</li>
+                    <li class="datepicker__dates-date">14</li>
+                    <li class="datepicker__dates-date">15</li>
+                    <li class="datepicker__dates-date">16</li>
+                    <li class="datepicker__dates-date">17</li>
+                    <li class="datepicker__dates-date">18</li>
+                    <li class="datepicker__dates-date">19</li>
+                    <li class="datepicker__dates-date">20</li>
+                    <li class="datepicker__dates-date">21</li>
+                    <li class="datepicker__dates-date">22</li>
+                    <li class="datepicker__dates-date">23</li>
+                    <li class="datepicker__dates-date">24</li>
+                    <li class="datepicker__dates-date">25</li>
+                    <li class="datepicker__dates-date">26</li>
+                    <li class="datepicker__dates-date">27</li>
+                    <li class="datepicker__dates-date">28</li>
+                    <li class="datepicker__dates-date">29</li>
+                    <li class="datepicker__dates-date">30</li>
+                    <li class="datepicker__dates-date">31</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row timepicker__block d-flex flex-column">
+            <div class="timepicker__block-date mt-5 ml-3">16 сентября 2018</div>
+            <ul class="timepicker__block-timelist d-flex flex-column align-items-center mt-4">
+                <li class="row timepicker__block-time">10:00 - 14:00</li>
+                <li class="row timepicker__block-time">14:00 - 18:00</li>
+                <li class="row timepicker__block-time">18:00 - 22:00</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__services">
+        <div class="footer__cost">
+            <span class="footer__cost-price">14000-15500 рублей</span>
+            <span class="footer__cost-time">110-130 минут</span>
+        </div>
+        <a class="footer__next" href = "time.html">
+            <span class="footer__next-button">Далее</span>
+            <img src="./svg/Arrow.svg" alt="" class="footer__next-button-img">
+        </a>
+    </div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6tvQL0_7FZx6iWt-zgEWdSJlDDWYvgt8&callback=initMap">
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/main.polyfills.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

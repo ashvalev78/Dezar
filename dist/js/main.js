@@ -1,7 +1,7 @@
 /*!
  * project-name v0.0.1
  * A description for your project.
- * (c) 2018 YOUR NAME
+ * (c) 2019 YOUR NAME
  * MIT License
  * http://link-to-your-git-repo.com
  */
@@ -14,6 +14,15 @@ $backButton.click((function() {
     $loginInputForm.show();
     $hiddenButtonsBlock.hide();
 }));
+function initMap() {
+    // The location of Uluru
+    var uluru = {lat: -25.344, lng: 131.036};
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 4, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: uluru, map: map});
+  }
 var $registerButton = $('.register-btn');
 
 $registerButton.click((function() {

@@ -11,6 +11,20 @@ html {
     }
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
 body {
 	margin: 0 auto;
 	min-height: remy(320);
