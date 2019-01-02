@@ -22,7 +22,7 @@ function initMap() {
         document.getElementById('map'), {zoom: 4, center: uluru});
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: uluru, map: map});
-  }
+}
 var $registerButton = $('.register-btn');
 
 $registerButton.click((function() {
@@ -122,10 +122,13 @@ var $masterItem = $('.master__description');
 $masterItem.click((function(e) {
     $(e.currentTarget).parent().toggleClass('selected');
 }));
-// import Glide from '@glidejs/glide';
+$('.datepicker__dates-date').click((function(e) {
+    $(e.currentTarget).toggleClass('selected-date');
+}));
 
-// new Glide('.glide__track-colorize').mount();
-
+$('.timepicker__block-time').click((function(e) {
+    $(e.currentTarget).toggleClass('selected-time-visible');
+}));
 /**
  * Element.matches() polyfill (simple version)
  * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
