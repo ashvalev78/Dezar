@@ -105,7 +105,7 @@
 /* line 78, src/sass/components/services.scss */
 .service_description, .haircut_description, .care_description {
   color: #6A7F9D;
-  background: url(../svg/colorize-bg.png) no-repeat;
+  background: url(../svg/colorize-bg@2x.png) no-repeat;
   background-size: contain;
   height: remy(162);
   border-radius: remy(20);
@@ -445,27 +445,27 @@
   }
 }
 
-/* line 292, src/sass/components/services.scss */
+/* line 290, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 298, src/sass/components/services.scss */
+/* line 296, src/sass/components/services.scss */
 .master-item {
   margin-right: remy(20);
   position: relative;
 }
 
 @media (max-width: 360) {
-  /* line 298, src/sass/components/services.scss */
+  /* line 296, src/sass/components/services.scss */
   .master-item {
     height: remy(240);
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 298, src/sass/components/services.scss */
+  /* line 296, src/sass/components/services.scss */
   .master-item {
     width: remy(180);
     height: remy(240);
@@ -473,14 +473,14 @@
 }
 
 @media (min-width: 720px) {
-  /* line 298, src/sass/components/services.scss */
+  /* line 296, src/sass/components/services.scss */
   .master-item {
     height: remy(400);
     width: remy(580);
   }
 }
 
-/* line 317, src/sass/components/services.scss */
+/* line 315, src/sass/components/services.scss */
 .master__selected {
   display: none;
   top: -remy(15);
@@ -488,7 +488,7 @@
   position: absolute;
 }
 
-/* line 325, src/sass/components/services.scss */
+/* line 323, src/sass/components/services.scss */
 .popup__description {
   position: fixed;
   top: 50%;
@@ -513,19 +513,19 @@
   display: none;
 }
 
-/* line 340, src/sass/components/services.scss */
+/* line 338, src/sass/components/services.scss */
 .popup__description-heading {
   margin-top: remy(10);
   font-weight: 600;
 }
 
-/* line 345, src/sass/components/services.scss */
+/* line 343, src/sass/components/services.scss */
 .popup__description-info {
   padding: remy(20);
   margin: 0;
 }
 
-/* line 350, src/sass/components/services.scss */
+/* line 348, src/sass/components/services.scss */
 .popup__description-back {
   width: 100%;
   border-top: 1px solid grey;
@@ -534,14 +534,14 @@
   cursor: pointer;
 }
 
-/* line 359, src/sass/components/services.scss */
+/* line 357, src/sass/components/services.scss */
 .visible_popup {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-/* line 363, src/sass/components/services.scss */
+/* line 361, src/sass/components/services.scss */
 .blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -550,7 +550,7 @@
   filter: blur(5px);
 }
 
-/* line 371, src/sass/components/services.scss */
+/* line 369, src/sass/components/services.scss */
 .popup_blur {
   display: none;
   position: fixed;

@@ -16,6 +16,7 @@ $main-color: #6083BB;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
+    overflow: visible;
 }
 
 .map__block {

@@ -1034,7 +1034,7 @@ ul {
 /* line 78, src/sass/components/services.scss */
 .service_description, .haircut_description, .care_description {
   color: #6A7F9D;
-  background: url(../svg/colorize-bg.png) no-repeat;
+  background: url(../svg/colorize-bg@2x.png) no-repeat;
   background-size: contain;
   height: 10.125rem;
   border-radius: 1.25rem;
@@ -1374,27 +1374,27 @@ ul {
   }
 }
 
-/* line 292, src/sass/components/services.scss */
+/* line 290, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 298, src/sass/components/services.scss */
+/* line 296, src/sass/components/services.scss */
 .master-item {
   margin-right: 1.25rem;
   position: relative;
 }
 
 @media (max-width: 360) {
-  /* line 298, src/sass/components/services.scss */
+  /* line 296, src/sass/components/services.scss */
   .master-item {
     height: 15rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 298, src/sass/components/services.scss */
+  /* line 296, src/sass/components/services.scss */
   .master-item {
     width: 11.25rem;
     height: 15rem;
@@ -1402,14 +1402,14 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 298, src/sass/components/services.scss */
+  /* line 296, src/sass/components/services.scss */
   .master-item {
     height: 25rem;
     width: 36.25rem;
   }
 }
 
-/* line 317, src/sass/components/services.scss */
+/* line 315, src/sass/components/services.scss */
 .master__selected {
   display: none;
   top: -0.9375rem;
@@ -1417,7 +1417,7 @@ ul {
   position: absolute;
 }
 
-/* line 325, src/sass/components/services.scss */
+/* line 323, src/sass/components/services.scss */
 .popup__description {
   position: fixed;
   top: 50%;
@@ -1442,19 +1442,19 @@ ul {
   display: none;
 }
 
-/* line 340, src/sass/components/services.scss */
+/* line 338, src/sass/components/services.scss */
 .popup__description-heading {
   margin-top: 0.625rem;
   font-weight: 600;
 }
 
-/* line 345, src/sass/components/services.scss */
+/* line 343, src/sass/components/services.scss */
 .popup__description-info {
   padding: 1.25rem;
   margin: 0;
 }
 
-/* line 350, src/sass/components/services.scss */
+/* line 348, src/sass/components/services.scss */
 .popup__description-back {
   width: 100%;
   border-top: 1px solid grey;
@@ -1463,14 +1463,14 @@ ul {
   cursor: pointer;
 }
 
-/* line 359, src/sass/components/services.scss */
+/* line 357, src/sass/components/services.scss */
 .visible_popup {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-/* line 363, src/sass/components/services.scss */
+/* line 361, src/sass/components/services.scss */
 .blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -1479,7 +1479,7 @@ ul {
   filter: blur(5px);
 }
 
-/* line 371, src/sass/components/services.scss */
+/* line 369, src/sass/components/services.scss */
 .popup_blur {
   display: none;
   position: fixed;
@@ -1513,15 +1513,16 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  overflow: visible;
 }
 
-/* line 23, src/sass/components/time.scss */
+/* line 24, src/sass/components/time.scss */
 .map__block-address {
   color: grey;
 }
 
 @media (min-width: 760px) {
-  /* line 23, src/sass/components/time.scss */
+  /* line 24, src/sass/components/time.scss */
   .map__block-address {
     width: 100%;
     text-align: center;
@@ -1529,13 +1530,13 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 21, src/sass/components/time.scss */
+  /* line 22, src/sass/components/time.scss */
   .map__block {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 37, src/sass/components/time.scss */
+/* line 38, src/sass/components/time.scss */
 #map {
   width: 17.5rem;
   height: 10.625rem;
@@ -1544,27 +1545,27 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 37, src/sass/components/time.scss */
+  /* line 38, src/sass/components/time.scss */
   #map {
     width: 39.375rem;
     height: 24.0625rem;
   }
 }
 
-/* line 49, src/sass/components/time.scss */
+/* line 50, src/sass/components/time.scss */
 .timepicker__block {
   width: 100%;
   background-color: rgba(96, 131, 187, 0.1);
 }
 
-/* line 53, src/sass/components/time.scss */
+/* line 54, src/sass/components/time.scss */
 .timepicker__block-date {
   color: #BB272D;
   font-size: 1.5rem;
 }
 
 @media (min-width: 760px) {
-  /* line 53, src/sass/components/time.scss */
+  /* line 54, src/sass/components/time.scss */
   .timepicker__block-date {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1576,12 +1577,12 @@ ul {
   }
 }
 
-/* line 65, src/sass/components/time.scss */
+/* line 66, src/sass/components/time.scss */
 .timepicker__block-container {
   width: 17.5rem;
 }
 
-/* line 69, src/sass/components/time.scss */
+/* line 70, src/sass/components/time.scss */
 .timepicker__block-time {
   border-radius: 0.625rem;
   margin-bottom: 1.875rem;
@@ -1601,7 +1602,7 @@ ul {
   position: relative;
 }
 
-/* line 81, src/sass/components/time.scss */
+/* line 82, src/sass/components/time.scss */
 .timepicker__block-time .selected-time {
   display: none;
   width: 2.25rem;
@@ -1612,37 +1613,37 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 49, src/sass/components/time.scss */
+  /* line 50, src/sass/components/time.scss */
   .timepicker__block {
     width: 50%;
     background-color: rgba(0, 0, 0, 0);
   }
 }
 
-/* line 99, src/sass/components/time.scss */
+/* line 100, src/sass/components/time.scss */
 .datepicker__block-table {
   width: 18.75rem;
 }
 
-/* line 103, src/sass/components/time.scss */
+/* line 104, src/sass/components/time.scss */
 .datepicker__block-switcher {
   color: #BB272D;
 }
 
-/* line 107, src/sass/components/time.scss */
+/* line 108, src/sass/components/time.scss */
 .datepicker__block .datepicker__days {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-/* line 112, src/sass/components/time.scss */
+/* line 113, src/sass/components/time.scss */
 .datepicker__block .datepicker__days-day {
   text-align: center;
   color: rgba(96, 131, 187, 0.46);
 }
 
-/* line 118, src/sass/components/time.scss */
+/* line 119, src/sass/components/time.scss */
 .datepicker__block .datepicker__dates {
   display: grid;
   width: 100%;
@@ -1650,26 +1651,26 @@ ul {
   border-top: 1px solid #6A7F9D;
 }
 
-/* line 124, src/sass/components/time.scss */
+/* line 125, src/sass/components/time.scss */
 .datepicker__block .datepicker__dates-date {
   text-align: center;
   color: #6083BB;
   padding: 0.625rem;
 }
 
-/* line 131, src/sass/components/time.scss */
+/* line 132, src/sass/components/time.scss */
 .datepicker__block .selected-date {
   color: #BB272D;
 }
 
 @media (min-width: 760px) {
-  /* line 97, src/sass/components/time.scss */
+  /* line 98, src/sass/components/time.scss */
   .datepicker__block {
     width: 50%;
   }
 }
 
-/* line 140, src/sass/components/time.scss */
+/* line 141, src/sass/components/time.scss */
 .footer__services {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
@@ -1686,7 +1687,7 @@ ul {
   background: black;
 }
 
-/* line 151, src/sass/components/time.scss */
+/* line 152, src/sass/components/time.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1698,12 +1699,12 @@ ul {
   color: white;
 }
 
-/* line 157, src/sass/components/time.scss */
+/* line 158, src/sass/components/time.scss */
 .footer__next {
   color: #BB272D;
 }
 
-/* line 161, src/sass/components/time.scss */
+/* line 162, src/sass/components/time.scss */
 .conversion__part-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1715,7 +1716,7 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 161, src/sass/components/time.scss */
+  /* line 162, src/sass/components/time.scss */
   .conversion__part-time {
     padding-top: 1.25rem;
     width: 100%;
@@ -1730,7 +1731,7 @@ ul {
   }
 }
 
-/* line 175, src/sass/components/time.scss */
+/* line 176, src/sass/components/time.scss */
 .selected-time-visible .selected-time {
   display: block;
 }

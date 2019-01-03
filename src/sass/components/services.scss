@@ -77,7 +77,7 @@ $main-color: #6083BB;
 
 .service_description, .haircut_description, .care_description {
     color: $text-color;
-    background: url(../svg/colorize-bg.png) no-repeat;
+    background: url(../svg/colorize-bg@2x.png) no-repeat;
     background-size: contain;
     height: remy(162);
     border-radius: remy(20);
@@ -266,8 +266,6 @@ $main-color: #6083BB;
     margin-bottom: remy(20);
     cursor: pointer;
     height: remy(240);
-    
-
     background: url(../svg/master.png);
     background-size: cover;
 
