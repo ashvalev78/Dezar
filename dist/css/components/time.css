@@ -15,13 +15,6 @@
           flex: 1;
 }
 
-@media (min-width: 760px) {
-  /* line 5, src/sass/components/time.scss */
-  .wrapper_time {
-    margin-top: remy(40);
-  }
-}
-
 /* line 15, src/sass/components/time.scss */
 .time__body {
   min-height: 100vh;

@@ -1,0 +1,178 @@
+$secondary-color: #BB272D;
+$text-color: #6A7F9D;
+$main-color: #6083BB;
+
+.wrapper_time {
+    padding: 0;
+    height: auto;
+    flex: 1;
+
+    // @media (min-width: 760px) {
+    //     margin-top: remy(40);
+    // }
+}
+
+.time__body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.map__block {
+
+    &-address {
+        color: grey;
+
+        @media (min-width: 760px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 760px) {
+        margin-bottom: remy(60);
+    }
+}
+
+#map {
+    width: remy(280);
+    height: remy(170);
+    background-color: $text-color;
+    border-radius: remy(10);
+
+    @media (min-width: 760px) {
+        width: remy(630);
+        height: remy(385);
+    }
+}
+
+.timepicker__block {
+    width: 100%;
+    background-color: rgba(96, 131, 187, 0.1);
+    
+    &-date {
+        color: $secondary-color;
+        font-size: remy(24);
+
+        @media (min-width: 760px) {
+            display: flex;
+            width: 100%;
+            align-self: flex-start;
+            margin-left: 0 !important;
+        }
+    }
+
+    &-container {
+        width: remy(280);
+    }
+
+    &-time {
+        border-radius: remy(10);
+        margin-bottom: remy(30);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color;
+        width: remy(280);
+        height: remy(35);
+        position: relative;
+
+        .selected-time {
+            display: none;
+            width: remy(36);
+            height: remy(36);
+            position: absolute;
+            top: - 50%;
+            right: - remy(10);
+        }
+    }
+
+    @media (min-width: 760px) {
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.datepicker__block {
+
+    &-table {
+        width: remy(300);
+    }
+
+    &-switcher {
+        color: $secondary-color;
+    }
+
+    .datepicker__days {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        &-day {
+            text-align: center;
+            color: rgba(96, 131, 187, 0.46);
+        }
+    }
+
+    .datepicker__dates {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(7, 1fr);
+        border-top: 1px solid $text-color;
+
+        &-date {
+            text-align: center;
+            color: $main-color;
+            padding: remy(10);
+        }
+    }
+
+    .selected-date {
+        color: $secondary-color;
+    }
+
+    @media (min-width: 760px) {
+        width: 50%;
+    }
+}
+
+.footer__services {
+    margin-top: remy(30);
+    margin-bottom: remy(30);
+    height: remy(60);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+}
+
+.footer__cost {
+    display: flex;
+    flex-flow: column;
+    color: white;
+}
+
+.footer__next {
+    color: $secondary-color;
+}
+
+.conversion__part-time {
+    display: flex;
+    flex-flow: column;
+
+    @media (min-width: 760px) {
+        padding-top: remy(20);
+        width: 100%;
+        background-color: rgba(96, 131, 187, 0.1);
+        flex-flow: row;
+        justify-content: center;
+    }
+}
+
+.selected-time-visible {
+    .selected-time {
+        display: block;
+    }
+}

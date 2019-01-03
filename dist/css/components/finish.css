@@ -1,0 +1,135 @@
+/*!
+ * project-name v0.0.1
+ * A description for your project.
+ * (c) 2019 YOUR NAME
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+/* line 1, src/sass/components/finish.scss */
+.wrapper_finish {
+  height: auto !important;
+}
+
+/* line 5, src/sass/components/finish.scss */
+.finish__body {
+  overflow: visible;
+  font-size: 16px;
+}
+
+/* line 10, src/sass/components/finish.scss */
+.services__list-item-name {
+  position: relative;
+}
+
+/* line 13, src/sass/components/finish.scss */
+.services__list-item-name:before {
+  position: absolute;
+  top: 50%;
+  left: -remy(10);
+  content: "";
+  width: remy(8);
+  height: remy(8);
+  border-radius: 50%;
+  background-color: #BB272D;
+}
+
+/* line 25, src/sass/components/finish.scss */
+.services__list-item {
+  margin-top: remy(30);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 30, src/sass/components/finish.scss */
+.services__list-item-name {
+  width: remy(100);
+  height: remy(20);
+}
+
+/* line 35, src/sass/components/finish.scss */
+.services__list-item-descr {
+  margin-top: remy(10);
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 42, src/sass/components/finish.scss */
+.services__list-item-descr-cost {
+  margin-top: remy(5);
+}
+
+/* line 48, src/sass/components/finish.scss */
+.finish__body {
+  color: grey;
+}
+
+/* line 52, src/sass/components/finish.scss */
+.finish__services-title {
+  font-size: 18px;
+}
+
+/* line 56, src/sass/components/finish.scss */
+.finish__accept, .finish__repeat {
+  color: #BB272D;
+}
+
+/* line 60, src/sass/components/finish.scss */
+.finish__cost, .finish__date {
+  color: #6083BB;
+  font-size: remy(18);
+}
+
+/* line 69, src/sass/components/finish.scss */
+.finish__master-title {
+  font-size: 18px;
+}
+
+/* line 73, src/sass/components/finish.scss */
+.finish__master-name {
+  margin-top: remy(15);
+  position: relative;
+}
+
+/* line 76, src/sass/components/finish.scss */
+.finish__master-name:before {
+  position: absolute;
+  top: 30%;
+  left: -remy(10);
+  content: "";
+  width: remy(8);
+  height: remy(8);
+  border-radius: 50%;
+  background-color: #BB272D;
+}
+
+/* line 89, src/sass/components/finish.scss */
+.finish__phone-number {
+  color: white;
+}
+
+/* line 91, src/sass/components/finish.scss */
+.finish__phone-number .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

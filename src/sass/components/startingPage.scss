@@ -1,0 +1,257 @@
+.main_wrapper {
+    height: 100vh;
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.bg-container {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    
+}
+
+.social-icon {
+    height: remy(29);
+}
+
+.logo_part {
+    min-height: remy(150);
+    position: relative;
+}
+
+#logo-img {
+    position: absolute;
+    top: remy(50);
+
+    @media (max-width: 400px) {
+        top: remy(25);
+    }
+}
+
+.enter-span {
+    display: flex;
+    align-items: center;
+    margin-right: remy(10);
+}
+
+.logo_part {
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 450px) {
+        height: 25%;
+    }
+}
+
+.bottom_part {
+    flex: 1;
+    min-height: remy(400);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    @media (min-width: 750px) {
+        margin-bottom: remy(20);
+    }
+}
+
+.input, .vk-enter, .inst-enter {
+    color: white;
+    background-color: #6083BB;
+    border-style: none;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover {
+        background: #6083EE;
+    }
+
+    &::placeholder {
+        color: white;
+    }
+}
+
+.inst-enter, .vk-enter {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_wrapper {
+    z-index: 10000;
+    border-style: none;
+    border-radius: remy(12);
+    padding: 1px;
+    border: solid #6083BB 1px;
+    height: remy(45);
+    width: remy(334);
+    margin-bottom: remy(10);
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        height: remy(50);
+        width: remy(400);
+    }
+}
+
+.enter-btn {
+    z-index: 10000;
+    color: red;
+    align-self: flex-end;
+    width: auto;
+    &:hover {
+        color: #C1272D;
+    }
+}
+
+.register-btn {
+    z-index: 10000;
+    color: red !important;
+    &:hover {
+        color: #C1272D !important;
+        text-decoration: underline !important;
+    }
+}
+
+#back_button {
+    color: red;
+    margin-top: remy(10);
+    cursor: pointer;
+
+    &:hover {
+        color: #C1272D;
+        text-decoration: underline;
+    }
+}
+
+.input-form {
+    display: flex;
+    min-height: remy(160);
+    flex-flow: column;
+
+    @media (max-width: 400px) {
+        margin-bottom: 0;
+    }
+}
+
+.hidden_buttons_block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    display: none;
+    z-index: 10000;
+}
+
+.socials-form {
+    display:flex;
+    min-height: remy(160);
+    flex-flow:column;
+}
+
+.license-agreement-block {
+    padding: remy(20);
+    border-radius: remy(20);
+    display: flex;
+    width: remy(334);
+
+    height: remy(100);
+    background-color: rgba(255, 255, 255, 0.5);
+
+    width: 100%;
+
+    @media (max-width: 400px) {
+        padding: remy(10);
+    }
+
+    &-wrapper {
+        height: remy(105);
+        width: remy(340);
+        border-radius: remy(20);
+        margin-bottom: remy(10);
+        margin-top: remy(20);
+        padding: remy(1);
+
+        border: 1px solid rgba(255, 255, 255, 0.5);
+
+        @media (max-width: 400px) {
+            margin-top: remy(40);
+        }
+    }
+}
+
+.agreement_block_rules {
+    display: flex;
+    flex-flow: column;
+}
+
+.license_text {
+    color: #C1272D;
+    margin-bottom: remy(5);
+}
+
+.switch {
+    position: relative;
+    width: 47px;
+    height: 27px;
+    margin-bottom: remy(15);
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 2px;
+    height: remy(23);
+    width: remy(23);
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.agreement_input:checked + .slider {
+    background-color: #C1272D;
+}
+  
+.agreement_input:focus + .slider {
+    box-shadow: 0 0 0 #C1272D;
+}
+
+.agreement_input:checked + .slider:before {
+    -webkit-transform: translateX(remy(20));
+    -ms-transform: translateX(remy(20));
+    transform: translateX(remy(20));
+}
+
+.slider.round {
+    border-radius: remy(32);
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}

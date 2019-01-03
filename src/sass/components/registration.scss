@@ -1,0 +1,231 @@
+ul {
+    list-style-type: none;
+}
+
+.main_wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    @media (min-width: 750px) and (max-width: 1019px) {
+        padding: remy(40) remy(50) 0  remy(50);
+    }
+}
+
+.master {
+    align-self: flex-start;
+    margin-top: remy(18);
+    margin-bottom: remy(15);
+    margin-left: remy(40);
+
+    @media (min-width: 1020px) {
+        align-self: unset;
+        margin-right: remy(500);
+    }
+
+    &_phone {
+        font-size: 12px;
+        color: #BB272D;
+    }
+
+    &_name {
+        font-size: remy(18);
+    }
+}
+
+.register_button-name {
+    position: relative;
+    width: remy(330);
+    background: url(../svg/Image4.png) center;
+    background-size: cover;
+    height: remy(65);
+    color: white !important;
+    margin-bottom: remy(15);
+    border-radius: remy(10);
+    margin-bottom: remy(25);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    @media (min-width: 750px) and (max-width: 1019px) {
+        width: remy(640);
+        margin-bottom: remy(30);
+    }
+
+    @media (min-width: 1020px) {
+        width: remy(680);
+        margin-bottom: remy(35);
+        font-weight: bold;
+    }
+}
+
+.registrations_list_wrapper {
+    @media (min-width: 1020px) {
+        column-count: 2;
+    }
+    width: 100%;
+    
+    overflow-y: scroll;
+}
+
+.convertion_part {
+    @media (min-width: 750px) and (max-width: 1019px) {
+        display: flex;
+        flex-flow: row;
+        width: remy(650);
+        justify-content: space-between;
+    }
+
+    &-cashback {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        @media (min-width: 1020px) {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            width: 100%;
+            flex: 1;
+            align-items: center;
+            font-weight: bold;
+        }
+    }
+}
+
+.master_photo {
+    width: remy(276);
+}
+
+.registration-item {
+    display: flex;
+}
+
+.registration_time, .registration_date {
+    color: #939393
+}
+
+.rub_img {
+    width: remy(12);
+    height: remy(15);
+}
+
+.client_registrations {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: remy(300);
+    height: remy(201);
+    border: solid 1px #6083BB;
+    border-radius: remy(15);
+    padding: remy(10) remy(15);
+    margin-bottom: remy(25);
+
+
+    @media (min-width: 750px) and (max-width: 1019px) {
+        height: remy(230);
+        width: remy(280);
+    }
+
+    @media (min-width: 1020px) {
+        width: remy(650);
+        height: remy(250);
+        margin-bottom: remy(35);
+    }
+}
+
+.registration_title {
+    color: #BB272D;
+    font-size: remy(17);
+    margin-bottom: remy(10);
+}
+
+.registrations_table {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.registration-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.cashback_block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: remy(300);
+    border: solid 1px #6083BB;
+    border-radius: remy(15);
+    margin-bottom: remy(20);
+    padding: remy(10) remy(15);
+
+    @media (min-width: 750px) and (max-width: 1019px) {
+        height: remy(230);
+        width: remy(280);
+    }
+
+    @media (min-width: 1020px) {
+        width: remy(650);
+        height: remy(250);
+        margin-bottom: remy(35);
+        font-weight: bold;
+    }
+}
+
+.cashback_title {
+    color: #BB272D;
+    margin-bottom: remy(19);
+
+    @media (min-width: 750px) and (max-width: 1019px) {
+        margin-bottom: remy(30);
+    }
+
+    @media (min-width: 1020px) {
+        margin-top: remy(20);
+    }
+}
+
+.cashback_balance {
+    color: #BB272D;
+    font-size: remy(21);
+    margin-bottom: remy(20);
+    @media (min-width: 1020px) {
+        width: remy(650);
+        height: remy(240);
+        flex:1;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 750px) and (max-width: 1019px) {
+        margin-bottom: remy(30);
+    }
+}
+
+.cashback_description {
+    text-align: center;
+    font-size: remy(14);
+    line-height: 1;
+    @media (min-width: 1020px) {
+        flex:1;
+        height: 100%;
+        font-size: remy(16);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.exit_button {
+    color: #BB272D;
+    position: absolute;
+    bottom: remy(40);
+}
