@@ -1,10 +1,22 @@
 .wrapper_finish {
     height: auto !important;
+
+    @media (min-width: 800px) {
+        width: remy(768);
+    }
 }
 
 .finish__body {
+    position: relative;
     overflow: visible;
     font-size: 16px;
+    padding-top: remy(40);
+}
+
+.back_button-finish {
+    position: absolute;
+    left: remy(10);
+    top: remy(10);
 }
 
 .services__list-item-name {
@@ -62,9 +74,7 @@
     font-size: remy(18);
 }
 
-.finish__master {
-    // height: remy(50);
-    
+.finish__master {    
 
     &-title {
         font-size: 18px;
@@ -92,5 +102,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.finish__top-conversion-part, .finish__bottom-conversion-part {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin-top: remy(20);
+
+    @media (min-width: 760px) {
+        flex-flow: row;
+        align-items: center;
+    }
+}
+
+.finish__bottom-overall-block, .finish__top-additional-block {
+    @media (min-width: 760px) {
+        width: 50%;
     }
 }

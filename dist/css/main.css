@@ -1740,18 +1740,34 @@ ul {
   height: auto !important;
 }
 
-/* line 5, src/sass/components/finish.scss */
-.finish__body {
-  overflow: visible;
-  font-size: 16px;
+@media (min-width: 800px) {
+  /* line 1, src/sass/components/finish.scss */
+  .wrapper_finish {
+    width: 48rem;
+  }
 }
 
-/* line 10, src/sass/components/finish.scss */
+/* line 9, src/sass/components/finish.scss */
+.finish__body {
+  position: relative;
+  overflow: visible;
+  font-size: 16px;
+  padding-top: 2.5rem;
+}
+
+/* line 16, src/sass/components/finish.scss */
+.back_button-finish {
+  position: absolute;
+  left: 0.625rem;
+  top: 0.625rem;
+}
+
+/* line 22, src/sass/components/finish.scss */
 .services__list-item-name {
   position: relative;
 }
 
-/* line 13, src/sass/components/finish.scss */
+/* line 25, src/sass/components/finish.scss */
 .services__list-item-name:before {
   position: absolute;
   top: 50%;
@@ -1763,7 +1779,7 @@ ul {
   background-color: #BB272D;
 }
 
-/* line 25, src/sass/components/finish.scss */
+/* line 37, src/sass/components/finish.scss */
 .services__list-item {
   margin-top: 1.875rem;
   display: -webkit-box;
@@ -1774,13 +1790,13 @@ ul {
           justify-content: space-between;
 }
 
-/* line 30, src/sass/components/finish.scss */
+/* line 42, src/sass/components/finish.scss */
 .services__list-item-name {
   width: 6.25rem;
   height: 1.25rem;
 }
 
-/* line 35, src/sass/components/finish.scss */
+/* line 47, src/sass/components/finish.scss */
 .services__list-item-descr {
   margin-top: 0.625rem;
   width: 50%;
@@ -1796,44 +1812,44 @@ ul {
           align-items: flex-start;
 }
 
-/* line 42, src/sass/components/finish.scss */
+/* line 54, src/sass/components/finish.scss */
 .services__list-item-descr-cost {
   margin-top: 0.3125rem;
 }
 
-/* line 48, src/sass/components/finish.scss */
+/* line 60, src/sass/components/finish.scss */
 .finish__body {
   color: grey;
 }
 
-/* line 52, src/sass/components/finish.scss */
+/* line 64, src/sass/components/finish.scss */
 .finish__services-title {
   font-size: 18px;
 }
 
-/* line 56, src/sass/components/finish.scss */
+/* line 68, src/sass/components/finish.scss */
 .finish__accept, .finish__repeat {
   color: #BB272D;
 }
 
-/* line 60, src/sass/components/finish.scss */
+/* line 72, src/sass/components/finish.scss */
 .finish__cost, .finish__date {
   color: #6083BB;
   font-size: 1.125rem;
 }
 
-/* line 69, src/sass/components/finish.scss */
+/* line 79, src/sass/components/finish.scss */
 .finish__master-title {
   font-size: 18px;
 }
 
-/* line 73, src/sass/components/finish.scss */
+/* line 83, src/sass/components/finish.scss */
 .finish__master-name {
   margin-top: 0.9375rem;
   position: relative;
 }
 
-/* line 76, src/sass/components/finish.scss */
+/* line 86, src/sass/components/finish.scss */
 .finish__master-name:before {
   position: absolute;
   top: 30%;
@@ -1845,12 +1861,12 @@ ul {
   background-color: #BB272D;
 }
 
-/* line 89, src/sass/components/finish.scss */
+/* line 99, src/sass/components/finish.scss */
 .finish__phone-number {
   color: white;
 }
 
-/* line 91, src/sass/components/finish.scss */
+/* line 101, src/sass/components/finish.scss */
 .finish__phone-number .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1861,4 +1877,37 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/* line 108, src/sass/components/finish.scss */
+.finish__top-conversion-part, .finish__bottom-conversion-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 760px) {
+  /* line 108, src/sass/components/finish.scss */
+  .finish__top-conversion-part, .finish__bottom-conversion-part {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 760px) {
+  /* line 120, src/sass/components/finish.scss */
+  .finish__bottom-overall-block, .finish__top-additional-block {
+    width: 50%;
+  }
 }
