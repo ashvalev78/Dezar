@@ -19,6 +19,12 @@
     top: remy(10);
 }
 
+.finish__services, .finish__additional-services {
+    @media (min-width: 760px) {
+        flex: 1;
+    }
+}
+
 .services__list-item-name {
     position: relative;
 
@@ -116,6 +122,10 @@
         align-items: center;
         margin-top: remy(100);
     }
+}
+
+.finish__bottom-conversion-part {
+    margin-bottom: remy(50);
 }
 
 .finish__bottom-overall-block, .finish__top-additional-block {

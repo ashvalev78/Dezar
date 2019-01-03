@@ -33,12 +33,21 @@
   top: remy(10);
 }
 
-/* line 22, src/sass/components/finish.scss */
+@media (min-width: 760px) {
+  /* line 22, src/sass/components/finish.scss */
+  .finish__services, .finish__additional-services {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+/* line 28, src/sass/components/finish.scss */
 .services__list-item-name {
   position: relative;
 }
 
-/* line 25, src/sass/components/finish.scss */
+/* line 31, src/sass/components/finish.scss */
 .services__list-item-name:before {
   position: absolute;
   top: 50%;
@@ -50,7 +59,7 @@
   background-color: #BB272D;
 }
 
-/* line 37, src/sass/components/finish.scss */
+/* line 43, src/sass/components/finish.scss */
 .services__list-item {
   margin-top: remy(30);
   display: -webkit-box;
@@ -61,13 +70,13 @@
           justify-content: space-between;
 }
 
-/* line 42, src/sass/components/finish.scss */
+/* line 48, src/sass/components/finish.scss */
 .services__list-item-name {
   width: remy(100);
   height: remy(20);
 }
 
-/* line 47, src/sass/components/finish.scss */
+/* line 53, src/sass/components/finish.scss */
 .services__list-item-descr {
   margin-top: remy(10);
   width: 50%;
@@ -83,44 +92,44 @@
           align-items: flex-start;
 }
 
-/* line 54, src/sass/components/finish.scss */
+/* line 60, src/sass/components/finish.scss */
 .services__list-item-descr-cost {
   margin-top: remy(5);
 }
 
-/* line 60, src/sass/components/finish.scss */
+/* line 66, src/sass/components/finish.scss */
 .finish__body {
   color: grey;
 }
 
-/* line 64, src/sass/components/finish.scss */
+/* line 70, src/sass/components/finish.scss */
 .finish__services-title {
   font-size: 18px;
 }
 
-/* line 68, src/sass/components/finish.scss */
+/* line 74, src/sass/components/finish.scss */
 .finish__accept, .finish__repeat {
   color: #BB272D;
 }
 
-/* line 72, src/sass/components/finish.scss */
+/* line 78, src/sass/components/finish.scss */
 .finish__cost, .finish__date {
   color: #6083BB;
   font-size: remy(18);
 }
 
-/* line 79, src/sass/components/finish.scss */
+/* line 85, src/sass/components/finish.scss */
 .finish__master-title {
   font-size: 18px;
 }
 
-/* line 83, src/sass/components/finish.scss */
+/* line 89, src/sass/components/finish.scss */
 .finish__master-name {
   margin-top: remy(15);
   position: relative;
 }
 
-/* line 86, src/sass/components/finish.scss */
+/* line 92, src/sass/components/finish.scss */
 .finish__master-name:before {
   position: absolute;
   top: 30%;
@@ -132,12 +141,12 @@
   background-color: #BB272D;
 }
 
-/* line 99, src/sass/components/finish.scss */
+/* line 105, src/sass/components/finish.scss */
 .finish__phone-number {
   color: white;
 }
 
-/* line 101, src/sass/components/finish.scss */
+/* line 107, src/sass/components/finish.scss */
 .finish__phone-number .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,7 +159,7 @@
           justify-content: center;
 }
 
-/* line 108, src/sass/components/finish.scss */
+/* line 114, src/sass/components/finish.scss */
 .finish__top-conversion-part, .finish__bottom-conversion-part {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,7 +173,7 @@
 }
 
 @media (min-width: 760px) {
-  /* line 108, src/sass/components/finish.scss */
+  /* line 114, src/sass/components/finish.scss */
   .finish__top-conversion-part, .finish__bottom-conversion-part {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -177,8 +186,13 @@
   }
 }
 
+/* line 127, src/sass/components/finish.scss */
+.finish__bottom-conversion-part {
+  margin-bottom: remy(50);
+}
+
 @media (min-width: 760px) {
-  /* line 121, src/sass/components/finish.scss */
+  /* line 131, src/sass/components/finish.scss */
   .finish__bottom-overall-block, .finish__top-additional-block {
     width: 50%;
   }
