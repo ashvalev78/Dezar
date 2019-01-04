@@ -162,10 +162,10 @@ $main-color: #6083BB;
 .conversion__part-time {
     display: flex;
     flex-flow: column;
+    width: 100%;
 
     @media (min-width: 760px) {
         padding-top: remy(20);
-        width: 100%;
         background-color: rgba(96, 131, 187, 0.1);
         flex-flow: row;
         justify-content: center;

@@ -1935,13 +1935,13 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  width: 100%;
 }
 
 @media (min-width: 760px) {
   /* line 162, src/sass/components/time.scss */
   .conversion__part-time {
     padding-top: 1.25rem;
-    width: 100%;
     background-color: rgba(96, 131, 187, 0.1);
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
