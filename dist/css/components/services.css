@@ -67,7 +67,7 @@
 
 /* line 52, src/sass/components/services.scss */
 .colorize-item, .haircut-item, .care-item {
-  margin-right: 5%;
+  margin-right: remy(30);
   display: inline-block;
   position: relative;
 }
@@ -125,7 +125,6 @@
 @media (min-width: 360px) and (max-width: 500px) {
   /* line 78, src/sass/components/services.scss */
   .service_description, .haircut_description, .care_description {
-    width: remy(360);
     height: remy(220);
   }
 }
@@ -134,13 +133,12 @@
   /* line 78, src/sass/components/services.scss */
   .service_description, .haircut_description, .care_description {
     height: remy(400);
-    width: remy(580);
     display: block;
   }
 }
 
 @media (max-width: 720px) {
-  /* line 102, src/sass/components/services.scss */
+  /* line 100, src/sass/components/services.scss */
   .service-group-part {
     height: 50%;
     display: -webkit-box;
@@ -155,7 +153,7 @@
   }
 }
 
-/* line 111, src/sass/components/services.scss */
+/* line 109, src/sass/components/services.scss */
 .service__description-small {
   height: 100%;
   width: 50%;
@@ -173,7 +171,7 @@
 }
 
 @media (min-width: 720px) {
-  /* line 111, src/sass/components/services.scss */
+  /* line 109, src/sass/components/services.scss */
   .service__description-small {
     height: 20%;
     -ms-flex-item-align: start;
@@ -195,31 +193,31 @@
 }
 
 @media (min-width: 720px) {
-  /* line 130, src/sass/components/services.scss */
+  /* line 128, src/sass/components/services.scss */
   .service_name {
     width: 50%;
   }
 }
 
-/* line 136, src/sass/components/services.scss */
+/* line 134, src/sass/components/services.scss */
 .service_time {
   margin-bottom: remy(10);
 }
 
-/* line 140, src/sass/components/services.scss */
+/* line 138, src/sass/components/services.scss */
 .service__description-full {
   margin-left: remy(25);
   width: 50%;
 }
 
 @media (max-width: 720px) {
-  /* line 140, src/sass/components/services.scss */
+  /* line 138, src/sass/components/services.scss */
   .service__description-full {
     display: none;
   }
 }
 
-/* line 149, src/sass/components/services.scss */
+/* line 147, src/sass/components/services.scss */
 .service_wrapper {
   width: 100%;
   height: remy(30);
@@ -236,18 +234,18 @@
 }
 
 @media (min-width: 720px) {
-  /* line 149, src/sass/components/services.scss */
+  /* line 147, src/sass/components/services.scss */
   .service_wrapper {
     display: none;
   }
 }
 
-/* line 162, src/sass/components/services.scss */
+/* line 160, src/sass/components/services.scss */
 .services__body {
   overflow-y: scroll;
 }
 
-/* line 166, src/sass/components/services.scss */
+/* line 164, src/sass/components/services.scss */
 .wrapper_services {
   height: auto;
   display: -webkit-box;
@@ -262,7 +260,7 @@
           justify-content: center;
 }
 
-/* line 173, src/sass/components/services.scss */
+/* line 171, src/sass/components/services.scss */
 .slider_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -271,7 +269,7 @@
   padding: 0;
 }
 
-/* line 179, src/sass/components/services.scss */
+/* line 177, src/sass/components/services.scss */
 .footer__services {
   margin-top: remy(30);
   height: remy(60);
@@ -287,7 +285,7 @@
   background: black;
 }
 
-/* line 189, src/sass/components/services.scss */
+/* line 187, src/sass/components/services.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -299,12 +297,12 @@
   color: white;
 }
 
-/* line 195, src/sass/components/services.scss */
+/* line 193, src/sass/components/services.scss */
 .footer__next {
   color: #BB272D;
 }
 
-/* line 199, src/sass/components/services.scss */
+/* line 197, src/sass/components/services.scss */
 .slider_master {
   width: 100%;
   overflow-x: scroll;
@@ -312,40 +310,40 @@
 }
 
 @media (min-width: 320px) {
-  /* line 199, src/sass/components/services.scss */
+  /* line 197, src/sass/components/services.scss */
   .slider_master {
     height: remy(360);
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 199, src/sass/components/services.scss */
+  /* line 197, src/sass/components/services.scss */
   .slider_master {
     height: remy(400);
   }
 }
 
 @media (min-width: 720px) {
-  /* line 199, src/sass/components/services.scss */
+  /* line 197, src/sass/components/services.scss */
   .slider_master {
     height: remy(550);
   }
 }
 
 @media (min-width: 770px) {
-  /* line 199, src/sass/components/services.scss */
+  /* line 197, src/sass/components/services.scss */
   .slider_master {
     width: remy(800);
   }
 }
 
-/* line 221, src/sass/components/services.scss */
+/* line 219, src/sass/components/services.scss */
 .slider-master {
   height: remy(300);
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 221, src/sass/components/services.scss */
+  /* line 219, src/sass/components/services.scss */
   .slider-master {
     width: remy(180);
     height: remy(280);
@@ -353,14 +351,14 @@
 }
 
 @media (min-width: 720px) {
-  /* line 221, src/sass/components/services.scss */
+  /* line 219, src/sass/components/services.scss */
   .slider-master {
     height: remy(400);
     width: remy(580);
   }
 }
 
-/* line 235, src/sass/components/services.scss */
+/* line 233, src/sass/components/services.scss */
 .master_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -370,7 +368,7 @@
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 235, src/sass/components/services.scss */
+  /* line 233, src/sass/components/services.scss */
   .master_list {
     width: remy(180);
     height: remy(280);
@@ -378,14 +376,14 @@
 }
 
 @media (min-width: 720px) {
-  /* line 235, src/sass/components/services.scss */
+  /* line 233, src/sass/components/services.scss */
   .master_list {
     height: remy(400);
     width: remy(580);
   }
 }
 
-/* line 251, src/sass/components/services.scss */
+/* line 249, src/sass/components/services.scss */
 .master_wrapper {
   width: 100%;
   height: remy(30);
@@ -402,7 +400,7 @@
   cursor: pointer;
 }
 
-/* line 261, src/sass/components/services.scss */
+/* line 259, src/sass/components/services.scss */
 .master__description {
   width: remy(180);
   padding-top: 10%;
@@ -416,14 +414,14 @@
 }
 
 @media (max-width: 360) {
-  /* line 261, src/sass/components/services.scss */
+  /* line 259, src/sass/components/services.scss */
   .master__description {
     height: remy(240);
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 261, src/sass/components/services.scss */
+  /* line 259, src/sass/components/services.scss */
   .master__description {
     width: remy(180);
     height: remy(240);
@@ -431,7 +429,7 @@
 }
 
 @media (min-width: 720px) {
-  /* line 261, src/sass/components/services.scss */
+  /* line 259, src/sass/components/services.scss */
   .master__description {
     height: remy(400);
     width: remy(313);
@@ -439,33 +437,33 @@
 }
 
 @media (max-width: 360) {
-  /* line 261, src/sass/components/services.scss */
+  /* line 259, src/sass/components/services.scss */
   .master__description {
     height: remy(200);
   }
 }
 
-/* line 290, src/sass/components/services.scss */
+/* line 288, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 296, src/sass/components/services.scss */
+/* line 294, src/sass/components/services.scss */
 .master-item {
   margin-right: remy(20);
   position: relative;
 }
 
 @media (max-width: 360) {
-  /* line 296, src/sass/components/services.scss */
+  /* line 294, src/sass/components/services.scss */
   .master-item {
     height: remy(240);
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 296, src/sass/components/services.scss */
+  /* line 294, src/sass/components/services.scss */
   .master-item {
     width: remy(180);
     height: remy(240);
@@ -473,14 +471,14 @@
 }
 
 @media (min-width: 720px) {
-  /* line 296, src/sass/components/services.scss */
+  /* line 294, src/sass/components/services.scss */
   .master-item {
     height: remy(400);
     width: remy(580);
   }
 }
 
-/* line 315, src/sass/components/services.scss */
+/* line 313, src/sass/components/services.scss */
 .master__selected {
   display: none;
   top: -remy(15);
@@ -488,7 +486,7 @@
   position: absolute;
 }
 
-/* line 323, src/sass/components/services.scss */
+/* line 321, src/sass/components/services.scss */
 .popup__description {
   position: fixed;
   top: 50%;
@@ -513,19 +511,19 @@
   display: none;
 }
 
-/* line 338, src/sass/components/services.scss */
+/* line 336, src/sass/components/services.scss */
 .popup__description-heading {
   margin-top: remy(10);
   font-weight: 600;
 }
 
-/* line 343, src/sass/components/services.scss */
+/* line 341, src/sass/components/services.scss */
 .popup__description-info {
   padding: remy(20);
   margin: 0;
 }
 
-/* line 348, src/sass/components/services.scss */
+/* line 346, src/sass/components/services.scss */
 .popup__description-back {
   width: 100%;
   border-top: 1px solid grey;
@@ -534,14 +532,14 @@
   cursor: pointer;
 }
 
-/* line 357, src/sass/components/services.scss */
+/* line 355, src/sass/components/services.scss */
 .visible_popup {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-/* line 361, src/sass/components/services.scss */
+/* line 359, src/sass/components/services.scss */
 .blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -550,7 +548,7 @@
   filter: blur(5px);
 }
 
-/* line 369, src/sass/components/services.scss */
+/* line 367, src/sass/components/services.scss */
 .popup_blur {
   display: none;
   position: fixed;
@@ -565,7 +563,7 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 382, src/sass/components/services.scss */
+/* line 380, src/sass/components/services.scss */
 .master__popup-close-button {
   cursor: pointer;
   position: absolute;
@@ -576,12 +574,12 @@
   opacity: 0.7;
 }
 
-/* line 391, src/sass/components/services.scss */
+/* line 389, src/sass/components/services.scss */
 .master__popup-close-button:hover {
   opacity: 1;
 }
 
-/* line 394, src/sass/components/services.scss */
+/* line 392, src/sass/components/services.scss */
 .master__popup-close-button:before, .master__popup-close-button:after {
   position: absolute;
   left: 15px;
@@ -591,19 +589,19 @@
   background-color: #6083BB;
 }
 
-/* line 402, src/sass/components/services.scss */
+/* line 400, src/sass/components/services.scss */
 .master__popup-close-button:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-/* line 405, src/sass/components/services.scss */
+/* line 403, src/sass/components/services.scss */
 .master__popup-close-button:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-/* line 409, src/sass/components/services.scss */
+/* line 407, src/sass/components/services.scss */
 .master__popup {
   position: fixed;
   top: 50%;
@@ -628,14 +626,14 @@
 }
 
 @media (min-width: 760px) {
-  /* line 409, src/sass/components/services.scss */
+  /* line 407, src/sass/components/services.scss */
   .master__popup {
     width: remy(540);
     height: remy(700);
   }
 }
 
-/* line 430, src/sass/components/services.scss */
+/* line 428, src/sass/components/services.scss */
 .master__popup-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,7 +644,7 @@
           flex-flow: column;
 }
 
-/* line 434, src/sass/components/services.scss */
+/* line 432, src/sass/components/services.scss */
 .master__popup-head .master__descr {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -659,18 +657,18 @@
   margin-bottom: remy(10);
 }
 
-/* line 440, src/sass/components/services.scss */
+/* line 438, src/sass/components/services.scss */
 .master__popup-head .master__descr-name {
   font-weight: 700;
 }
 
-/* line 444, src/sass/components/services.scss */
+/* line 442, src/sass/components/services.scss */
 .master__popup-head .master__descr-position {
   color: #BB272D;
   font-size: 12px;
 }
 
-/* line 450, src/sass/components/services.scss */
+/* line 448, src/sass/components/services.scss */
 .master__popup-head .master__photo {
   width: 100%;
   height: remy(220);
@@ -678,13 +676,13 @@
 }
 
 @media (min-width: 760px) {
-  /* line 450, src/sass/components/services.scss */
+  /* line 448, src/sass/components/services.scss */
   .master__popup-head .master__photo {
     height: remy(400);
   }
 }
 
-/* line 459, src/sass/components/services.scss */
+/* line 457, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter {
   position: absolute;
   bottom: -remy(20);
@@ -708,24 +706,24 @@
           justify-content: center;
 }
 
-/* line 472, src/sass/components/services.scss */
+/* line 470, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter-number {
   font-size: 30px;
 }
 
-/* line 476, src/sass/components/services.scss */
+/* line 474, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter-name {
   font-size: 12px;
   margin-top: -8px;
 }
 
-/* line 484, src/sass/components/services.scss */
+/* line 482, src/sass/components/services.scss */
 .master__popup__feedback-list {
   margin-top: remy(30);
   padding: remy(15);
 }
 
-/* line 489, src/sass/components/services.scss */
+/* line 487, src/sass/components/services.scss */
 .master__popup__feedback-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,7 +736,7 @@
   border-bottom: 2px solid #6083BB;
 }
 
-/* line 495, src/sass/components/services.scss */
+/* line 493, src/sass/components/services.scss */
 .master__popup__feedback-item .feedback__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -746,7 +744,7 @@
   margin-bottom: remy(10);
 }
 
-/* line 499, src/sass/components/services.scss */
+/* line 497, src/sass/components/services.scss */
 .master__popup__feedback-item .feedback__heading .feedback__name {
   color: #BB272D;
   font-weight: 600;

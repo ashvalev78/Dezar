@@ -60,7 +60,7 @@ $main-color: #6083BB;
         height: remy(220);
     }
     
-    margin-right: 5%;
+    margin-right: remy(30);
     display: inline-block;
     position: relative;
 
@@ -88,13 +88,11 @@ $main-color: #6083BB;
     cursor: pointer;
 
     @media (min-width: 360px) and (max-width: 500px) {
-        width: remy(360);
         height: remy(220);
     }
 
     @media (min-width: 720px) {
         height: remy(400);
-        width: remy(580);
         display: block;
     }
 }

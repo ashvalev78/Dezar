@@ -97,7 +97,7 @@ ul {
 @media (min-width: 1020px) {
   /* line 35, src/sass/components/registration.scss */
   .register_button-name {
-    width: remy(680);
+    width: remy(640);
     margin-bottom: remy(35);
     font-weight: bold;
   }

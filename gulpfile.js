@@ -31,7 +31,8 @@ var paths = {
 		output: 'dist/css/'
 	},
 	svgs: {
-		other: 'src/svg/*.png',
+		other: 'src/svg/*/*',
+		png: 'src/svg/*.*',
 		input: 'src/svg/*.svg',
 		output: 'dist/svg/'
 	},
@@ -238,6 +239,7 @@ var buildSVGs = function (done) {
 		.pipe(svgmin())
 		.pipe(dest(paths.svgs.output));
 	src(paths.svgs.other).pipe(dest(paths.svgs.output));
+	src(paths.svgs.png).pipe(dest(paths.svgs.output));
 	// Signal completion
 	done();
 
