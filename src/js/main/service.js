@@ -45,3 +45,19 @@ var $masterItem = $('.master__description');
 $masterItem.click(function(e) {
     $(e.currentTarget).parent().toggleClass('selected');
 });
+
+var $masterPopupButton = $('.master_wrapper');
+
+$masterPopupButton.click(function() {
+    $('.master__popup').toggleClass("visible_popup");
+    $('.popup_blur').toggleClass('visible_popup');
+    $('.wrapper_services').toggleClass('blur');
+});
+
+var $masterPopupBackButton = $('.master__popup-close-button');
+
+$masterPopupBackButton.click(function() {
+    $('.master__popup').toggleClass("visible_popup");
+    $('.popup_blur').toggleClass('visible_popup');
+    $('.wrapper_services').toggleClass('blur');
+});

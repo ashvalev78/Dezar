@@ -325,14 +325,21 @@
   margin-bottom: remy(15);
 }
 
-/* line 207, src/sass/components/startingPage.scss */
+@media (max-width: 420px) {
+  /* line 200, src/sass/components/startingPage.scss */
+  .switch {
+    height: 20px;
+  }
+}
+
+/* line 211, src/sass/components/startingPage.scss */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* line 213, src/sass/components/startingPage.scss */
+/* line 217, src/sass/components/startingPage.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -345,42 +352,62 @@
   transition: .4s;
 }
 
-/* line 225, src/sass/components/startingPage.scss */
+/* line 229, src/sass/components/startingPage.scss */
 .slider:before {
   position: absolute;
   content: "";
   left: 2px;
   top: 2px;
-  height: remy(23);
-  width: remy(23);
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  top: 1px;
+  height: 20px;
+  width: 20px;
 }
 
-/* line 237, src/sass/components/startingPage.scss */
+@media (max-width: 420px) {
+  /* line 229, src/sass/components/startingPage.scss */
+  .slider:before {
+    top: 1px;
+    height: 18px;
+    width: 18px;
+  }
+}
+
+/* line 251, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider {
   background-color: #C1272D;
 }
 
-/* line 241, src/sass/components/startingPage.scss */
+/* line 255, src/sass/components/startingPage.scss */
 .agreement_input:focus + .slider {
   -webkit-box-shadow: 0 0 0 #C1272D;
           box-shadow: 0 0 0 #C1272D;
 }
 
-/* line 245, src/sass/components/startingPage.scss */
+/* line 259, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider:before {
-  -webkit-transform: translateX(remy(20));
-  transform: translateX(remy(20));
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transform: translateX(23px);
+  transform: translateX(23px);
 }
 
-/* line 251, src/sass/components/startingPage.scss */
+@media (max-width: 420px) {
+  /* line 259, src/sass/components/startingPage.scss */
+  .agreement_input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    transform: translateX(25px);
+  }
+}
+
+/* line 275, src/sass/components/startingPage.scss */
 .slider.round {
   border-radius: remy(32);
 }
 
-/* line 255, src/sass/components/startingPage.scss */
+/* line 279, src/sass/components/startingPage.scss */
 .slider.round:before {
   border-radius: 50%;
 }

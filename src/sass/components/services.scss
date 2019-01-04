@@ -77,7 +77,7 @@ $main-color: #6083BB;
 
 .service_description, .haircut_description, .care_description {
     color: $text-color;
-    background: url(../svg/colorize-bg@2x.png) no-repeat;
+    background: url(../svg/colorize-bg.png) no-repeat;
     background-size: contain;
     height: remy(162);
     border-radius: remy(20);
@@ -377,4 +377,131 @@ $main-color: #6083BB;
     height: 100vh;
     z-index: 10003;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.master__popup-close-button {
+    cursor: pointer;
+    position: absolute;
+    right: remy(20);
+    top: remy(16);
+    width: remy(16);
+    height: remy(16);
+    opacity: 0.7;
+    }
+    .master__popup-close-button:hover {
+    opacity: 1;
+    }
+    .master__popup-close-button:before, .master__popup-close-button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: remy(16);
+    width: 2px;
+    background-color: $main-color;
+    }
+    .master__popup-close-button:before {
+    transform: rotate(45deg);
+    }
+    .master__popup-close-button:after {
+    transform: rotate(-45deg);
+    }
+
+.master__popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: remy(10);
+    z-index: 10004;
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    height: remy(500);
+    padding-top: remy(10);
+    display: none;
+
+    @media (min-width: 760px) {
+        width: remy(540);
+        height: remy(700);
+    }
+
+    &-head {
+        display: flex;
+        flex-flow: column;
+
+        .master__descr {
+            display: flex;
+            flex-flow: column;
+            padding-left: remy(15);
+            margin-bottom: remy(10);
+
+            &-name {
+                font-weight: 700;
+            }
+
+            &-position {
+                color: $secondary-color;
+                font-size: 12px;
+            }
+        }
+
+        .master__photo {
+            width: 100%;
+            height: remy(220);
+            position: relative;
+
+            @media (min-width: 760px) {
+                height: remy(400);
+            }
+
+            .feedback__counter {
+                position: absolute;
+                bottom: - remy(20);
+                right: remy(20);
+                height: remy(65);
+                width: remy(65);
+                color: white;
+                background-color: $main-color;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                &-number {
+                    font-size: 30px;
+                }
+
+                &-name {
+                    font-size: 12px;
+                    margin-top: -8px;
+                }
+            }
+        }
+    }
+
+    &__feedback-list {
+        margin-top: remy(30);
+        padding: remy(15);
+    }
+
+    &__feedback-item {
+        display: flex;
+        flex-flow: column;
+        padding-bottom: remy(5);
+        border-bottom: 2px solid $main-color;
+
+        .feedback__heading {
+            display: flex;
+            margin-bottom: remy(10);
+            
+            .feedback__name {
+                color: $secondary-color;
+                font-weight: 600;
+                margin-right: remy(20);
+            }
+        }
+    }
+    
 }

@@ -105,7 +105,7 @@
 /* line 78, src/sass/components/services.scss */
 .service_description, .haircut_description, .care_description {
   color: #6A7F9D;
-  background: url(../svg/colorize-bg@2x.png) no-repeat;
+  background: url(../svg/colorize-bg.png) no-repeat;
   background-size: contain;
   height: remy(162);
   border-radius: remy(20);
@@ -563,4 +563,192 @@
   height: 100vh;
   z-index: 10003;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* line 382, src/sass/components/services.scss */
+.master__popup-close-button {
+  cursor: pointer;
+  position: absolute;
+  right: remy(20);
+  top: remy(16);
+  width: remy(16);
+  height: remy(16);
+  opacity: 0.7;
+}
+
+/* line 391, src/sass/components/services.scss */
+.master__popup-close-button:hover {
+  opacity: 1;
+}
+
+/* line 394, src/sass/components/services.scss */
+.master__popup-close-button:before, .master__popup-close-button:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: remy(16);
+  width: 2px;
+  background-color: #6083BB;
+}
+
+/* line 402, src/sass/components/services.scss */
+.master__popup-close-button:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 405, src/sass/components/services.scss */
+.master__popup-close-button:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 409, src/sass/components/services.scss */
+.master__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: remy(10);
+  z-index: 10004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 90%;
+  height: remy(500);
+  padding-top: remy(10);
+  display: none;
+}
+
+@media (min-width: 760px) {
+  /* line 409, src/sass/components/services.scss */
+  .master__popup {
+    width: remy(540);
+    height: remy(700);
+  }
+}
+
+/* line 430, src/sass/components/services.scss */
+.master__popup-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+/* line 434, src/sass/components/services.scss */
+.master__popup-head .master__descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-left: remy(15);
+  margin-bottom: remy(10);
+}
+
+/* line 440, src/sass/components/services.scss */
+.master__popup-head .master__descr-name {
+  font-weight: 700;
+}
+
+/* line 444, src/sass/components/services.scss */
+.master__popup-head .master__descr-position {
+  color: #BB272D;
+  font-size: 12px;
+}
+
+/* line 450, src/sass/components/services.scss */
+.master__popup-head .master__photo {
+  width: 100%;
+  height: remy(220);
+  position: relative;
+}
+
+@media (min-width: 760px) {
+  /* line 450, src/sass/components/services.scss */
+  .master__popup-head .master__photo {
+    height: remy(400);
+  }
+}
+
+/* line 459, src/sass/components/services.scss */
+.master__popup-head .master__photo .feedback__counter {
+  position: absolute;
+  bottom: -remy(20);
+  right: remy(20);
+  height: remy(65);
+  width: remy(65);
+  color: white;
+  background-color: #6083BB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 472, src/sass/components/services.scss */
+.master__popup-head .master__photo .feedback__counter-number {
+  font-size: 30px;
+}
+
+/* line 476, src/sass/components/services.scss */
+.master__popup-head .master__photo .feedback__counter-name {
+  font-size: 12px;
+  margin-top: -8px;
+}
+
+/* line 484, src/sass/components/services.scss */
+.master__popup__feedback-list {
+  margin-top: remy(30);
+  padding: remy(15);
+}
+
+/* line 489, src/sass/components/services.scss */
+.master__popup__feedback-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-bottom: remy(5);
+  border-bottom: 2px solid #6083BB;
+}
+
+/* line 495, src/sass/components/services.scss */
+.master__popup__feedback-item .feedback__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: remy(10);
+}
+
+/* line 499, src/sass/components/services.scss */
+.master__popup__feedback-item .feedback__heading .feedback__name {
+  color: #BB272D;
+  font-weight: 600;
+  margin-right: remy(20);
 }
