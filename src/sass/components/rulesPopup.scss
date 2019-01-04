@@ -16,6 +16,10 @@
     display: none;
     position: fixed;
     padding: remy(50);
+
+    @media (max-width: 420px) {
+        padding: remy(20);
+    }
     background-color: white;
     height: 80%;
     width: 80%;
@@ -29,17 +33,17 @@
 
     @media (max-width: 321px) {
         font-size: 12px;
-        padding: 0;
+        padding: remy(5);
     }
 }
 
 .popup_rules {
     overflow-y: scroll;
     overflow-x: hidden;
-    padding: remy(30);
+    padding: remy(20);
     width: 100%;
-    @media (max-width: 400px) {
-        padding: remy(15);
+    @media (max-width: 420px) {
+        padding: remy(5);
     }
 }
 

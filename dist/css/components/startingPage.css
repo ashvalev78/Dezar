@@ -275,7 +275,7 @@
   width: 100%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   /* line 159, src/sass/components/startingPage.scss */
   .license-agreement-block {
     padding: remy(10);
