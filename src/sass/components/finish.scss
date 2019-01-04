@@ -133,3 +133,15 @@
         width: 50%;
     }
 }
+
+.finish__popup-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.finish__OK {
+    height: remy(40);
+}
