@@ -17,7 +17,7 @@ $backButton.click((function() {
 var $popupButton = $('.finish__accept');
 
 $popupButton.click((function() {
-    $('.finish__popup').toggleClass("visible_popup");
+    $('.finish__popup').addClass("visible_popup");
     $('.popup_blur').toggleClass('visible_popup');
     $('.wrapper_finish').toggleClass('blur');
 }));
@@ -25,7 +25,7 @@ $popupButton.click((function() {
 var $popupBackButton = $('.finish__OK');
 
 $popupBackButton.click((function() {
-    $('.finish__popup').toggleClass("visible_popup");
+    $('.finish__popup').removeClass("visible_popup");
     $('.popup_blur').toggleClass('visible_popup');
     $('.wrapper_finish').toggleClass('blur');
 }));

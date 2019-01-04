@@ -134,6 +134,22 @@
     }
 }
 
+.finish__popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: remy(20);
+    z-index: 10004;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: remy(321);
+    display: none;
+}
+
 .finish__popup-heading {
     display: flex;
     justify-content: center;
@@ -143,5 +159,13 @@
 }
 
 .finish__OK {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: remy(40);
+    width: 100%;
+    border-top: 1px solid grey;
+    color: #6083BB;
+    text-align: center;
+    cursor: pointer;
 }

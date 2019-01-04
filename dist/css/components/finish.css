@@ -199,6 +199,31 @@
 }
 
 /* line 137, src/sass/components/finish.scss */
+.finish__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: remy(20);
+  z-index: 10004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: remy(321);
+  display: none;
+}
+
+/* line 153, src/sass/components/finish.scss */
 .finish__popup-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,7 +237,21 @@
   text-align: center;
 }
 
-/* line 145, src/sass/components/finish.scss */
+/* line 161, src/sass/components/finish.scss */
 .finish__OK {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: remy(40);
+  width: 100%;
+  border-top: 1px solid grey;
+  color: #6083BB;
+  text-align: center;
+  cursor: pointer;
 }
