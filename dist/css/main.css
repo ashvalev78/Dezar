@@ -73,6 +73,12 @@ button {
 }
 
 /* line 11, src/sass/components/startingPage.scss */
+.sp__body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* line 16, src/sass/components/startingPage.scss */
 .bg-container {
   position: absolute;
   left: 0;
@@ -80,31 +86,31 @@ button {
   min-height: 20rem;
 }
 
-/* line 18, src/sass/components/startingPage.scss */
+/* line 23, src/sass/components/startingPage.scss */
 .social-icon {
   height: 1.8125rem;
 }
 
-/* line 22, src/sass/components/startingPage.scss */
+/* line 27, src/sass/components/startingPage.scss */
 .logo_part {
   min-height: 9.375rem;
   position: relative;
 }
 
-/* line 27, src/sass/components/startingPage.scss */
+/* line 32, src/sass/components/startingPage.scss */
 #logo-img {
   position: absolute;
   top: 3.125rem;
 }
 
 @media (max-width: 400px) {
-  /* line 27, src/sass/components/startingPage.scss */
+  /* line 32, src/sass/components/startingPage.scss */
   #logo-img {
     top: 1.5625rem;
   }
 }
 
-/* line 36, src/sass/components/startingPage.scss */
+/* line 41, src/sass/components/startingPage.scss */
 .enter-span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,7 +121,7 @@ button {
   margin-right: 0.625rem;
 }
 
-/* line 42, src/sass/components/startingPage.scss */
+/* line 47, src/sass/components/startingPage.scss */
 .logo_part {
   height: 45%;
   -webkit-box-pack: center;
@@ -127,13 +133,13 @@ button {
 }
 
 @media (max-width: 450px) {
-  /* line 42, src/sass/components/startingPage.scss */
+  /* line 47, src/sass/components/startingPage.scss */
   .logo_part {
     height: 25%;
   }
 }
 
-/* line 51, src/sass/components/startingPage.scss */
+/* line 56, src/sass/components/startingPage.scss */
 .bottom_part {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -152,13 +158,13 @@ button {
 }
 
 @media (min-width: 750px) {
-  /* line 51, src/sass/components/startingPage.scss */
+  /* line 56, src/sass/components/startingPage.scss */
   .bottom_part {
     margin-bottom: 1.25rem;
   }
 }
 
-/* line 62, src/sass/components/startingPage.scss */
+/* line 67, src/sass/components/startingPage.scss */
 .input, .vk-enter, .inst-enter {
   color: white;
   background-color: #6083BB;
@@ -173,12 +179,12 @@ button {
   cursor: pointer;
 }
 
-/* line 74, src/sass/components/startingPage.scss */
+/* line 79, src/sass/components/startingPage.scss */
 .input:hover, .vk-enter:hover, .inst-enter:hover {
   background: #6083EE;
 }
 
-/* line 78, src/sass/components/startingPage.scss */
+/* line 83, src/sass/components/startingPage.scss */
 .input::-webkit-input-placeholder, .vk-enter::-webkit-input-placeholder, .inst-enter::-webkit-input-placeholder {
   color: white;
 }
@@ -192,7 +198,7 @@ button {
   color: white;
 }
 
-/* line 83, src/sass/components/startingPage.scss */
+/* line 88, src/sass/components/startingPage.scss */
 .inst-enter, .vk-enter {
   cursor: pointer;
   display: -webkit-box;
@@ -206,7 +212,7 @@ button {
           align-items: center;
 }
 
-/* line 90, src/sass/components/startingPage.scss */
+/* line 95, src/sass/components/startingPage.scss */
 .input_wrapper {
   z-index: 10000;
   border-style: none;
@@ -219,14 +225,14 @@ button {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 90, src/sass/components/startingPage.scss */
+  /* line 95, src/sass/components/startingPage.scss */
   .input_wrapper {
     height: 3.125rem;
     width: 25rem;
   }
 }
 
-/* line 106, src/sass/components/startingPage.scss */
+/* line 111, src/sass/components/startingPage.scss */
 .enter-btn {
   z-index: 10000;
   color: red;
@@ -235,37 +241,37 @@ button {
   width: auto;
 }
 
-/* line 111, src/sass/components/startingPage.scss */
+/* line 116, src/sass/components/startingPage.scss */
 .enter-btn:hover {
   color: #C1272D;
 }
 
-/* line 116, src/sass/components/startingPage.scss */
+/* line 121, src/sass/components/startingPage.scss */
 .register-btn {
   z-index: 10000;
   color: red !important;
 }
 
-/* line 119, src/sass/components/startingPage.scss */
+/* line 124, src/sass/components/startingPage.scss */
 .register-btn:hover {
   color: #C1272D !important;
   text-decoration: underline !important;
 }
 
-/* line 125, src/sass/components/startingPage.scss */
+/* line 130, src/sass/components/startingPage.scss */
 #back_button {
   color: red;
   margin-top: 0.625rem;
   cursor: pointer;
 }
 
-/* line 130, src/sass/components/startingPage.scss */
+/* line 135, src/sass/components/startingPage.scss */
 #back_button:hover {
   color: #C1272D;
   text-decoration: underline;
 }
 
-/* line 136, src/sass/components/startingPage.scss */
+/* line 141, src/sass/components/startingPage.scss */
 .input-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,13 +284,13 @@ button {
 }
 
 @media (max-width: 400px) {
-  /* line 136, src/sass/components/startingPage.scss */
+  /* line 141, src/sass/components/startingPage.scss */
   .input-form {
     margin-bottom: 0;
   }
 }
 
-/* line 146, src/sass/components/startingPage.scss */
+/* line 151, src/sass/components/startingPage.scss */
 .hidden_buttons_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,7 +306,7 @@ button {
   z-index: 10000;
 }
 
-/* line 154, src/sass/components/startingPage.scss */
+/* line 159, src/sass/components/startingPage.scss */
 .socials-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +318,7 @@ button {
           flex-flow: column;
 }
 
-/* line 160, src/sass/components/startingPage.scss */
+/* line 165, src/sass/components/startingPage.scss */
 .license-agreement-block {
   padding: 0.625rem;
   border-radius: 1.25rem;
@@ -325,7 +331,7 @@ button {
   width: 100%;
 }
 
-/* line 171, src/sass/components/startingPage.scss */
+/* line 176, src/sass/components/startingPage.scss */
 .license-agreement-block-wrapper {
   height: 6.5625rem;
   width: 21.25rem;
@@ -337,13 +343,13 @@ button {
 }
 
 @media (max-width: 400px) {
-  /* line 171, src/sass/components/startingPage.scss */
+  /* line 176, src/sass/components/startingPage.scss */
   .license-agreement-block-wrapper {
     margin-top: 2.5rem;
   }
 }
 
-/* line 187, src/sass/components/startingPage.scss */
+/* line 192, src/sass/components/startingPage.scss */
 .agreement_block_rules {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,13 +360,13 @@ button {
           flex-flow: column;
 }
 
-/* line 192, src/sass/components/startingPage.scss */
+/* line 197, src/sass/components/startingPage.scss */
 .license_text {
   color: #C1272D;
   margin-bottom: 0.3125rem;
 }
 
-/* line 197, src/sass/components/startingPage.scss */
+/* line 202, src/sass/components/startingPage.scss */
 .switch {
   position: relative;
   width: 47px;
@@ -369,20 +375,20 @@ button {
 }
 
 @media (max-width: 420px) {
-  /* line 197, src/sass/components/startingPage.scss */
+  /* line 202, src/sass/components/startingPage.scss */
   .switch {
     height: 20px;
   }
 }
 
-/* line 208, src/sass/components/startingPage.scss */
+/* line 213, src/sass/components/startingPage.scss */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* line 214, src/sass/components/startingPage.scss */
+/* line 219, src/sass/components/startingPage.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -395,7 +401,7 @@ button {
   transition: .4s;
 }
 
-/* line 226, src/sass/components/startingPage.scss */
+/* line 231, src/sass/components/startingPage.scss */
 .slider:before {
   position: absolute;
   content: "";
@@ -410,7 +416,7 @@ button {
 }
 
 @media (max-width: 420px) {
-  /* line 226, src/sass/components/startingPage.scss */
+  /* line 231, src/sass/components/startingPage.scss */
   .slider:before {
     top: 1px;
     height: 18px;
@@ -418,18 +424,18 @@ button {
   }
 }
 
-/* line 247, src/sass/components/startingPage.scss */
+/* line 252, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider {
   background-color: #C1272D;
 }
 
-/* line 251, src/sass/components/startingPage.scss */
+/* line 256, src/sass/components/startingPage.scss */
 .agreement_input:focus + .slider {
   -webkit-box-shadow: 0 0 0 #C1272D;
           box-shadow: 0 0 0 #C1272D;
 }
 
-/* line 255, src/sass/components/startingPage.scss */
+/* line 260, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider:before {
   -webkit-transform: translateX(20px);
   transform: translateX(20px);
@@ -438,19 +444,19 @@ button {
 }
 
 @media (max-width: 420px) {
-  /* line 255, src/sass/components/startingPage.scss */
+  /* line 260, src/sass/components/startingPage.scss */
   .agreement_input:checked + .slider:before {
     -webkit-transform: translateX(25px);
     transform: translateX(25px);
   }
 }
 
-/* line 271, src/sass/components/startingPage.scss */
+/* line 276, src/sass/components/startingPage.scss */
 .slider.round {
   border-radius: 2rem;
 }
 
-/* line 275, src/sass/components/startingPage.scss */
+/* line 280, src/sass/components/startingPage.scss */
 .slider.round:before {
   border-radius: 50%;
 }
