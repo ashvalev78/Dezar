@@ -2,6 +2,12 @@ ul {
     list-style-type: none;
 }
 
+.registration-body {
+    @media (max-width: 360px) {
+        overflow: visible;
+    }
+}
+
 .main_wrapper {
     display: flex;
     flex-flow: column;
@@ -226,6 +232,5 @@ ul {
 
 .exit_button {
     color: #BB272D;
-    position: absolute;
-    bottom: remy(40);
+    margin-top: rem(20);
 }
