@@ -192,6 +192,12 @@ $main-color: #6083BB;
 
 .footer__next {
     color: $secondary-color;
+    // display: flex;
+
+    &-button-img {
+        margin-left: rem(5);
+        margin-bottom: rem(3);
+    }
 }
 
 .slider_master {

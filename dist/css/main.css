@@ -77,6 +77,7 @@ button {
   position: absolute;
   left: 0;
   height: 100vh;
+  min-height: 20rem;
 }
 
 /* line 18, src/sass/components/startingPage.scss */
@@ -1265,6 +1266,12 @@ ul {
 }
 
 /* line 197, src/sass/components/services.scss */
+.footer__next-button-img {
+  margin-left: rem(5);
+  margin-bottom: rem(3);
+}
+
+/* line 203, src/sass/components/services.scss */
 .slider_master {
   width: 100%;
   overflow-x: scroll;
@@ -1272,40 +1279,40 @@ ul {
 }
 
 @media (min-width: 320px) {
-  /* line 197, src/sass/components/services.scss */
+  /* line 203, src/sass/components/services.scss */
   .slider_master {
     height: 22.5rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 197, src/sass/components/services.scss */
+  /* line 203, src/sass/components/services.scss */
   .slider_master {
     height: 25rem;
   }
 }
 
 @media (min-width: 720px) {
-  /* line 197, src/sass/components/services.scss */
+  /* line 203, src/sass/components/services.scss */
   .slider_master {
     height: 34.375rem;
   }
 }
 
 @media (min-width: 770px) {
-  /* line 197, src/sass/components/services.scss */
+  /* line 203, src/sass/components/services.scss */
   .slider_master {
     width: 50rem;
   }
 }
 
-/* line 219, src/sass/components/services.scss */
+/* line 225, src/sass/components/services.scss */
 .slider-master {
   height: 18.75rem;
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 219, src/sass/components/services.scss */
+  /* line 225, src/sass/components/services.scss */
   .slider-master {
     width: 11.25rem;
     height: 17.5rem;
@@ -1313,14 +1320,14 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 219, src/sass/components/services.scss */
+  /* line 225, src/sass/components/services.scss */
   .slider-master {
     height: 25rem;
     width: 36.25rem;
   }
 }
 
-/* line 233, src/sass/components/services.scss */
+/* line 239, src/sass/components/services.scss */
 .master_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1330,7 +1337,7 @@ ul {
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 233, src/sass/components/services.scss */
+  /* line 239, src/sass/components/services.scss */
   .master_list {
     width: 11.25rem;
     height: 17.5rem;
@@ -1338,14 +1345,14 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 233, src/sass/components/services.scss */
+  /* line 239, src/sass/components/services.scss */
   .master_list {
     height: 25rem;
     width: 36.25rem;
   }
 }
 
-/* line 249, src/sass/components/services.scss */
+/* line 255, src/sass/components/services.scss */
 .master_wrapper {
   width: 100%;
   height: 1.875rem;
@@ -1362,7 +1369,7 @@ ul {
   cursor: pointer;
 }
 
-/* line 259, src/sass/components/services.scss */
+/* line 265, src/sass/components/services.scss */
 .master__description {
   width: 11.25rem;
   padding-top: 10%;
@@ -1376,14 +1383,14 @@ ul {
 }
 
 @media (max-width: 360) {
-  /* line 259, src/sass/components/services.scss */
+  /* line 265, src/sass/components/services.scss */
   .master__description {
     height: 15rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 259, src/sass/components/services.scss */
+  /* line 265, src/sass/components/services.scss */
   .master__description {
     width: 11.25rem;
     height: 15rem;
@@ -1391,7 +1398,7 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 259, src/sass/components/services.scss */
+  /* line 265, src/sass/components/services.scss */
   .master__description {
     height: 25rem;
     width: 19.5625rem;
@@ -1399,33 +1406,33 @@ ul {
 }
 
 @media (max-width: 360) {
-  /* line 259, src/sass/components/services.scss */
+  /* line 265, src/sass/components/services.scss */
   .master__description {
     height: 12.5rem;
   }
 }
 
-/* line 288, src/sass/components/services.scss */
+/* line 294, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 294, src/sass/components/services.scss */
+/* line 300, src/sass/components/services.scss */
 .master-item {
   margin-right: 1.25rem;
   position: relative;
 }
 
 @media (max-width: 360) {
-  /* line 294, src/sass/components/services.scss */
+  /* line 300, src/sass/components/services.scss */
   .master-item {
     height: 15rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 294, src/sass/components/services.scss */
+  /* line 300, src/sass/components/services.scss */
   .master-item {
     width: 11.25rem;
     height: 15rem;
@@ -1433,14 +1440,14 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* line 294, src/sass/components/services.scss */
+  /* line 300, src/sass/components/services.scss */
   .master-item {
     height: 25rem;
     width: 36.25rem;
   }
 }
 
-/* line 313, src/sass/components/services.scss */
+/* line 319, src/sass/components/services.scss */
 .master__selected {
   display: none;
   top: -0.9375rem;
@@ -1448,7 +1455,7 @@ ul {
   position: absolute;
 }
 
-/* line 321, src/sass/components/services.scss */
+/* line 327, src/sass/components/services.scss */
 .popup__description {
   position: fixed;
   top: 50%;
@@ -1473,19 +1480,19 @@ ul {
   display: none;
 }
 
-/* line 336, src/sass/components/services.scss */
+/* line 342, src/sass/components/services.scss */
 .popup__description-heading {
   margin-top: 0.625rem;
   font-weight: 600;
 }
 
-/* line 341, src/sass/components/services.scss */
+/* line 347, src/sass/components/services.scss */
 .popup__description-info {
   padding: 1.25rem;
   margin: 0;
 }
 
-/* line 346, src/sass/components/services.scss */
+/* line 352, src/sass/components/services.scss */
 .popup__description-back {
   width: 100%;
   border-top: 1px solid grey;
@@ -1494,14 +1501,14 @@ ul {
   cursor: pointer;
 }
 
-/* line 355, src/sass/components/services.scss */
+/* line 361, src/sass/components/services.scss */
 .visible_popup {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-/* line 359, src/sass/components/services.scss */
+/* line 365, src/sass/components/services.scss */
 .blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -1510,7 +1517,7 @@ ul {
   filter: blur(5px);
 }
 
-/* line 367, src/sass/components/services.scss */
+/* line 373, src/sass/components/services.scss */
 .popup_blur {
   display: none;
   position: fixed;
@@ -1525,7 +1532,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 380, src/sass/components/services.scss */
+/* line 386, src/sass/components/services.scss */
 .master__popup-close-button {
   cursor: pointer;
   position: absolute;
@@ -1536,12 +1543,12 @@ ul {
   opacity: 0.7;
 }
 
-/* line 389, src/sass/components/services.scss */
+/* line 395, src/sass/components/services.scss */
 .master__popup-close-button:hover {
   opacity: 1;
 }
 
-/* line 392, src/sass/components/services.scss */
+/* line 398, src/sass/components/services.scss */
 .master__popup-close-button:before, .master__popup-close-button:after {
   position: absolute;
   left: 15px;
@@ -1551,19 +1558,19 @@ ul {
   background-color: #6083BB;
 }
 
-/* line 400, src/sass/components/services.scss */
+/* line 406, src/sass/components/services.scss */
 .master__popup-close-button:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-/* line 403, src/sass/components/services.scss */
+/* line 409, src/sass/components/services.scss */
 .master__popup-close-button:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-/* line 407, src/sass/components/services.scss */
+/* line 413, src/sass/components/services.scss */
 .master__popup {
   position: fixed;
   top: 50%;
@@ -1588,14 +1595,14 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 407, src/sass/components/services.scss */
+  /* line 413, src/sass/components/services.scss */
   .master__popup {
     width: 33.75rem;
     height: 43.75rem;
   }
 }
 
-/* line 428, src/sass/components/services.scss */
+/* line 434, src/sass/components/services.scss */
 .master__popup-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1606,7 +1613,7 @@ ul {
           flex-flow: column;
 }
 
-/* line 432, src/sass/components/services.scss */
+/* line 438, src/sass/components/services.scss */
 .master__popup-head .master__descr {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1619,18 +1626,18 @@ ul {
   margin-bottom: 0.625rem;
 }
 
-/* line 438, src/sass/components/services.scss */
+/* line 444, src/sass/components/services.scss */
 .master__popup-head .master__descr-name {
   font-weight: 700;
 }
 
-/* line 442, src/sass/components/services.scss */
+/* line 448, src/sass/components/services.scss */
 .master__popup-head .master__descr-position {
   color: #BB272D;
   font-size: 12px;
 }
 
-/* line 448, src/sass/components/services.scss */
+/* line 454, src/sass/components/services.scss */
 .master__popup-head .master__photo {
   width: 100%;
   height: 13.75rem;
@@ -1638,13 +1645,13 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 448, src/sass/components/services.scss */
+  /* line 454, src/sass/components/services.scss */
   .master__popup-head .master__photo {
     height: 25rem;
   }
 }
 
-/* line 457, src/sass/components/services.scss */
+/* line 463, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter {
   position: absolute;
   bottom: -1.25rem;
@@ -1668,24 +1675,24 @@ ul {
           justify-content: center;
 }
 
-/* line 470, src/sass/components/services.scss */
+/* line 476, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter-number {
   font-size: 30px;
 }
 
-/* line 474, src/sass/components/services.scss */
+/* line 480, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter-name {
   font-size: 12px;
   margin-top: -8px;
 }
 
-/* line 482, src/sass/components/services.scss */
+/* line 488, src/sass/components/services.scss */
 .master__popup__feedback-list {
   margin-top: 1.875rem;
   padding: 0.9375rem;
 }
 
-/* line 487, src/sass/components/services.scss */
+/* line 493, src/sass/components/services.scss */
 .master__popup__feedback-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1698,7 +1705,7 @@ ul {
   border-bottom: 2px solid #6083BB;
 }
 
-/* line 493, src/sass/components/services.scss */
+/* line 499, src/sass/components/services.scss */
 .master__popup__feedback-item .feedback__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1706,7 +1713,7 @@ ul {
   margin-bottom: 0.625rem;
 }
 
-/* line 497, src/sass/components/services.scss */
+/* line 503, src/sass/components/services.scss */
 .master__popup__feedback-item .feedback__heading .feedback__name {
   color: #BB272D;
   font-weight: 600;
