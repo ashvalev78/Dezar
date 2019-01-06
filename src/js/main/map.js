@@ -5,23 +5,25 @@
 //     var marker = new google.maps.Marker({position: uluru, map: map});
 // }
 
-ymaps.ready(init);
-function init(){ 
 
-    var myGeoObject = new ymaps.GeoObject({
-        geometry: {
-            type: "Point", // тип геометрии - точка
-            coordinates: [59.853531, 30.140566] // координаты точки
-        }
-    });
+if (document.getElementById('map') !== null) {
+    ymaps.ready(init);
+    function init(){ 
 
-    // Создание карты.    
-    var myMap = new ymaps.Map("map", {
-        center: [59.853531, 30.140566],
-        controls: [],
-        zoom: 16
-    });
+        var myGeoObject = new ymaps.GeoObject({
+            geometry: {
+                type: "Point", // тип геометрии - точка
+                coordinates: [59.853531, 30.140566] // координаты точки
+            }
+        });
 
-    myMap.geoObjects.add(myGeoObject);
+        var myMap = new ymaps.Map("map", {
+            center: [59.853531, 30.140566],
+            controls: [],
+            zoom: 16
+        });
+
+        myMap.geoObjects.add(myGeoObject);
+    }
 }
 

@@ -12,6 +12,10 @@ $main-color: #6083BB;
     outline: none;
     text-decoration: none;
 
+    &-name {
+        height: remy(25);
+    }
+
 
     .back_arrow {
         font-size: remy(25);
@@ -56,7 +60,6 @@ $main-color: #6083BB;
     margin-left: remy(20);
     color: $secondary-color;
     width: auto;
-    margin-bottom: remy(20);
 }
 
 .colorize-item, .haircut-item, .care-item {
@@ -65,10 +68,12 @@ $main-color: #6083BB;
         font-size: 10px;
     }
 
-    @media (min-width: 360px) and (max-width: 500px) {
+    @media (min-width: 360px) and (max-width: 767px) {
         width: remy(360);
         height: remy(220);
     }
+    margin-top: remy(30);
+
     
     margin-right: remy(30);
     display: inline-block;
@@ -80,8 +85,8 @@ $main-color: #6083BB;
 }
 
 .slider-colorize {
-    @media (min-width: 360px) and (max-width: 500px) {
-        height: remy(280);
+    @media (min-width: 360px) and (max-width: 767px) {
+        height: remy(320);
     }
 }
 
@@ -97,18 +102,18 @@ $main-color: #6083BB;
     justify-content: space-around;
     cursor: pointer;
 
-    @media (min-width: 360px) and (max-width: 500px) {
+    @media (min-width: 360px) and (max-width: 767px) {
         height: remy(220);
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         height: remy(400);
         display: block;
     }
 }
 
 .service-group-part {
-    @media (max-width: 720px) {
+    @media (max-width: 767px) {
         height: 50%;
         display: flex;
         flex-flow: column;
@@ -125,7 +130,7 @@ $main-color: #6083BB;
     flex-direction: column;
     justify-content: space-around;
 
-    @media (min-width: 720px) {
+    @media (min-width: 767px) {
         height: 20%;
         align-self: flex-start;
         display: flex;
@@ -136,7 +141,7 @@ $main-color: #6083BB;
 }
 
 .service_name {
-    @media (min-width: 720px) {
+    @media (min-width: 767px) {
         width: 50%;
     }
 }
@@ -149,7 +154,7 @@ $main-color: #6083BB;
     margin-left: remy(25);
     width: 50%;
 
-    @media (max-width: 720px) {
+    @media (max-width: 767px) {
         display: none;
     }
 }
@@ -162,7 +167,7 @@ $main-color: #6083BB;
     justify-content: center;
     color: $main-color;
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         display: none;
     }
 }
@@ -225,7 +230,7 @@ $main-color: #6083BB;
         height: remy(400);
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         height: remy(550);
     }
 
@@ -242,7 +247,7 @@ $main-color: #6083BB;
         height: remy(280);
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         height: remy(400);
         width: remy(580);
     }
@@ -258,7 +263,7 @@ $main-color: #6083BB;
         height: remy(280);
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         height: remy(400);
         width: remy(580);
     }
@@ -294,7 +299,7 @@ $main-color: #6083BB;
         height: remy(240);
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         height: remy(400);
         width: remy(313);
     }
@@ -322,7 +327,7 @@ $main-color: #6083BB;
         height: remy(240);
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
         height: remy(400);
         width: remy(580);
     }
