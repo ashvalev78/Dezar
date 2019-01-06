@@ -38,18 +38,25 @@ $popupBackButton.click((function() {
 
 ymaps.ready(init);
 function init(){ 
+
+    var myGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point", // тип геометрии - точка
+            coordinates: [59.853531, 30.140566] // координаты точки
+        }
+    });
+
     // Создание карты.    
     var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [55.76, 37.64],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 7
+        center: [59.853531, 30.140566],
+        controls: [],
+        zoom: 16
     });
+
+    myMap.geoObjects.add(myGeoObject);
 }
+
+
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch
