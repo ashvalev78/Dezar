@@ -32,6 +32,7 @@ $main-color: #6083BB;
 }
 
 .service__selected {
+    width: remy(47) !important;
     position: absolute;
     top: - remy(10);
     right: - remy(10);
@@ -40,11 +41,12 @@ $main-color: #6083BB;
 
 .selected {
     .service__selected {
-        display: block;
+        display: block !important;
     }
 
     .master__selected {
-        display: block;
+        display: block !important;
+        width: remy(47) !important;
     }
 }
 
@@ -219,7 +221,6 @@ $main-color: #6083BB;
 
 .slider_master {
     width: 100%;
-    overflow-x: scroll;
     overflow-y: hidden;
 
     @media (min-width: 320px) {
@@ -240,32 +241,18 @@ $main-color: #6083BB;
 }
 
 .slider-master {
-        height: remy(300);
+    overflow-x: scroll;
+    height: remy(350);
+    width: 100%;
 
-    @media (min-width: 360px) and (max-width: 500px) {
-        width: remy(180);
-        height: remy(280);
+    @media (min-width: 360px) and (max-width: 767px) {
+        // width: remy(180);
+        height: remy(370);
     }
 
     @media (min-width: 768px) {
-        height: remy(400);
-        width: remy(580);
-    }
-}
-
-.master_list {
-    display: inline-flex;
-    padding: 0;
-    height: 100%;
-
-    @media (min-width: 360px) and (max-width: 500px) {
-        width: remy(180);
-        height: remy(280);
-    }
-
-    @media (min-width: 768px) {
-        height: remy(400);
-        width: remy(580);
+        height: remy(500);
+        width: remy(800);
     }
 }
 
@@ -317,24 +304,25 @@ $main-color: #6083BB;
 .master-item {
     margin-right: remy(20);
     position: relative;
+    margin-top: remy(30);
 
     @media (max-width: 360) {
-        height: remy(240);
+        height: remy(280);
     }
 
     @media (min-width: 360px) and (max-width: 500px) {
-        width: remy(180);
-        height: remy(240);
+        // width: remy(180);
+        height: remy(320);
     }
 
     @media (min-width: 768px) {
-        height: remy(400);
-        width: remy(580);
+        height: remy(520);
+        // width: remy(580);
     }
 }
 
 .master__selected {
-    display: none;
+    display: none !important;
     top: - remy(15);
     right: - remy(15);
     position: absolute;

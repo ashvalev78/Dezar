@@ -203,6 +203,12 @@ var masters = {
         img: "url(./svg/1x/Master-4-min.png)"
     }
 };
+
+$('.slider-master').owlCarousel({
+    nav: false,
+    dots: false,
+    autoWidth: true
+});
 $('.datepicker__dates-date').click((function(e) {
     $(e.currentTarget).toggleClass('selected-date');
 }));
