@@ -142,20 +142,30 @@
   color: #BB272D;
 }
 
-/* line 108, src/sass/components/time.scss */
+/* line 107, src/sass/components/time.scss */
+.datepicker__block-switcher-next {
+  color: #BB272D;
+}
+
+/* line 111, src/sass/components/time.scss */
+.datepicker__block-switcher-prev {
+  color: #BB272D;
+}
+
+/* line 116, src/sass/components/time.scss */
 .datepicker__block .datepicker__days {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-/* line 113, src/sass/components/time.scss */
+/* line 121, src/sass/components/time.scss */
 .datepicker__block .datepicker__days-day {
   text-align: center;
   color: rgba(96, 131, 187, 0.46);
 }
 
-/* line 119, src/sass/components/time.scss */
+/* line 127, src/sass/components/time.scss */
 .datepicker__block .datepicker__dates {
   display: grid;
   width: 100%;
@@ -163,14 +173,14 @@
   border-top: 1px solid #6A7F9D;
 }
 
-/* line 125, src/sass/components/time.scss */
+/* line 133, src/sass/components/time.scss */
 .datepicker__block .datepicker__dates-date {
   text-align: center;
   color: #6083BB;
   padding: remy(10);
 }
 
-/* line 132, src/sass/components/time.scss */
+/* line 140, src/sass/components/time.scss */
 .datepicker__block .selected-date {
   color: #BB272D;
 }
@@ -182,7 +192,7 @@
   }
 }
 
-/* line 141, src/sass/components/time.scss */
+/* line 149, src/sass/components/time.scss */
 .footer__services {
   margin-top: remy(30);
   margin-bottom: remy(30);
@@ -199,7 +209,7 @@
   background: black;
 }
 
-/* line 152, src/sass/components/time.scss */
+/* line 160, src/sass/components/time.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,12 +221,12 @@
   color: white;
 }
 
-/* line 158, src/sass/components/time.scss */
+/* line 166, src/sass/components/time.scss */
 .footer__next {
   color: #BB272D;
 }
 
-/* line 162, src/sass/components/time.scss */
+/* line 170, src/sass/components/time.scss */
 .conversion__part-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,7 +239,7 @@
 }
 
 @media (min-width: 760px) {
-  /* line 162, src/sass/components/time.scss */
+  /* line 170, src/sass/components/time.scss */
   .conversion__part-time {
     padding-top: remy(20);
     background-color: rgba(96, 131, 187, 0.1);
@@ -243,7 +253,7 @@
   }
 }
 
-/* line 176, src/sass/components/time.scss */
+/* line 184, src/sass/components/time.scss */
 .selected-time-visible .selected-time {
   display: block;
 }

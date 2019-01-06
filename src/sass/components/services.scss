@@ -14,7 +14,8 @@ $main-color: #6083BB;
 
 
     .back_arrow {
-        font-size: remy(30);
+        font-size: remy(25);
+        margin-bottom: 4px;
     }
 
     @media (min-width: 770px) {
@@ -201,11 +202,13 @@ $main-color: #6083BB;
 
 .footer__next {
     color: $secondary-color;
+    display: flex;
+    align-items: center;
     // display: flex;
 
-    &-button-img {
-        margin-left: rem(5);
-        margin-bottom: rem(3);
+    &-arrow {
+        margin-bottom: 4px;
+        font-size: remy(25);
     }
 }
 

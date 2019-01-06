@@ -103,6 +103,14 @@ $main-color: #6083BB;
 
     &-switcher {
         color: $secondary-color;
+
+        &-next {
+            color: $secondary-color;
+        }
+
+        &-prev {
+            color:$secondary-color;
+        }
     }
 
     .datepicker__days {

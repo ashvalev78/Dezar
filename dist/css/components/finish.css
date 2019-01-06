@@ -144,22 +144,33 @@
 /* line 105, src/sass/components/finish.scss */
 .finish__phone-number {
   color: white;
+  background-color: #6083BB;
+  border-style: none;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-/* line 107, src/sass/components/finish.scss */
-.finish__phone-number .input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* line 118, src/sass/components/finish.scss */
+.finish__phone-number::-webkit-input-placeholder {
+  color: white;
+}
+.finish__phone-number:-ms-input-placeholder {
+  color: white;
+}
+.finish__phone-number::-ms-input-placeholder {
+  color: white;
+}
+.finish__phone-number::placeholder {
+  color: white;
 }
 
-/* line 114, src/sass/components/finish.scss */
+/* line 123, src/sass/components/finish.scss */
 .finish__top-conversion-part, .finish__bottom-conversion-part {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +184,7 @@
 }
 
 @media (min-width: 760px) {
-  /* line 114, src/sass/components/finish.scss */
+  /* line 123, src/sass/components/finish.scss */
   .finish__top-conversion-part, .finish__bottom-conversion-part {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -186,19 +197,19 @@
   }
 }
 
-/* line 127, src/sass/components/finish.scss */
+/* line 136, src/sass/components/finish.scss */
 .finish__bottom-conversion-part {
   margin-bottom: remy(50);
 }
 
 @media (min-width: 760px) {
-  /* line 131, src/sass/components/finish.scss */
+  /* line 140, src/sass/components/finish.scss */
   .finish__bottom-overall-block, .finish__top-additional-block {
     width: 50%;
   }
 }
 
-/* line 137, src/sass/components/finish.scss */
+/* line 146, src/sass/components/finish.scss */
 .finish__popup {
   position: fixed;
   top: 50%;
@@ -223,7 +234,7 @@
   display: none;
 }
 
-/* line 153, src/sass/components/finish.scss */
+/* line 162, src/sass/components/finish.scss */
 .finish__popup-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,7 +248,7 @@
   text-align: center;
 }
 
-/* line 161, src/sass/components/finish.scss */
+/* line 170, src/sass/components/finish.scss */
 .finish__OK {
   display: -webkit-box;
   display: -ms-flexbox;

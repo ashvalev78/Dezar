@@ -104,10 +104,19 @@
 
 .finish__phone-number {
     color: white;
-    .input {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    background-color: #6083BB;
+    border-style: none;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &::placeholder {
+        color: white;
     }
 }
 
