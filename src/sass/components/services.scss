@@ -36,7 +36,7 @@ $main-color: #6083BB;
     position: absolute;
     top: - remy(10);
     right: - remy(10);
-    display: none;
+    display: none !important;
 }
 
 .selected {
@@ -50,7 +50,7 @@ $main-color: #6083BB;
     }
 }
 
-.slider_services {
+.slider_services, .slider_colorize, .slider_haircut {
     @media (min-width: 770px) {
         width: remy(800);
     }
@@ -72,7 +72,7 @@ $main-color: #6083BB;
 
     @media (min-width: 360px) and (max-width: 767px) {
         width: remy(360);
-        height: remy(220);
+        height: remy(280);
     }
     margin-top: remy(30);
 
@@ -86,9 +86,9 @@ $main-color: #6083BB;
     }
 }
 
-.slider-colorize {
+.slider-colorize, .slider-haircut, .slider-services {
     @media (min-width: 360px) and (max-width: 767px) {
-        height: remy(320);
+        height: remy(360);
     }
 }
 

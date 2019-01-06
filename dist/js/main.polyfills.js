@@ -209,6 +209,24 @@ $('.slider-master').owlCarousel({
     dots: false,
     autoWidth: true
 });
+
+$('.slider-haircut').owlCarousel({
+    nav: false,
+    dots: false,
+    autoWidth: true
+});
+
+$('.slider-colorize').owlCarousel({
+    nav: false,
+    dots: false,
+    autoWidth: true
+});
+
+$('.slider-services').owlCarousel({
+    nav: false,
+    dots: false,
+    autoWidth: true
+});
 $('.datepicker__dates-date').click((function(e) {
     $(e.currentTarget).toggleClass('selected-date');
 }));

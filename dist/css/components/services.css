@@ -52,7 +52,7 @@
   position: absolute;
   top: -remy(10);
   right: -remy(10);
-  display: none;
+  display: none !important;
 }
 
 /* line 43, src/sass/components/services.scss */
@@ -67,14 +67,14 @@
 }
 
 /* line 53, src/sass/components/services.scss */
-.slider_services {
+.slider_services, .slider_colorize, .slider_haircut {
   margin-bottom: remy(30);
   width: 100%;
 }
 
 @media (min-width: 770px) {
   /* line 53, src/sass/components/services.scss */
-  .slider_services {
+  .slider_services, .slider_colorize, .slider_haircut {
     width: remy(800);
   }
 }
@@ -106,7 +106,7 @@
   /* line 67, src/sass/components/services.scss */
   .colorize-item, .haircut-item, .care-item {
     width: remy(360);
-    height: remy(220);
+    height: remy(280);
   }
 }
 
@@ -119,8 +119,8 @@
 
 @media (min-width: 360px) and (max-width: 767px) {
   /* line 89, src/sass/components/services.scss */
-  .slider-colorize {
-    height: remy(320);
+  .slider-colorize, .slider-haircut, .slider-services {
+    height: remy(360);
   }
 }
 

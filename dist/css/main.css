@@ -1034,7 +1034,7 @@ ul {
   position: absolute;
   top: -0.625rem;
   right: -0.625rem;
-  display: none;
+  display: none !important;
 }
 
 /* line 43, src/sass/components/services.scss */
@@ -1049,14 +1049,14 @@ ul {
 }
 
 /* line 53, src/sass/components/services.scss */
-.slider_services {
+.slider_services, .slider_colorize, .slider_haircut {
   margin-bottom: 1.875rem;
   width: 100%;
 }
 
 @media (min-width: 770px) {
   /* line 53, src/sass/components/services.scss */
-  .slider_services {
+  .slider_services, .slider_colorize, .slider_haircut {
     width: 50rem;
   }
 }
@@ -1088,7 +1088,7 @@ ul {
   /* line 67, src/sass/components/services.scss */
   .colorize-item, .haircut-item, .care-item {
     width: 22.5rem;
-    height: 13.75rem;
+    height: 17.5rem;
   }
 }
 
@@ -1101,8 +1101,8 @@ ul {
 
 @media (min-width: 360px) and (max-width: 767px) {
   /* line 89, src/sass/components/services.scss */
-  .slider-colorize {
-    height: 20rem;
+  .slider-colorize, .slider-haircut, .slider-services {
+    height: 22.5rem;
   }
 }
 
