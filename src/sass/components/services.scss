@@ -27,10 +27,6 @@ $main-color: #6083BB;
     }
 }
 
-.slider-colorize {
-    overflow-x: scroll;
-}
-
 .service__selected {
     width: remy(47) !important;
     position: absolute;
@@ -176,7 +172,7 @@ $main-color: #6083BB;
 
 .services__body {
     overflow-x: hidden;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 }
 
 .wrapper_services {
