@@ -31,10 +31,14 @@
 
 #logo-img {
     position: absolute;
-    top: remy(40);
+    top: remy(70);
 
     @media (max-width: 400px) {
-        top: remy(70);
+        top: remy(50);
+    }
+
+    @media (max-width: 360px) {
+        top: remy(30);
     }
 }
 
