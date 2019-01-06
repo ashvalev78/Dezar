@@ -68,18 +68,18 @@ $masterPopupBackButton.click(function() {
 var masters = {
     1: {
         name: "Наталия",
-        img: "url(./svg/1x/Master-1.png)"
+        img: "url(./svg/1x/Master-1-min.png)"
     },
     2: {
         name: 'Жаннет',
-        img: "url(./svg/1x/Master-2.png)"
+        img: "url(./svg/1x/Master-2-min.png)"
     },
     3: {
         name: 'Халида',
-        img: "url(./svg/1x/Master-3.png)"
+        img: "url(./svg/1x/Master-3-min.png)"
     },
     4: {
         name: 'Лера',
-        img: "url(./svg/1x/Master-4.png)"
+        img: "url(./svg/1x/Master-4-min.png)"
     }
 };
