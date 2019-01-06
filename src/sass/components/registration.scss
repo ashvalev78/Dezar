@@ -8,12 +8,16 @@ ul {
     }
 }
 
-.main_wrapper {
+.reg_wrapper {
     display: flex;
     flex-flow: column;
     align-items: center;
     @media (min-width: 750px) and (max-width: 1019px) {
         padding: remy(40) remy(50) 0  remy(50);
+    }
+
+    @media (min-height: 800px) {
+        padding-top: remy(40);
     }
 }
 

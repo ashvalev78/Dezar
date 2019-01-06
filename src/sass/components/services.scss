@@ -6,20 +6,24 @@ $main-color: #6083BB;
     align-self: flex-start;
     color: $main-color;
     margin-top: remy(30);
-    margin-bottom: remy(50);
+    margin-bottom: remy(20);
+    display: flex;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+
+
+    .back_arrow {
+        font-size: remy(30);
+    }
 
     @media (min-width: 770px) {
         margin-left: remy(100);
     }
 }
 
-.slider_colorize {
+.slider-colorize {
     overflow-x: scroll;
-    width: 100%;
-
-    @media (min-width: 770px) {
-        width: remy(800);
-    }
 }
 
 .service__selected {
@@ -40,12 +44,17 @@ $main-color: #6083BB;
 }
 
 .slider_services {
+    @media (min-width: 770px) {
+        width: remy(800);
+    }
     margin-bottom: remy(30);
+    width: 100%;
 }
 
 .slider_name {
     margin-left: remy(20);
     color: $secondary-color;
+    width: auto;
     margin-bottom: remy(20);
 }
 
@@ -455,6 +464,8 @@ $main-color: #6083BB;
             width: 100%;
             height: remy(220);
             position: relative;
+            background-size: cover !important; 
+            background-position-y: 20% !important;
 
             @media (min-width: 760px) {
                 height: remy(400);

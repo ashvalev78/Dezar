@@ -140,10 +140,13 @@ $masterItem.click((function(e) {
 
 var $masterPopupButton = $('.master_wrapper');
 
-$masterPopupButton.click((function() {
+$masterPopupButton.click((function(e) {
     $('.master__popup').toggleClass("visible_popup");
     $('.popup_blur').toggleClass('visible_popup');
     $('.wrapper_services').toggleClass('blur');
+
+    $('.master__descr-name').html(masters[e.currentTarget.getAttribute('data-attr')].name);
+    $('.master__photo').css('background', masters[e.currentTarget.getAttribute('data-attr')].img);
 }));
 
 var $masterPopupBackButton = $('.master__popup-close-button');
@@ -153,6 +156,25 @@ $masterPopupBackButton.click((function() {
     $('.popup_blur').toggleClass('visible_popup');
     $('.wrapper_services').toggleClass('blur');
 }));
+
+var masters = {
+    1: {
+        name: "Наталия",
+        img: "url(./svg/1x/Master-1.png)"
+    },
+    2: {
+        name: 'Жаннет',
+        img: "url(./svg/1x/Master-2.png)"
+    },
+    3: {
+        name: 'Халида',
+        img: "url(./svg/1x/Master-3.png)"
+    },
+    4: {
+        name: 'Лера',
+        img: "url(./svg/1x/Master-4.png)"
+    }
+};
 $('.datepicker__dates-date').click((function(e) {
     $(e.currentTarget).toggleClass('selected-date');
 }));
