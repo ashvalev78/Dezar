@@ -372,7 +372,7 @@
 
 /* line 243, src/sass/components/services.scss */
 .slider-master {
-  overflow-x: scroll;
+  overflow-y: hidden;
   height: remy(350);
   width: 100%;
 }

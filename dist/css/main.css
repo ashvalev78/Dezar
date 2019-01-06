@@ -1354,7 +1354,7 @@ ul {
 
 /* line 243, src/sass/components/services.scss */
 .slider-master {
-  overflow-x: scroll;
+  overflow-y: hidden;
   height: 21.875rem;
   width: 100%;
 }
