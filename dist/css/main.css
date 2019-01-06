@@ -60,6 +60,12 @@ button {
   font: inherit;
 }
 
+/* line 45, src/sass/components/_base.scss */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* line 1, src/sass/components/startingPage.scss */
 .main_wrapper {
   height: 100vh;
