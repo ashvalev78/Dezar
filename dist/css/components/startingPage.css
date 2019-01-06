@@ -52,7 +52,7 @@
 /* line 32, src/sass/components/startingPage.scss */
 #logo-img {
   position: absolute;
-  top: remy(70);
+  top: remy(50);
 }
 
 @media (max-width: 400px) {
