@@ -85,24 +85,28 @@ var masters = {
 };
 
 $('.slider-master').owlCarousel({
+    slideBy: 1,
     nav: false,
     dots: false,
     autoWidth: true
 });
 
 $('.slider-haircut').owlCarousel({
+    slideBy: 1,
     nav: false,
     dots: false,
     autoWidth: true
 });
 
 $('.slider-colorize').owlCarousel({
+    slideBy: 1,
     nav: false,
     dots: false,
     autoWidth: true
 });
 
 $('.slider-services').owlCarousel({
+    slideBy: 1,
     nav: false,
     dots: false,
     autoWidth: true
