@@ -205,6 +205,7 @@ var masters = {
 };
 
 $('.slider-master').owlCarousel({
+    rewind: false,
     slideBy: 1,
     nav: false,
     dots: false,
@@ -212,6 +213,7 @@ $('.slider-master').owlCarousel({
 });
 
 $('.slider-haircut').owlCarousel({
+    rewind: false,
     slideBy: 1,
     nav: false,
     dots: false,
@@ -219,8 +221,7 @@ $('.slider-haircut').owlCarousel({
 });
 
 $('.slider-colorize').owlCarousel({
-    freeDrag: false,
-    pullDrag: false,
+    rewind: false,
     slideBy: 1,
     nav: false,
     dots: false,
@@ -228,6 +229,7 @@ $('.slider-colorize').owlCarousel({
 });
 
 $('.slider-services').owlCarousel({
+    rewind: false,
     slideBy: 1,
     nav: false,
     dots: false,
