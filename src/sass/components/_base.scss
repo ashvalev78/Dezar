@@ -8,7 +8,7 @@ html {
 
 	@media (min-width: 750px) and (max-width: 1019px) {
         font-size: 15px;
-    }
+	}
 }
 
 * {
@@ -30,7 +30,7 @@ ul {
 }
 
 body {
-	margin: 0 auto;
+	margin: 0;
 	min-height: remy(320);
 	overflow: hidden;
 }
@@ -43,9 +43,15 @@ button {
 }
 
 html, body {
-	width: 100%;
-	height: 100%;
-	overflow: auto;
+	position: fixed;
+  	overflow: hidden;
 	overscroll-behavior-x: none;
 	overscroll-behavior-y: none;
 }
+
+.mainwrapper {
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+  }
