@@ -27,25 +27,27 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/* line 19, src/sass/components/_base.scss */
+/* line 20, src/sass/components/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 22, src/sass/components/_base.scss */
+/* line 23, src/sass/components/_base.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 27, src/sass/components/_base.scss */
+/* line 28, src/sass/components/_base.scss */
 ul {
   padding: 0;
   list-style-type: none;
 }
 
-/* line 32, src/sass/components/_base.scss */
+/* line 33, src/sass/components/_base.scss */
 body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -53,7 +55,7 @@ body {
   min-height: 20rem;
 }
 
-/* line 39, src/sass/components/_base.scss */
+/* line 40, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -61,7 +63,7 @@ button {
   font: inherit;
 }
 
-/* line 46, src/sass/components/_base.scss */
+/* line 47, src/sass/components/_base.scss */
 html, body {
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;
@@ -1085,7 +1087,7 @@ ul {
   position: relative;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   /* line 63, src/sass/components/services.scss */
   .colorize-item, .haircut-item, .care-item {
     width: 17.5rem;
@@ -1093,7 +1095,7 @@ ul {
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 376px) and (max-width: 767px) {
   /* line 63, src/sass/components/services.scss */
   .colorize-item, .haircut-item, .care-item {
     width: 22.5rem;
