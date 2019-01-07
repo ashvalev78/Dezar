@@ -211,9 +211,15 @@ $main-color: #6083BB;
     display: flex;
     align-items: center;
     // display: flex;
+    outline: none;
+    text-decoration: none;
+
+    &-button {
+        height: remy(25);
+    }
 
     &-arrow {
-        margin-bottom: 4px;
+        margin-bottom: remy(4);
         font-size: remy(25);
     }
 }
