@@ -219,6 +219,8 @@ $('.slider-haircut').owlCarousel({
 });
 
 $('.slider-colorize').owlCarousel({
+    freeDrag: false,
+    pullDrag: false,
     slideBy: 1,
     nav: false,
     dots: false,
