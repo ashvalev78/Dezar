@@ -227,6 +227,10 @@ $('.slider-services').owlCarousel({
     dots: false,
     autoWidth: true
 });
+
+document.body.addEventListener('touchmove', (function(event) {
+    event.preventDefault();
+}));
 $('.datepicker__dates-date').click((function(e) {
     $(e.currentTarget).toggleClass('selected-date');
 }));

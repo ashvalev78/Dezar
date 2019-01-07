@@ -32,7 +32,6 @@ ul {
 body {
 	margin: 0;
 	min-height: remy(320);
-	overflow: hidden;
 }
 
 input,
@@ -43,15 +42,6 @@ button {
 }
 
 html, body {
-	position: fixed;
-  	overflow: hidden;
 	overscroll-behavior-x: none;
 	overscroll-behavior-y: none;
 }
-
-.mainwrapper {
-	width: 100vw;
-	height: 100vh;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-  }
