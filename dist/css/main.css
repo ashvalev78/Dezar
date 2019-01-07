@@ -282,18 +282,17 @@ html, body {
 
 /* line 134, src/sass/components/startingPage.scss */
 #back_button {
-  color: red;
+  color: #C1272D;
   margin-top: 0.625rem;
   cursor: pointer;
 }
 
 /* line 139, src/sass/components/startingPage.scss */
 #back_button:hover {
-  color: #C1272D;
   text-decoration: underline;
 }
 
-/* line 145, src/sass/components/startingPage.scss */
+/* line 144, src/sass/components/startingPage.scss */
 .input-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,13 +305,13 @@ html, body {
 }
 
 @media (max-width: 400px) {
-  /* line 145, src/sass/components/startingPage.scss */
+  /* line 144, src/sass/components/startingPage.scss */
   .input-form {
     margin-bottom: 0;
   }
 }
 
-/* line 155, src/sass/components/startingPage.scss */
+/* line 154, src/sass/components/startingPage.scss */
 .hidden_buttons_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,7 +327,7 @@ html, body {
   z-index: 10000;
 }
 
-/* line 163, src/sass/components/startingPage.scss */
+/* line 162, src/sass/components/startingPage.scss */
 .socials-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,7 +339,7 @@ html, body {
           flex-flow: column;
 }
 
-/* line 169, src/sass/components/startingPage.scss */
+/* line 168, src/sass/components/startingPage.scss */
 .license-agreement-block {
   padding: 0.625rem;
   border-radius: 1.25rem;
@@ -353,7 +352,7 @@ html, body {
   width: 100%;
 }
 
-/* line 180, src/sass/components/startingPage.scss */
+/* line 179, src/sass/components/startingPage.scss */
 .license-agreement-block-wrapper {
   height: 6.5625rem;
   width: 21.25rem;
@@ -365,13 +364,13 @@ html, body {
 }
 
 @media (max-width: 400px) {
-  /* line 180, src/sass/components/startingPage.scss */
+  /* line 179, src/sass/components/startingPage.scss */
   .license-agreement-block-wrapper {
     margin-top: 2.5rem;
   }
 }
 
-/* line 196, src/sass/components/startingPage.scss */
+/* line 195, src/sass/components/startingPage.scss */
 .agreement_block_rules {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,13 +381,13 @@ html, body {
           flex-flow: column;
 }
 
-/* line 201, src/sass/components/startingPage.scss */
+/* line 200, src/sass/components/startingPage.scss */
 .license_text {
   color: #C1272D;
   margin-bottom: 0.3125rem;
 }
 
-/* line 206, src/sass/components/startingPage.scss */
+/* line 205, src/sass/components/startingPage.scss */
 .switch {
   position: relative;
   width: 47px;
@@ -397,20 +396,20 @@ html, body {
 }
 
 @media (max-width: 420px) {
-  /* line 206, src/sass/components/startingPage.scss */
+  /* line 205, src/sass/components/startingPage.scss */
   .switch {
     height: 20px;
   }
 }
 
-/* line 217, src/sass/components/startingPage.scss */
+/* line 216, src/sass/components/startingPage.scss */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* line 223, src/sass/components/startingPage.scss */
+/* line 222, src/sass/components/startingPage.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -423,7 +422,7 @@ html, body {
   transition: .4s;
 }
 
-/* line 235, src/sass/components/startingPage.scss */
+/* line 234, src/sass/components/startingPage.scss */
 .slider:before {
   position: absolute;
   content: "";
@@ -438,7 +437,7 @@ html, body {
 }
 
 @media (max-width: 420px) {
-  /* line 235, src/sass/components/startingPage.scss */
+  /* line 234, src/sass/components/startingPage.scss */
   .slider:before {
     top: 1px;
     height: 18px;
@@ -446,18 +445,18 @@ html, body {
   }
 }
 
-/* line 256, src/sass/components/startingPage.scss */
+/* line 255, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider {
   background-color: #C1272D;
 }
 
-/* line 260, src/sass/components/startingPage.scss */
+/* line 259, src/sass/components/startingPage.scss */
 .agreement_input:focus + .slider {
   -webkit-box-shadow: 0 0 0 #C1272D;
           box-shadow: 0 0 0 #C1272D;
 }
 
-/* line 264, src/sass/components/startingPage.scss */
+/* line 263, src/sass/components/startingPage.scss */
 .agreement_input:checked + .slider:before {
   -webkit-transform: translateX(20px);
   transform: translateX(20px);
@@ -466,21 +465,37 @@ html, body {
 }
 
 @media (max-width: 420px) {
-  /* line 264, src/sass/components/startingPage.scss */
+  /* line 263, src/sass/components/startingPage.scss */
   .agreement_input:checked + .slider:before {
     -webkit-transform: translateX(25px);
     transform: translateX(25px);
   }
 }
 
-/* line 280, src/sass/components/startingPage.scss */
+/* line 279, src/sass/components/startingPage.scss */
 .slider.round {
   border-radius: 2rem;
 }
 
-/* line 284, src/sass/components/startingPage.scss */
+/* line 283, src/sass/components/startingPage.scss */
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* line 287, src/sass/components/startingPage.scss */
+.bottom-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 293, src/sass/components/startingPage.scss */
+#bottom-block__register {
+  color: #C1272D;
 }
 
 /* line 1, src/sass/components/rulesPopup.scss */

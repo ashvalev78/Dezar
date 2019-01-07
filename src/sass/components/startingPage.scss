@@ -132,12 +132,11 @@
 }
 
 #back_button {
-    color: red;
+    color: #C1272D;
     margin-top: remy(10);
     cursor: pointer;
 
     &:hover {
-        color: #C1272D;
         text-decoration: underline;
     }
 }
@@ -283,4 +282,14 @@
   
 .slider.round:before {
     border-radius: 50%;
+}
+
+.bottom-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom-block__register {
+    color: #C1272D;
 }
