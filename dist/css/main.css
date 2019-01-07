@@ -47,11 +47,13 @@ ul {
 
 /* line 32, src/sass/components/_base.scss */
 body {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   min-height: 20rem;
 }
 
-/* line 37, src/sass/components/_base.scss */
+/* line 39, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -59,7 +61,7 @@ button {
   font: inherit;
 }
 
-/* line 44, src/sass/components/_base.scss */
+/* line 46, src/sass/components/_base.scss */
 html, body {
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;

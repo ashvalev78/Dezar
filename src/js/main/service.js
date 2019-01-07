@@ -107,7 +107,3 @@ $('.slider-services').owlCarousel({
     dots: false,
     autoWidth: true
 });
-
-document.body.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
