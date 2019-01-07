@@ -62,8 +62,9 @@ button {
 
 /* line 45, src/sass/components/_base.scss */
 html, body {
-  overflow-x: hidden;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;
 }
