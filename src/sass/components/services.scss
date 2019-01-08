@@ -61,12 +61,12 @@ $main-color: #6083BB;
 }
 
 .colorize-item, .haircut-item, .care-item {
-    @media (max-width: 375px) {
+    @media (max-width: 414px) {
         width: remy(280);
         font-size: 10px;
     }
 
-    @media (min-width: 376px) and (max-width: 767px) {
+    @media (min-width: 415px) and (max-width: 767px) {
         width: remy(360);
         height: remy(280);
     }

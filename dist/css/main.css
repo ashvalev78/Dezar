@@ -1102,7 +1102,7 @@ ul {
   position: relative;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
   /* line 63, src/sass/components/services.scss */
   .colorize-item, .haircut-item, .care-item {
     width: 17.5rem;
@@ -1110,7 +1110,7 @@ ul {
   }
 }
 
-@media (min-width: 376px) and (max-width: 767px) {
+@media (min-width: 415px) and (max-width: 767px) {
   /* line 63, src/sass/components/services.scss */
   .colorize-item, .haircut-item, .care-item {
     width: 22.5rem;
