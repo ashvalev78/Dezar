@@ -402,3 +402,13 @@ ul {
   color: #BB272D;
   margin-top: rem(20);
 }
+
+/* line 242, src/sass/components/registration.scss */
+.prev-link {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
