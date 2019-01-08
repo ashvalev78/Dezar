@@ -127,7 +127,7 @@ $main-color: #6083BB;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: 12px;
+    font-size: remy(16);
 
     @media (min-width: 767px) {
         height: 20%;
@@ -136,22 +136,24 @@ $main-color: #6083BB;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        font-size: 16px;
         margin-top: remy(40);
     }
 }
 
 .service_name {
+
     @media (min-width: 767px) {
         width: 50%;
     }
 }
 
 .service_time {
+
     margin-bottom: remy(10);
 }
 
 .service__description-full {
+    font-size: remy(16);
     margin-left: remy(25);
     width: 50%;
 
@@ -521,4 +523,8 @@ $main-color: #6083BB;
         }
     }
     
+}
+
+.service_more {
+    font-size: remy(16);
 }
