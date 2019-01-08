@@ -694,7 +694,7 @@ ul {
 /* line 45, src/sass/components/registration.scss */
 .register_button-name {
   position: relative;
-  width: 20.625rem;
+  width: 18.75rem;
   background: url(../svg/Image4.png) center;
   background-size: cover;
   height: 4.0625rem;
