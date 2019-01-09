@@ -497,6 +497,33 @@ html, body {
   color: #C1272D;
 }
 
+/* line 296, src/sass/components/startingPage.scss */
+.preloader {
+  position: fixed;
+  z-index: 11000;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 305, src/sass/components/startingPage.scss */
+.preloader__img {
+  height: 100%;
+}
+
+/* line 311, src/sass/components/startingPage.scss */
+.hiding__preloader {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
 /* line 1, src/sass/components/rulesPopup.scss */
 .background_dimmer {
   position: absolute;

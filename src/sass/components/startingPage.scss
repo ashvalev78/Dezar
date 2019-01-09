@@ -292,3 +292,23 @@
 #bottom-block__register {
     color: #C1272D;
 }
+
+.preloader {
+    position: fixed;
+    z-index: 11000;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+    &__img {
+        // width: 100%;
+        height: 100%;
+    }
+}
+
+.hiding__preloader {
+    transition: opacity 1s;
+    opacity: 0;
+}
