@@ -116,9 +116,6 @@ $('.slider-services').owlCarousel({
     autoWidth: true
 });
 
-
-iNoBounce.enable();
-
 $('body').on('touchmove', function(e) {
     console.log(iNoBounce.isEnabled());
 });
