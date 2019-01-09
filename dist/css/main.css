@@ -524,6 +524,11 @@ html, body {
   opacity: 0;
 }
 
+/* line 316, src/sass/components/startingPage.scss */
+.preloader__hidden {
+  display: none;
+}
+
 /* line 1, src/sass/components/rulesPopup.scss */
 .background_dimmer {
   position: absolute;

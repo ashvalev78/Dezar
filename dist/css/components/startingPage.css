@@ -460,3 +460,8 @@
   transition: opacity 1s;
   opacity: 0;
 }
+
+/* line 316, src/sass/components/startingPage.scss */
+.preloader__hidden {
+  display: none;
+}
