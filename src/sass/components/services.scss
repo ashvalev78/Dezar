@@ -133,7 +133,7 @@ $main-color: #6083BB;
     justify-content: space-around;
     font-size: 11px;
 
-    @media (min-width: 767px) {
+    @media (min-width: 768px) {
         height: 20%;
         align-self: flex-start;
         display: flex;
@@ -142,6 +142,8 @@ $main-color: #6083BB;
         justify-content: space-between;
         margin-top: remy(40);
         font-size: remy(16);
+        margin-bottom: remy(30);
+        padding-top: remy(25);
     }
 }
 
@@ -161,6 +163,8 @@ $main-color: #6083BB;
     font-size: remy(16);
     margin-left: remy(25);
     width: 50%;
+    max-height: 50%;
+    overflow-y: scroll;
 
     @media (max-width: 767px) {
         display: none;
@@ -356,15 +360,18 @@ $main-color: #6083BB;
     align-items: center;
     width: remy(321);
     display: none;
+    max-height: 60%;
 
     &-heading {
-        margin-top: remy(10);
+        margin-top: remy(15);
         font-weight: 600;
+        padding: remy(20);
     }
 
     &-info {
         padding: remy(20);
         margin: 0;
+        overflow-y: scroll;
     }
 
     &-back {

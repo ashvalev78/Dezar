@@ -102,12 +102,9 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
     $popupButton.click(function(e) {
         var parent = $(e.currentTarget).parent();
-        if (parent.attr('class') === 'care-item') {
-            console.log("OK");
-            $('.popup__description-info').html(parent.find('.care_description').find('.service__description-full').html());
-            $('.popup__description-heading').html(parent.find('.care_description').find('.service__description-small').find('.service_name').html());
-        }
-        console.log(parent);
+        $('.popup__description-info').html(parent.find('.service__description-full').html());
+        $('.popup__description-heading').html(parent.find('.service_name').html());
+        
         $('.popup__description').toggleClass("visible_popup");
         $('.popup_blur').toggleClass('visible_popup');
         $('.wrapper_services').toggleClass('blur');

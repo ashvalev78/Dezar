@@ -1249,7 +1249,7 @@ ul {
   font-size: 11px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   /* line 126, src/sass/components/services.scss */
   .service__description-small {
     height: 20%;
@@ -1270,36 +1270,40 @@ ul {
             justify-content: space-between;
     margin-top: 2.5rem;
     font-size: 1rem;
+    margin-bottom: 1.875rem;
+    padding-top: 1.5625rem;
   }
 }
 
 @media (min-width: 767px) {
-  /* line 148, src/sass/components/services.scss */
+  /* line 150, src/sass/components/services.scss */
   .service_name {
     width: 50%;
   }
 }
 
-/* line 155, src/sass/components/services.scss */
+/* line 157, src/sass/components/services.scss */
 .service_time {
   margin-bottom: 0.625rem;
 }
 
-/* line 160, src/sass/components/services.scss */
+/* line 162, src/sass/components/services.scss */
 .service__description-full {
   font-size: 1rem;
   margin-left: 1.5625rem;
   width: 50%;
+  max-height: 50%;
+  overflow-y: scroll;
 }
 
 @media (max-width: 767px) {
-  /* line 160, src/sass/components/services.scss */
+  /* line 162, src/sass/components/services.scss */
   .service__description-full {
     display: none;
   }
 }
 
-/* line 170, src/sass/components/services.scss */
+/* line 174, src/sass/components/services.scss */
 .service_wrapper {
   width: 100%;
   height: 1.875rem;
@@ -1316,18 +1320,18 @@ ul {
 }
 
 @media (min-width: 768px) {
-  /* line 170, src/sass/components/services.scss */
+  /* line 174, src/sass/components/services.scss */
   .service_wrapper {
     display: none;
   }
 }
 
-/* line 183, src/sass/components/services.scss */
+/* line 187, src/sass/components/services.scss */
 .services__body {
   overflow-x: hidden;
 }
 
-/* line 187, src/sass/components/services.scss */
+/* line 191, src/sass/components/services.scss */
 .wrapper_services {
   height: auto;
   display: -webkit-box;
@@ -1343,7 +1347,7 @@ ul {
   padding-right: 0 !important;
 }
 
-/* line 195, src/sass/components/services.scss */
+/* line 199, src/sass/components/services.scss */
 .slider_list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1352,7 +1356,7 @@ ul {
   padding: 0;
 }
 
-/* line 201, src/sass/components/services.scss */
+/* line 205, src/sass/components/services.scss */
 .footer__services {
   margin-top: 1.875rem;
   height: 3.75rem;
@@ -1368,7 +1372,7 @@ ul {
   background: black;
 }
 
-/* line 211, src/sass/components/services.scss */
+/* line 215, src/sass/components/services.scss */
 .footer__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1380,7 +1384,7 @@ ul {
   color: white;
 }
 
-/* line 217, src/sass/components/services.scss */
+/* line 221, src/sass/components/services.scss */
 .footer__next {
   color: #BB272D;
   display: -webkit-box;
@@ -1393,52 +1397,52 @@ ul {
   text-decoration: none;
 }
 
-/* line 225, src/sass/components/services.scss */
+/* line 229, src/sass/components/services.scss */
 .footer__next-button {
   height: 1.5625rem;
 }
 
-/* line 229, src/sass/components/services.scss */
+/* line 233, src/sass/components/services.scss */
 .footer__next-arrow {
   margin-bottom: 0.25rem;
   font-size: 1.5625rem;
 }
 
-/* line 235, src/sass/components/services.scss */
+/* line 239, src/sass/components/services.scss */
 .slider_master {
   width: 100%;
   overflow-y: hidden;
 }
 
 @media (min-width: 320px) {
-  /* line 235, src/sass/components/services.scss */
+  /* line 239, src/sass/components/services.scss */
   .slider_master {
     height: 22.5rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 235, src/sass/components/services.scss */
+  /* line 239, src/sass/components/services.scss */
   .slider_master {
     height: 25rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 235, src/sass/components/services.scss */
+  /* line 239, src/sass/components/services.scss */
   .slider_master {
     height: 34.375rem;
   }
 }
 
 @media (min-width: 770px) {
-  /* line 235, src/sass/components/services.scss */
+  /* line 239, src/sass/components/services.scss */
   .slider_master {
     width: 50rem;
   }
 }
 
-/* line 256, src/sass/components/services.scss */
+/* line 260, src/sass/components/services.scss */
 .slider-master {
   overflow-y: hidden;
   height: 21.875rem;
@@ -1446,21 +1450,21 @@ ul {
 }
 
 @media (min-width: 360px) and (max-width: 767px) {
-  /* line 256, src/sass/components/services.scss */
+  /* line 260, src/sass/components/services.scss */
   .slider-master {
     height: 23.125rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 256, src/sass/components/services.scss */
+  /* line 260, src/sass/components/services.scss */
   .slider-master {
     height: 31.25rem;
     width: 50rem;
   }
 }
 
-/* line 272, src/sass/components/services.scss */
+/* line 276, src/sass/components/services.scss */
 .master_wrapper {
   width: 100%;
   height: 1.875rem;
@@ -1477,7 +1481,7 @@ ul {
   cursor: pointer;
 }
 
-/* line 282, src/sass/components/services.scss */
+/* line 286, src/sass/components/services.scss */
 .master__description {
   width: 11.25rem;
   padding-top: 10%;
@@ -1491,14 +1495,14 @@ ul {
 }
 
 @media (max-width: 360) {
-  /* line 282, src/sass/components/services.scss */
+  /* line 286, src/sass/components/services.scss */
   .master__description {
     height: 15rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 282, src/sass/components/services.scss */
+  /* line 286, src/sass/components/services.scss */
   .master__description {
     width: 11.25rem;
     height: 15rem;
@@ -1506,7 +1510,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  /* line 282, src/sass/components/services.scss */
+  /* line 286, src/sass/components/services.scss */
   .master__description {
     height: 25rem;
     width: 19.5625rem;
@@ -1514,19 +1518,19 @@ ul {
 }
 
 @media (max-width: 360) {
-  /* line 282, src/sass/components/services.scss */
+  /* line 286, src/sass/components/services.scss */
   .master__description {
     height: 12.5rem;
   }
 }
 
-/* line 311, src/sass/components/services.scss */
+/* line 315, src/sass/components/services.scss */
 .master__description .master_name {
   color: white;
   font-weight: 600;
 }
 
-/* line 317, src/sass/components/services.scss */
+/* line 321, src/sass/components/services.scss */
 .master-item {
   margin-right: 1.25rem;
   position: relative;
@@ -1534,27 +1538,27 @@ ul {
 }
 
 @media (max-width: 360) {
-  /* line 317, src/sass/components/services.scss */
+  /* line 321, src/sass/components/services.scss */
   .master-item {
     height: 17.5rem;
   }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
-  /* line 317, src/sass/components/services.scss */
+  /* line 321, src/sass/components/services.scss */
   .master-item {
     height: 20rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 317, src/sass/components/services.scss */
+  /* line 321, src/sass/components/services.scss */
   .master-item {
     height: 32.5rem;
   }
 }
 
-/* line 337, src/sass/components/services.scss */
+/* line 341, src/sass/components/services.scss */
 .master__selected {
   display: none !important;
   top: -0.9375rem;
@@ -1562,7 +1566,7 @@ ul {
   position: absolute;
 }
 
-/* line 345, src/sass/components/services.scss */
+/* line 349, src/sass/components/services.scss */
 .popup__description {
   position: fixed;
   top: 50%;
@@ -1585,21 +1589,24 @@ ul {
           align-items: center;
   width: 20.0625rem;
   display: none;
-}
-
-/* line 360, src/sass/components/services.scss */
-.popup__description-heading {
-  margin-top: 0.625rem;
-  font-weight: 600;
+  max-height: 60%;
 }
 
 /* line 365, src/sass/components/services.scss */
+.popup__description-heading {
+  margin-top: 0.9375rem;
+  font-weight: 600;
+  padding: 1.25rem;
+}
+
+/* line 371, src/sass/components/services.scss */
 .popup__description-info {
   padding: 1.25rem;
   margin: 0;
+  overflow-y: scroll;
 }
 
-/* line 370, src/sass/components/services.scss */
+/* line 377, src/sass/components/services.scss */
 .popup__description-back {
   width: 100%;
   border-top: 1px solid grey;
@@ -1608,14 +1615,14 @@ ul {
   cursor: pointer;
 }
 
-/* line 379, src/sass/components/services.scss */
+/* line 386, src/sass/components/services.scss */
 .visible_popup {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-/* line 383, src/sass/components/services.scss */
+/* line 390, src/sass/components/services.scss */
 .blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -1624,7 +1631,7 @@ ul {
   filter: blur(5px);
 }
 
-/* line 391, src/sass/components/services.scss */
+/* line 398, src/sass/components/services.scss */
 .popup_blur {
   display: none;
   position: fixed;
@@ -1639,7 +1646,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 404, src/sass/components/services.scss */
+/* line 411, src/sass/components/services.scss */
 .master__popup-close-button {
   cursor: pointer;
   position: absolute;
@@ -1650,12 +1657,12 @@ ul {
   opacity: 0.7;
 }
 
-/* line 413, src/sass/components/services.scss */
+/* line 420, src/sass/components/services.scss */
 .master__popup-close-button:hover {
   opacity: 1;
 }
 
-/* line 416, src/sass/components/services.scss */
+/* line 423, src/sass/components/services.scss */
 .master__popup-close-button:before, .master__popup-close-button:after {
   position: absolute;
   left: 15px;
@@ -1665,19 +1672,19 @@ ul {
   background-color: #6083BB;
 }
 
-/* line 424, src/sass/components/services.scss */
+/* line 431, src/sass/components/services.scss */
 .master__popup-close-button:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-/* line 427, src/sass/components/services.scss */
+/* line 434, src/sass/components/services.scss */
 .master__popup-close-button:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-/* line 431, src/sass/components/services.scss */
+/* line 438, src/sass/components/services.scss */
 .master__popup {
   position: fixed;
   top: 50%;
@@ -1702,14 +1709,14 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 431, src/sass/components/services.scss */
+  /* line 438, src/sass/components/services.scss */
   .master__popup {
     width: 33.75rem;
     height: 43.75rem;
   }
 }
 
-/* line 452, src/sass/components/services.scss */
+/* line 459, src/sass/components/services.scss */
 .master__popup-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1720,7 +1727,7 @@ ul {
           flex-flow: column;
 }
 
-/* line 456, src/sass/components/services.scss */
+/* line 463, src/sass/components/services.scss */
 .master__popup-head .master__descr {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1733,18 +1740,18 @@ ul {
   margin-bottom: 0.625rem;
 }
 
-/* line 462, src/sass/components/services.scss */
+/* line 469, src/sass/components/services.scss */
 .master__popup-head .master__descr-name {
   font-weight: 700;
 }
 
-/* line 466, src/sass/components/services.scss */
+/* line 473, src/sass/components/services.scss */
 .master__popup-head .master__descr-position {
   color: #BB272D;
   font-size: 12px;
 }
 
-/* line 472, src/sass/components/services.scss */
+/* line 479, src/sass/components/services.scss */
 .master__popup-head .master__photo {
   width: 100%;
   height: 13.75rem;
@@ -1754,13 +1761,13 @@ ul {
 }
 
 @media (min-width: 760px) {
-  /* line 472, src/sass/components/services.scss */
+  /* line 479, src/sass/components/services.scss */
   .master__popup-head .master__photo {
     height: 25rem;
   }
 }
 
-/* line 483, src/sass/components/services.scss */
+/* line 490, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter {
   position: absolute;
   bottom: -1.25rem;
@@ -1784,24 +1791,24 @@ ul {
           justify-content: center;
 }
 
-/* line 496, src/sass/components/services.scss */
+/* line 503, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter-number {
   font-size: 30px;
 }
 
-/* line 500, src/sass/components/services.scss */
+/* line 507, src/sass/components/services.scss */
 .master__popup-head .master__photo .feedback__counter-name {
   font-size: 12px;
   margin-top: -8px;
 }
 
-/* line 508, src/sass/components/services.scss */
+/* line 515, src/sass/components/services.scss */
 .master__popup__feedback-list {
   margin-top: 1.875rem;
   padding: 0.9375rem;
 }
 
-/* line 513, src/sass/components/services.scss */
+/* line 520, src/sass/components/services.scss */
 .master__popup__feedback-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1814,7 +1821,7 @@ ul {
   border-bottom: 2px solid #6083BB;
 }
 
-/* line 519, src/sass/components/services.scss */
+/* line 526, src/sass/components/services.scss */
 .master__popup__feedback-item .feedback__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1822,14 +1829,14 @@ ul {
   margin-bottom: 0.625rem;
 }
 
-/* line 523, src/sass/components/services.scss */
+/* line 530, src/sass/components/services.scss */
 .master__popup__feedback-item .feedback__heading .feedback__name {
   color: #BB272D;
   font-weight: 600;
   margin-right: 1.25rem;
 }
 
-/* line 533, src/sass/components/services.scss */
+/* line 540, src/sass/components/services.scss */
 .service_more {
   font-size: 1rem;
 }
