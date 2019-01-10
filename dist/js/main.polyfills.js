@@ -96,7 +96,7 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
             prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
         }
         console.log(prevLoc);
-        // location.replace(prevLoc);
+        location.replace(prevLoc);
     }));
 
     function avtSoc(str){
