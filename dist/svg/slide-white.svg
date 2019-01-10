@@ -9,4 +9,12 @@
     </filter>
   </defs>
   <g id="Slide-white" transform="translate(-308 -104.5)">
-    <path id="Shape" d="M15.5,0h20a15.5,15.5,0,0,1,0,31h-20a15.5,15.5,0,0,1,0-31Z" transform="translat
+    <path id="Shape" d="M15.5,0h20a15.5,15.5,0,0,1,0,31h-20a15.5,15.5,0,0,1,0-31Z" transform="translate(308 104.5)" fill="#c1272d"/>
+    <g transform="matrix(1, 0, 0, 1, 308, 104.5)" filter="url(#Oval)">
+      <g id="Oval-2" data-name="Oval" transform="translate(21.5 1.5)" fill="#fff" stroke="#e5e5e5" stroke-width="0.5">
+        <circle cx="14" cy="14" r="14" stroke="none"/>
+        <circle cx="14" cy="14" r="13.75" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
