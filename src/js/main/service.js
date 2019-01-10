@@ -1,4 +1,4 @@
-// if (location.pathname === '/services.html') {
+if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
     var $sliderElements = $('.colorize-item');
     var $sliderServices = $('.slider_services');
@@ -144,4 +144,4 @@
         dots: false,
         autoWidth: true
     });
-// }
+}
