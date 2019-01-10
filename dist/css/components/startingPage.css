@@ -194,7 +194,7 @@
 /* line 115, src/sass/components/startingPage.scss */
 .enter-btn {
   z-index: 10000;
-  color: red;
+  color: red !important;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: auto;
@@ -202,7 +202,7 @@
 
 /* line 120, src/sass/components/startingPage.scss */
 .enter-btn:hover {
-  color: #C1272D;
+  color: #C1272D !important;
 }
 
 /* line 125, src/sass/components/startingPage.scss */
@@ -432,9 +432,12 @@
 /* line 292, src/sass/components/startingPage.scss */
 #bottom-block__register {
   color: #C1272D;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
-/* line 296, src/sass/components/startingPage.scss */
+/* line 297, src/sass/components/startingPage.scss */
 .preloader {
   position: fixed;
   z-index: 11000;
@@ -449,19 +452,19 @@
           justify-content: center;
 }
 
-/* line 305, src/sass/components/startingPage.scss */
+/* line 306, src/sass/components/startingPage.scss */
 .preloader__img {
   height: 100%;
 }
 
-/* line 311, src/sass/components/startingPage.scss */
+/* line 312, src/sass/components/startingPage.scss */
 .hiding__preloader {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 0;
 }
 
-/* line 316, src/sass/components/startingPage.scss */
+/* line 317, src/sass/components/startingPage.scss */
 .preloader__hidden {
   display: none;
 }

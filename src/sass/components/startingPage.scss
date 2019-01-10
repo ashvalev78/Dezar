@@ -114,11 +114,11 @@
 
 .enter-btn {
     z-index: 10000;
-    color: red;
+    color: red !important;
     align-self: flex-end;
     width: auto;
     &:hover {
-        color: #C1272D;
+        color: #C1272D !important;
     }
 }
 
@@ -291,6 +291,7 @@
 
 #bottom-block__register {
     color: #C1272D;
+    appearance: none;
 }
 
 .preloader {

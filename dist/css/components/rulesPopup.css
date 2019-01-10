@@ -19,7 +19,7 @@
 }
 
 /* line 12, src/sass/components/rulesPopup.scss */
-.rules_popup, .process_popup {
+.rules_popup, .process_popup, .warning-popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,20 +48,25 @@
 
 @media (max-width: 420px) {
   /* line 12, src/sass/components/rulesPopup.scss */
-  .rules_popup, .process_popup {
+  .rules_popup, .process_popup, .warning-popup {
     padding: remy(20);
   }
 }
 
 @media (max-width: 321px) {
   /* line 12, src/sass/components/rulesPopup.scss */
-  .rules_popup, .process_popup {
+  .rules_popup, .process_popup, .warning-popup {
     font-size: 12px;
     padding: remy(5);
   }
 }
 
 /* line 40, src/sass/components/rulesPopup.scss */
+.warning-popup {
+  height: remy(80);
+}
+
+/* line 44, src/sass/components/rulesPopup.scss */
 .popup_rules {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -70,13 +75,13 @@
 }
 
 @media (max-width: 420px) {
-  /* line 40, src/sass/components/rulesPopup.scss */
+  /* line 44, src/sass/components/rulesPopup.scss */
   .popup_rules {
     padding: remy(5);
   }
 }
 
-/* line 50, src/sass/components/rulesPopup.scss */
+/* line 54, src/sass/components/rulesPopup.scss */
 .popup_buttons {
   width: 100%;
   position: absolute;
@@ -89,8 +94,8 @@
   border-top: solid grey 1px;
 }
 
-/* line 60, src/sass/components/rulesPopup.scss */
-.popup_cancel, .popup_accept {
+/* line 64, src/sass/components/rulesPopup.scss */
+.popup_cancel, .popup_accept, .warning-cancel {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -103,28 +108,34 @@
   outline: 0 !important;
 }
 
-/* line 70, src/sass/components/rulesPopup.scss */
-.popup_cancel:hover, .popup_accept:hover {
+/* line 74, src/sass/components/rulesPopup.scss */
+.popup_cancel:hover, .popup_accept:hover, .warning-cancel:hover {
   background-color: #cccaca;
 }
 
-/* line 74, src/sass/components/rulesPopup.scss */
-.popup_cancel:active, .popup_accept:active {
+/* line 78, src/sass/components/rulesPopup.scss */
+.popup_cancel:active, .popup_accept:active, .warning-cancel:active {
   outline: 0 !important;
 }
 
-/* line 79, src/sass/components/rulesPopup.scss */
+/* line 83, src/sass/components/rulesPopup.scss */
 .popup_cancel {
   border-radius: 0 0 0 remy(30);
   border-right: solid grey 1px;
 }
 
-/* line 84, src/sass/components/rulesPopup.scss */
+/* line 88, src/sass/components/rulesPopup.scss */
+.warning-cancel {
+  border-right: none;
+  border-radius: 0 0 remy(30) remy(30);
+}
+
+/* line 92, src/sass/components/rulesPopup.scss */
 .popup_accept {
   border-radius: 0 0 remy(30) 0;
 }
 
-/* line 88, src/sass/components/rulesPopup.scss */
+/* line 96, src/sass/components/rulesPopup.scss */
 .popup_heading {
   font-size: remy(20);
   margin-top: remy(5);

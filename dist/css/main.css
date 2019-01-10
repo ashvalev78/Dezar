@@ -257,7 +257,7 @@ html, body {
 /* line 115, src/sass/components/startingPage.scss */
 .enter-btn {
   z-index: 10000;
-  color: red;
+  color: red !important;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: auto;
@@ -265,7 +265,7 @@ html, body {
 
 /* line 120, src/sass/components/startingPage.scss */
 .enter-btn:hover {
-  color: #C1272D;
+  color: #C1272D !important;
 }
 
 /* line 125, src/sass/components/startingPage.scss */
@@ -495,9 +495,12 @@ html, body {
 /* line 292, src/sass/components/startingPage.scss */
 #bottom-block__register {
   color: #C1272D;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
-/* line 296, src/sass/components/startingPage.scss */
+/* line 297, src/sass/components/startingPage.scss */
 .preloader {
   position: fixed;
   z-index: 11000;
@@ -512,19 +515,19 @@ html, body {
           justify-content: center;
 }
 
-/* line 305, src/sass/components/startingPage.scss */
+/* line 306, src/sass/components/startingPage.scss */
 .preloader__img {
   height: 100%;
 }
 
-/* line 311, src/sass/components/startingPage.scss */
+/* line 312, src/sass/components/startingPage.scss */
 .hiding__preloader {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 0;
 }
 
-/* line 316, src/sass/components/startingPage.scss */
+/* line 317, src/sass/components/startingPage.scss */
 .preloader__hidden {
   display: none;
 }
@@ -542,7 +545,7 @@ html, body {
 }
 
 /* line 12, src/sass/components/rulesPopup.scss */
-.rules_popup, .process_popup {
+.rules_popup, .process_popup, .warning-popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,20 +574,25 @@ html, body {
 
 @media (max-width: 420px) {
   /* line 12, src/sass/components/rulesPopup.scss */
-  .rules_popup, .process_popup {
+  .rules_popup, .process_popup, .warning-popup {
     padding: 1.25rem;
   }
 }
 
 @media (max-width: 321px) {
   /* line 12, src/sass/components/rulesPopup.scss */
-  .rules_popup, .process_popup {
+  .rules_popup, .process_popup, .warning-popup {
     font-size: 12px;
     padding: 0.3125rem;
   }
 }
 
 /* line 40, src/sass/components/rulesPopup.scss */
+.warning-popup {
+  height: 5rem;
+}
+
+/* line 44, src/sass/components/rulesPopup.scss */
 .popup_rules {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -593,13 +601,13 @@ html, body {
 }
 
 @media (max-width: 420px) {
-  /* line 40, src/sass/components/rulesPopup.scss */
+  /* line 44, src/sass/components/rulesPopup.scss */
   .popup_rules {
     padding: 0.3125rem;
   }
 }
 
-/* line 50, src/sass/components/rulesPopup.scss */
+/* line 54, src/sass/components/rulesPopup.scss */
 .popup_buttons {
   width: 100%;
   position: absolute;
@@ -612,8 +620,8 @@ html, body {
   border-top: solid grey 1px;
 }
 
-/* line 60, src/sass/components/rulesPopup.scss */
-.popup_cancel, .popup_accept {
+/* line 64, src/sass/components/rulesPopup.scss */
+.popup_cancel, .popup_accept, .warning-cancel {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -626,28 +634,34 @@ html, body {
   outline: 0 !important;
 }
 
-/* line 70, src/sass/components/rulesPopup.scss */
-.popup_cancel:hover, .popup_accept:hover {
+/* line 74, src/sass/components/rulesPopup.scss */
+.popup_cancel:hover, .popup_accept:hover, .warning-cancel:hover {
   background-color: #cccaca;
 }
 
-/* line 74, src/sass/components/rulesPopup.scss */
-.popup_cancel:active, .popup_accept:active {
+/* line 78, src/sass/components/rulesPopup.scss */
+.popup_cancel:active, .popup_accept:active, .warning-cancel:active {
   outline: 0 !important;
 }
 
-/* line 79, src/sass/components/rulesPopup.scss */
+/* line 83, src/sass/components/rulesPopup.scss */
 .popup_cancel {
   border-radius: 0 0 0 1.875rem;
   border-right: solid grey 1px;
 }
 
-/* line 84, src/sass/components/rulesPopup.scss */
+/* line 88, src/sass/components/rulesPopup.scss */
+.warning-cancel {
+  border-right: none;
+  border-radius: 0 0 1.875rem 1.875rem;
+}
+
+/* line 92, src/sass/components/rulesPopup.scss */
 .popup_accept {
   border-radius: 0 0 1.875rem 0;
 }
 
-/* line 88, src/sass/components/rulesPopup.scss */
+/* line 96, src/sass/components/rulesPopup.scss */
 .popup_heading {
   font-size: 1.25rem;
   margin-top: 0.3125rem;

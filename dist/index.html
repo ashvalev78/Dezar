@@ -24,22 +24,22 @@
 			<img id = "logo-img" src="./svg/logo.png" />
 		</div>
 		<div class = "bottom_part row align-items-end">
-            <div class = "hidden_buttons_block">
+            <form class = "hidden_buttons_block">
                 <div class="form-group input-form register-input-form">
 					<div class = "input_wrapper">
-						<input class="input" name = "login" placeholder="Логин"/>
+						<input class="input" name = "login" placeholder="Логин" required/>
 					</div>
 					<div class = "input_wrapper">
-						<input class="input" name = "name" type = "name" placeholder="ФИО"/>	
+						<input class="input" name = "name" type = "name" placeholder="ФИО" required/>	
 					</div>
 					<div class = "input_wrapper">
-						<input class="input" name = "phone" type = "phone" placeholder="Номер телефона"/>	
+						<input class="input" name = "phone" type = "phone" type="tel" placeholder="Номер телефона" required/>	
 					</div>
 					<div class = "input_wrapper">
-						<input class="input" name = "password" type = "password" placeholder="Пароль"/>	
+						<input class="input" name = "password" type = "password" placeholder="Пароль" required/>	
 					</div>
 					<div class = "input_wrapper">
-						<input class="input" name = "again_password" type = "password" placeholder="Повторите пароль"/>	
+						<input class="input" name = "again_password" type = "password" placeholder="Повторите пароль" required/>	
 					</div>
 				</div>
 				<div class="license-agreement-block-wrapper">
@@ -62,16 +62,16 @@
 				</div>
 				<div class="bottom-block">
 					<a id = "back_button">Назад</a>
-					<a id="bottom-block__register">Готово</a>
+					<a id="bottom-block__register" type="submit">Готово</a>
 				</div>	
-			</div>
+			</form>
 			<div class="login-input-form">
 				<div class="form-group input-form">
 					<div class = "input_wrapper">
-						<input class="input" name = "login" placeholder="Логин"/>
+						<input class="input" name = "main-login" placeholder="Логин" required/>
 					</div>
 					<div class = "input_wrapper">
-						<input class="input" name = "password" type = "password" placeholder="Пароль"/>	
+						<input class="input" name = "main-password" type = "password" placeholder="Пароль" required/>	
 					</div>
 					<a class="enter-btn btn btn-link" href = "./registration.html">Войти</a>
 				</div>
@@ -142,6 +142,13 @@
 			<div class ="popup_buttons">
 				<button class = "popup_cancel">Назад</button>
 				<button name = "process_accept" class = "popup_accept">Принимаю</button>
+			</div>
+		</div>
+
+		<div class = "warning-popup">
+			<h2 class="popup_heading">Заполните все поля!</h2>
+			<div class ="popup_buttons">
+				<button class = "warning-cancel">Ок</button>
 			</div>
 		</div>
 	</div>

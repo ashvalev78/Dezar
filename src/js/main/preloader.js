@@ -15,20 +15,57 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
     enterButton.addEventListener('click', function() {
         var fio = document.getElementsByName('name')[0].value;
         var phone = document.getElementsByName('phone')[0].value;
-        // console.log(phone.indexOf('+'));
-        if (phone.indexOf('+') == 0) {
-            phone = phone.slice(1);
-        }
-        var prevLoc = location.pathname;
-        var newPath = '/registration.html?nm=' + fio + '&tel=' + phone;
-        if (prevLoc.includes('/index.html')) {
-            console.log('OK');
-            prevLoc = prevLoc.replace('/index.html', newPath);
+        var log, pass, againPass, rulesChecked, processChecked;
+        log = document.getElementsByName('login')[0].value;
+        pass = document.getElementsByName('password')[0].value;
+        againPass = document.getElementsByName('again_password')[0].value;
+        rulesChecked = document.getElementsByName('rules-agreement')[0].checked;
+        processChecked = document.getElementsByName('process-agreement')[0].checked;
+
+        if (fio.length > 0 && phone.length > 0 && log.length > 0 
+            && pass.length > 0 && againPass.length > 0 && rulesChecked && processChecked) {
+            if (phone.indexOf('+') == 0) {
+                phone = phone.slice(1);
+            }
+            var prevLoc = location.pathname;
+            var newPath = '/registration.html?nm=' + fio + '&tel=' + phone;
+            if (prevLoc.includes('/index.html')) {
+                prevLoc = prevLoc.replace('/index.html', newPath);
+            } else {
+                prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
+            }
+            location.replace(prevLoc);
         } else {
-            prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
+            document.getElementsByClassName('warning-popup')[0].style.display = 'flex';
+            document.getElementsByClassName('background_dimmer')[0].style.display = 'flex';
         }
-        console.log(prevLoc);
-        location.replace(prevLoc);
+    });
+
+    var entrBtn = document.getElementsByClassName('enter-btn')[0];
+
+    entrBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var log = document.getElementsByName('main-login')[0].value;
+        var pas = document.getElementsByName('main-password')[0].value;
+        if (log.length > 0 && pas.length > 0) {
+            var prevLoc = location.pathname;
+            var newPath = '/registration.html';
+            if (prevLoc.includes('/index.html')) {
+                prevLoc = prevLoc.replace('/index.html', newPath);
+            } else {
+                prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
+            }
+            location.replace(prevLoc);
+        } else {
+            document.getElementsByClassName('warning-popup')[0].style.display = 'flex';
+            document.getElementsByClassName('background_dimmer')[0].style.display = 'flex';
+        }
+    });
+
+    var cancelPopup = document.getElementsByClassName('warning-cancel')[0];
+    cancelPopup.addEventListener('click', function() {
+        document.getElementsByClassName('warning-popup')[0].style.display = 'none';
+        document.getElementsByClassName('background_dimmer')[0].style.display = 'none';
     });
 
     function avtSoc(str){
