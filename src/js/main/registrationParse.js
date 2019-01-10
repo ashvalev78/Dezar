@@ -1,5 +1,5 @@
 
-if (document.getElementsByName('registration-body')[0] !== undefined) {
+if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     var stringToParse = location.search;
 
     console.log(document.getElementsByClassName('master_name')[0]);

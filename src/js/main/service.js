@@ -1,5 +1,83 @@
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
+    function timeAddition() {
+        var selectedElements = document.getElementsByClassName('selected');
+        var summTime = document.getElementsByClassName('footer__cost-time')[0];
+        var minTime = 0, maxTime = 0;
+        
+        for (var i = 0; i < selectedElements.length; i++) {
+            if (!selectedElements[i].classList.contains('master-item')) {
+
+                var time = $(selectedElements[i]).find('.service_time').html();
+                var parsedTime = time.split(" ")[0];
+                parsedTime = parsedTime.split("-");
+
+                // if time is defined in hours
+                if (+parsedTime[0] < 10) {
+                    minTime += +parsedTime[0] * 60;
+
+                    if(parsedTime.length > 1) {
+                        maxTime += +parsedTime[1] * 60;
+                    } else {
+                        maxTime += +parsedTime[0] * 60;
+                    }
+
+                // if time is defined in minutes
+                } else {
+                    minTime += +parsedTime[0];
+                    if(parsedTime.length > 1) {
+                        maxTime += +parsedTime[1];
+                    } else {
+                        maxTime += +parsedTime[0];
+                    }
+                }
+
+                // outputting an answer
+                if (maxTime === minTime) {
+                    summTime.innerHTML = maxTime + ' минут';
+                } else {
+                    summTime.innerHTML = minTime + ' - ' + maxTime + ' минут';
+                }
+            }
+        }
+
+        // price addition part
+        var summPrice = document.getElementsByClassName('footer__cost-price')[0];
+        var minPrice = 0, maxPrice = 0;
+
+        for (i = 0; i < selectedElements.length; i++) {
+            if (!selectedElements[i].classList.contains('master-item')) {
+
+                var price = $(selectedElements[i]).find('.service_price').html();
+                var parsedPrice = price.split(" ")[0];
+                parsedPrice = parsedPrice.split("-");
+
+
+                minPrice += +parsedPrice[0];
+                if(parsedPrice.length > 1) {
+                    maxPrice += +parsedPrice[1];
+                } else {
+                    maxPrice += +parsedPrice[0];
+                }
+
+                // outputting an answer
+                if (maxPrice === minPrice) {
+                    summPrice.innerHTML = maxPrice + ' рублей';
+                } else {
+                    summPrice.innerHTML = minPrice + ' - ' + maxPrice + ' рублей';
+                }
+            }
+        }
+
+        if (selectedElements.length === 0) {
+            summPrice.innerHTML = '0 рублей';
+            summTime.innerHTML = '0 минут';
+        }
+    }
+
+    //--------------------------------
+    // slider and popup section
+
     var $sliderElements = $('.colorize-item');
     var $sliderServices = $('.slider_services');
     var $sliderWidth = $sliderServices.width();
@@ -17,6 +95,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
             $('.colorize-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
+        timeAddition();
     });
 
     var $popupButton = $('.service_wrapper');
@@ -51,6 +130,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
             $('.care-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
+        timeAddition();
     });
 
     var $haircutItem = $('.haircut_description');
@@ -62,6 +142,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
             $('.haircut-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
+        timeAddition();
     });
 
     var $masterItem = $('.master__description');
