@@ -83,11 +83,19 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
     enterButton.addEventListener('click', (function() {
         var fio = document.getElementsByName('name')[0].value;
         var phone = document.getElementsByName('phone')[0].value;
-        console.log(phone.indexOf('+'));
+        // console.log(phone.indexOf('+'));
         if (phone.indexOf('+') == 0) {
             phone = phone.slice(1);
         }
-        location.replace('/registration.html?nm=' + fio + '&tel=' + phone);
+        var prevLoc = location.pathname;
+        var newPath = '/registration.html?nm=' + fio + '&tel=' + phone;
+        if (prevLoc.includes('/index.html')) {
+            prevLoc.replace('/index.html', newPath);
+        } else {
+            prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
+        }
+        console.log(prevLoc);
+        // location.replace(prevLoc);
     }));
 
     function avtSoc(str){
@@ -114,7 +122,6 @@ $registerButton.click((function() {
 if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     var stringToParse = location.search;
 
-    console.log(document.getElementsByClassName('master_name')[0]);
     document.getElementsByClassName('master_name')[0].innerHTML = stringToParse.slice(stringToParse.indexOf('=') + 1, stringToParse.lastIndexOf('&'));
     document.getElementsByClassName('master_phone')[0].innerHTML = "+" + stringToParse.slice(stringToParse.indexOf('=', 4) + 1);
 }
