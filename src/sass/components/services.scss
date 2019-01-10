@@ -131,7 +131,7 @@ $main-color: #6083BB;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: remy(16);
+    font-size: 11px;
 
     @media (min-width: 767px) {
         height: 20%;
@@ -141,6 +141,7 @@ $main-color: #6083BB;
         align-items: center;
         justify-content: space-between;
         margin-top: remy(40);
+        font-size: remy(16);
     }
 }
 
