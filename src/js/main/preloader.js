@@ -22,6 +22,7 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
         var prevLoc = location.pathname;
         var newPath = '/registration.html?nm=' + fio + '&tel=' + phone;
         if (prevLoc.includes('/index.html')) {
+            console.log('OK');
             prevLoc.replace('/index.html', newPath);
         } else {
             prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
