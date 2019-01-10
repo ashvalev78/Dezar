@@ -111,13 +111,13 @@ $registerButton.click((function() {
 }));
 
 
-if (location.pathname === '/registration.html') {
+// if (location.pathname === '/registration.html') {
     var stringToParse = location.search;
 
     console.log(document.getElementsByClassName('master_name')[0]);
     document.getElementsByClassName('master_name')[0].innerHTML = stringToParse.slice(stringToParse.indexOf('=') + 1, stringToParse.lastIndexOf('&'));
     document.getElementsByClassName('master_phone')[0].innerHTML = "+" + stringToParse.slice(stringToParse.indexOf('=', 4) + 1);
-}
+// }
 var $popupButton1 = $('.rules_popup_button_open');
 var $popupButton2 = $('.process_popup_button_open');
 var $rulesPopup = $('.rules_popup');
@@ -162,7 +162,7 @@ $popupButton2.click((function() {
         sliders[1].checked = false;
     }
 }));
-if (location.pathname === '/services.html') {
+// if (location.pathname === '/services.html') {
 
     var $sliderElements = $('.colorize-item');
     var $sliderServices = $('.slider_services');
@@ -308,7 +308,7 @@ if (location.pathname === '/services.html') {
         dots: false,
         autoWidth: true
     });
-}
+// }
 $('.datepicker__dates-date').click((function(e) {
     $(e.currentTarget).toggleClass('selected-date');
 }));

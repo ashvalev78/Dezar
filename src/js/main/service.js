@@ -1,4 +1,4 @@
-if (location.pathname === '/services.html') {
+// if (location.pathname === '/services.html') {
 
     var $sliderElements = $('.colorize-item');
     var $sliderServices = $('.slider_services');
@@ -144,4 +144,4 @@ if (location.pathname === '/services.html') {
         dots: false,
         autoWidth: true
     });
-}
+// }
