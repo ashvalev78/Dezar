@@ -185,7 +185,14 @@ if (location.pathname === '/services.html') {
 
     var $popupButton = $('.service_wrapper');
 
-    $popupButton.click((function() {
+    $popupButton.click((function(e) {
+        var parent = $(e.currentTarget).parent();
+        if (parent.attr('class') === 'care-item') {
+            console.log("OK");
+            $('.popup__description-info').html(parent.find('.care_description').find('.service__description-full').html());
+            $('.popup__description-heading').html(parent.find('.care_description').find('.service__description-small').find('.service_name').html());
+        }
+        console.log(parent);
         $('.popup__description').toggleClass("visible_popup");
         $('.popup_blur').toggleClass('visible_popup');
         $('.wrapper_services').toggleClass('blur');
@@ -224,7 +231,12 @@ if (location.pathname === '/services.html') {
     var $masterItem = $('.master__description');
 
     $masterItem.click((function(e) {
-        $(e.currentTarget).parent().toggleClass('selected');
+        if ($(e.currentTarget).parent().hasClass('selected')) {
+            $(e.currentTarget).parent().removeClass('selected');
+        } else {
+            $('.master-item').removeClass('selected');
+            $(e.currentTarget).parent().addClass('selected');
+        }
     }));
 
     var $masterPopupButton = $('.master_wrapper');
