@@ -124,7 +124,7 @@
 }
 
 /* line 71, src/sass/components/startingPage.scss */
-.input, .vk-enter, .inst-enter {
+.input, .vk-enter, .fb-enter {
   color: white;
   background-color: #6083BB;
   border-style: none;
@@ -139,26 +139,26 @@
 }
 
 /* line 83, src/sass/components/startingPage.scss */
-.input:hover, .vk-enter:hover, .inst-enter:hover {
+.input:hover, .vk-enter:hover, .fb-enter:hover {
   background: #6083EE;
 }
 
 /* line 87, src/sass/components/startingPage.scss */
-.input::-webkit-input-placeholder, .vk-enter::-webkit-input-placeholder, .inst-enter::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .vk-enter::-webkit-input-placeholder, .fb-enter::-webkit-input-placeholder {
   color: white;
 }
-.input:-ms-input-placeholder, .vk-enter:-ms-input-placeholder, .inst-enter:-ms-input-placeholder {
+.input:-ms-input-placeholder, .vk-enter:-ms-input-placeholder, .fb-enter:-ms-input-placeholder {
   color: white;
 }
-.input::-ms-input-placeholder, .vk-enter::-ms-input-placeholder, .inst-enter::-ms-input-placeholder {
+.input::-ms-input-placeholder, .vk-enter::-ms-input-placeholder, .fb-enter::-ms-input-placeholder {
   color: white;
 }
-.input::placeholder, .vk-enter::placeholder, .inst-enter::placeholder {
+.input::placeholder, .vk-enter::placeholder, .fb-enter::placeholder {
   color: white;
 }
 
 /* line 92, src/sass/components/startingPage.scss */
-.inst-enter, .vk-enter {
+.fb-enter, .vk-enter {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;

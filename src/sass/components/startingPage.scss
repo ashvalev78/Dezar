@@ -68,7 +68,7 @@
     }
 }
 
-.input, .vk-enter, .inst-enter {
+.input, .vk-enter, .fb-enter {
     color: white;
     background-color: #6083BB;
     border-style: none;
@@ -89,7 +89,7 @@
     }
 }
 
-.inst-enter, .vk-enter {
+.fb-enter, .vk-enter {
     cursor: pointer;
     display: flex;
     justify-content: center;

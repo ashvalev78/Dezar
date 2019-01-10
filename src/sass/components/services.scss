@@ -33,6 +33,10 @@ $main-color: #6083BB;
     top: - remy(10);
     right: - remy(10);
     display: none !important;
+
+    @media (min-width: 768px) {
+        top: 5%;
+    }
 }
 
 .selected {

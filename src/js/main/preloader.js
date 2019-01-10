@@ -21,7 +21,15 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
         }
         location.replace('/registration.html?nm=' + fio + '&tel=' + phone);
     });
+
     function avtSoc(str){
         location.replace("?id="+str); 
     }
+
+    document.getElementsByClassName('vk-enter')[0].addEventListener('click', function() {
+        avtSoc('vk');
+    });
+    document.getElementsByClassName('fb-enter')[0].addEventListener('click', function() {
+        avtSoc('fb');
+    });
 }
