@@ -162,6 +162,20 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
 
     document.getElementsByClassName('master_name')[0].innerHTML = stringToParse.slice(stringToParse.indexOf('=') + 1, stringToParse.lastIndexOf('&'));
     document.getElementsByClassName('master_phone')[0].innerHTML = "+" + stringToParse.slice(stringToParse.indexOf('=', 4) + 1);
+
+    var exitButton = document.getElementsByClassName('exit_button')[0];
+
+    
+
+    exitButton.addEventListener('click', (function() {
+        var newPath = '/Dezar/dist/index.html?id=clear';
+        // if (prevLoc.includes('/index.html')) {
+        //     prevLoc = prevLoc.replace('/index.html', newPath);
+        // } else {
+        //     prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
+        // }
+        location.replace(newPath);
+    }));
 }
 var $popupButton1 = $('.rules_popup_button_open');
 var $popupButton2 = $('.process_popup_button_open');
@@ -368,7 +382,6 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         $('.master__popup').toggleClass("visible_popup");
         $('.popup_blur').toggleClass('visible_popup');
         $('.wrapper_services').toggleClass('blur');
-
         $('.master__descr-name').html(masters[e.currentTarget.getAttribute('data-attr')].name);
         $('.master__photo').css('background', masters[e.currentTarget.getAttribute('data-attr')].img);
     }));

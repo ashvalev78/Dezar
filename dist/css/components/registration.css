@@ -113,7 +113,7 @@ ul {
   .register_button-name {
     width: remy(640);
     margin-bottom: remy(35);
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 
@@ -182,7 +182,7 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 
@@ -303,7 +303,7 @@ ul {
     width: remy(650);
     height: remy(250);
     margin-bottom: remy(35);
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 

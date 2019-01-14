@@ -776,7 +776,7 @@ ul {
   .register_button-name {
     width: 40rem;
     margin-bottom: 2.1875rem;
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 
@@ -845,7 +845,7 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 
@@ -966,7 +966,7 @@ ul {
     width: 40.625rem;
     height: 15.625rem;
     margin-bottom: 2.1875rem;
-    font-weight: bold;
+    font-weight: 500;
   }
 }
 

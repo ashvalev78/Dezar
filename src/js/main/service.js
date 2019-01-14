@@ -159,7 +159,6 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         $('.master__popup').toggleClass("visible_popup");
         $('.popup_blur').toggleClass('visible_popup');
         $('.wrapper_services').toggleClass('blur');
-
         $('.master__descr-name').html(masters[e.currentTarget.getAttribute('data-attr')].name);
         $('.master__photo').css('background', masters[e.currentTarget.getAttribute('data-attr')].img);
     });
