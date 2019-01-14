@@ -235,7 +235,8 @@ ul {
 }
 
 .exit_button {
-    color: #BB272D;
+    color: #BB272D !important;
+    cursor: pointer;
     margin-top: rem(20);
 }
 

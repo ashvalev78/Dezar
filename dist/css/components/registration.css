@@ -399,11 +399,12 @@ ul {
 
 /* line 237, src/sass/components/registration.scss */
 .exit_button {
-  color: #BB272D;
+  color: #BB272D !important;
+  cursor: pointer;
   margin-top: rem(20);
 }
 
-/* line 242, src/sass/components/registration.scss */
+/* line 243, src/sass/components/registration.scss */
 .prev-link {
   width: 100%;
   -ms-flex-pack: distribute;

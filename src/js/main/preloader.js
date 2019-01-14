@@ -34,6 +34,7 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
             } else {
                 prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
             }
+            prevLoc = encodeURI(prevLoc);
             location.replace(prevLoc);
         } else {
             document.getElementsByClassName('warning-popup')[0].style.display = 'flex';
