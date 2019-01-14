@@ -117,25 +117,25 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
         var log = document.getElementsByName('main-login')[0].value;
         var pas = document.getElementsByName('main-password')[0].value;
 
+        if (log == '1111' && pas == '1111') {
+            location.replace('/Dezar/dist/registration.html?nm=test&tel=79991234567');
+        }
+
         if (log.length > 0 && pas.length > 0) {
             var prevLoc = location.pathname;
             var newPath = '/registration.html';
             if (prevLoc.includes('/index.html')) {
                 if (log == '1111' && pas == '1111') {
                     var index = prevLoc.indexOf('/index.html');
-                    console.log(index);
                     var subStr = prevLoc.slice(index);
-                    console.log(subStr);
                     prevLoc = prevLoc.replace(subStr, '/registration.html?nm=test&tel=79991234567');
                     location.replace(prevLoc);
                 }
                 prevLoc = prevLoc.replace('/index.html', newPath);
             } else {
                 if (log == '1111' && pas == '1111') {
-                    var index = prevLoc.indexOf('/index.html');
-                    console.log(index);
-                    var subStr = prevLoc.slice(index);
-                    console.log(subStr);
+                    index = prevLoc.indexOf('/');
+                    subStr = prevLoc.slice(index);
                     prevLoc = prevLoc.replace(subStr, '/registration.html?nm=test&tel=79991234567');
                     location.replace(prevLoc);
                 }
