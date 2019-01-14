@@ -116,19 +116,29 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
         e.preventDefault();
         var log = document.getElementsByName('main-login')[0].value;
         var pas = document.getElementsByName('main-password')[0].value;
-        console.log(log + ' ' + pas);
 
-        if (log === '1111' && pas === '1111') {
-            var prevLoc = location.pathname;
-            prevLoc = '/Dezar/dist/registration.html?nm=test&tel=79991234567';
-            location.replace(prevLoc);
-        }
         if (log.length > 0 && pas.length > 0) {
             var prevLoc = location.pathname;
             var newPath = '/registration.html';
             if (prevLoc.includes('/index.html')) {
+                if (log == '1111' && pas == '1111') {
+                    var index = prevLoc.indexOf('/index.html');
+                    console.log(index);
+                    var subStr = prevLoc.slice(index);
+                    console.log(subStr);
+                    prevLoc = prevLoc.replace(subStr, '/registration.html?nm=test&tel=79991234567');
+                    location.replace(prevLoc);
+                }
                 prevLoc = prevLoc.replace('/index.html', newPath);
             } else {
+                if (log == '1111' && pas == '1111') {
+                    var index = prevLoc.indexOf('/index.html');
+                    console.log(index);
+                    var subStr = prevLoc.slice(index);
+                    console.log(subStr);
+                    prevLoc = prevLoc.replace(subStr, '/registration.html?nm=test&tel=79991234567');
+                    location.replace(prevLoc);
+                }
                 prevLoc = prevLoc.substr(0, prevLoc.length - 1) + newPath;
             }
             location.replace(prevLoc);
