@@ -48,11 +48,6 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
         e.preventDefault();
         var log = document.getElementsByName('main-login')[0].value;
         var pas = document.getElementsByName('main-password')[0].value;
-        console.log(log + ' ' + pas);
-
-        if (log === '1111' && pas === '1111') {
-            location.replace('/Dezar/dist/registration.html?nm=test&tel=79991234567');
-        }
 
         if (log.length > 0 && pas.length > 0) {
             var prevLoc = location.pathname;
@@ -78,6 +73,10 @@ if (document.getElementsByClassName('preloader')[0] !== undefined) {
         } else {
             document.getElementsByClassName('warning-popup')[0].style.display = 'flex';
             document.getElementsByClassName('background_dimmer')[0].style.display = 'flex';
+        }
+        
+        if (log === '1111' && pas === '1111') {
+            location.replace('/Dezar/dist/registration.html?nm=test&tel=79991234567');
         }
     });
 
