@@ -513,7 +513,7 @@
 }
 
 /* line 349, src/sass/components/services.scss */
-.popup__description {
+.popup__description, .popup__warning {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -539,21 +539,21 @@
 }
 
 /* line 365, src/sass/components/services.scss */
-.popup__description-heading {
+.popup__description-heading, .popup__warning-heading {
   margin-top: remy(15);
   font-weight: 600;
   padding: remy(20);
 }
 
 /* line 371, src/sass/components/services.scss */
-.popup__description-info {
+.popup__description-info, .popup__warning-info {
   padding: remy(20);
   margin: 0;
   overflow-y: scroll;
 }
 
 /* line 377, src/sass/components/services.scss */
-.popup__description-back {
+.popup__description-back, .popup__warning-back {
   width: 100%;
   border-top: 1px solid grey;
   color: #6083BB;
@@ -785,4 +785,25 @@
 /* line 540, src/sass/components/services.scss */
 .service_more {
   font-size: remy(16);
+}
+
+/* line 544, src/sass/components/services.scss */
+.popup__warning {
+  width: remy(200);
+  height: remy(100);
+}
+
+/* line 548, src/sass/components/services.scss */
+.popup__warning-description {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: remy(10);
 }

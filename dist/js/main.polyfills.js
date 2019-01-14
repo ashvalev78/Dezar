@@ -219,6 +219,8 @@ $popupButton2.click((function() {
 }));
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
+    var minPrice = 0;
+
     function timeAddition() {
         var selectedElements = document.getElementsByClassName('selected');
         var summTime = document.getElementsByClassName('footer__cost-time')[0];
@@ -262,7 +264,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
         // price addition part
         var summPrice = document.getElementsByClassName('footer__cost-price')[0];
-        var minPrice = 0, maxPrice = 0;
+        var maxPrice = 0;
 
         for (i = 0; i < selectedElements.length; i++) {
             if (!selectedElements[i].classList.contains('master-item')) {
@@ -408,6 +410,23 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
             img: "url(./svg/1x/Master-4-min.png)"
         }
     };
+
+    $('.footer__next').click((function(e) {
+        var $mastersList = $('.master-item');
+
+        if (!$mastersList.hasClass('selected') && minPrice === 0) {
+            $('.popup__warning').toggleClass('visible_popup');
+            $('.popup_blur').toggleClass('visible_popup');
+            $('.wrapper_services').toggleClass('blur');
+            e.preventDefault();
+        }
+    }));
+
+    $('.popup__warning-back').click((function() {
+        $('.popup__warning').toggleClass('visible_popup');
+        $('.popup_blur').toggleClass('visible_popup');
+        $('.wrapper_services').toggleClass('blur');
+    }))
 
     $('.slider-master').owlCarousel({
         rewind: false,
