@@ -29,13 +29,634 @@ $popupBackButton.click((function() {
     $('.popup_blur').toggleClass('visible_popup');
     $('.wrapper_finish').toggleClass('blur');
 }));
-// function initMap() {
-//     var uluru = {lat: 59.853531, lng: 30.140566};
-//     var map = new google.maps.Map(
-//     document.getElementById('map'), {zoom: 14, center: uluru});
-//     var marker = new google.maps.Marker({position: uluru, map: map});
-// }
 
+
+function getURIValue(str, symb) {
+    var uri = decodeURI(location.href);
+    return uri.slice(uri.indexOf(str) + str.length, uri.indexOf(symb, uri.indexOf(str)));
+}
+
+var uri = decodeURI(location.href);
+
+$('.finish__cost-price').html(getURIValue('sum=', '&'));
+$('.finish__cost-time').html(getURIValue('time=', '&'));
+$('.finish__date-time').html(uri.slice(uri.indexOf('t=') + 2));
+
+$(document).ready((function($) {
+
+    $('.finish__phone-number').mask('+7(000) 000 - 00 - 00', {
+        placeholder: "+7(___) ___ - __ - __"
+    });
+
+    if (uri.indexOf('tel=') !== -1) {
+        console.log(getURIValue('tel=', '&'));
+        document.getElementsByClassName('finish__phone-number')[0].value = '+' + getURIValue('tel=', '&');
+    }
+}));
+/**
+ * jquery.mask.js
+ * @version: v1.14.15
+ * @author: Igor Escobar
+ *
+ * Created by Igor Escobar on 2012-03-10. Please report any bug at github.com/igorescobar/jQuery-Mask-Plugin
+ *
+ * Copyright (c) 2012 Igor Escobar http://igorescobar.com
+ *
+ * The MIT License (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/* jshint laxbreak: true */
+/* jshint maxcomplexity:17 */
+/* global define */
+
+// UMD (Universal Module Definition) patterns for JavaScript modules that work everywhere.
+// https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js
+(function (factory, jQuery, Zepto) {
+
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        module.exports = factory(require('jquery'));
+    } else {
+        factory(jQuery || Zepto);
+    }
+
+}((function ($) {
+    'use strict';
+
+    var Mask = function (el, mask, options) {
+
+        var p = {
+            invalid: [],
+            getCaret: function () {
+                try {
+                    var sel,
+                        pos = 0,
+                        ctrl = el.get(0),
+                        dSel = document.selection,
+                        cSelStart = ctrl.selectionStart;
+
+                    // IE Support
+                    if (dSel && navigator.appVersion.indexOf('MSIE 10') === -1) {
+                        sel = dSel.createRange();
+                        sel.moveStart('character', -p.val().length);
+                        pos = sel.text.length;
+                    }
+                    // Firefox support
+                    else if (cSelStart || cSelStart === '0') {
+                        pos = cSelStart;
+                    }
+
+                    return pos;
+                } catch (e) {}
+            },
+            setCaret: function(pos) {
+                try {
+                    if (el.is(':focus')) {
+                        var range, ctrl = el.get(0);
+
+                        // Firefox, WebKit, etc..
+                        if (ctrl.setSelectionRange) {
+                            ctrl.setSelectionRange(pos, pos);
+                        } else { // IE
+                            range = ctrl.createTextRange();
+                            range.collapse(true);
+                            range.moveEnd('character', pos);
+                            range.moveStart('character', pos);
+                            range.select();
+                        }
+                    }
+                } catch (e) {}
+            },
+            events: function() {
+                el
+                .on('keydown.mask', (function(e) {
+                    el.data('mask-keycode', e.keyCode || e.which);
+                    el.data('mask-previus-value', el.val());
+                    el.data('mask-previus-caret-pos', p.getCaret());
+                    p.maskDigitPosMapOld = p.maskDigitPosMap;
+                }))
+                .on($.jMaskGlobals.useInput ? 'input.mask' : 'keyup.mask', p.behaviour)
+                .on('paste.mask drop.mask', (function() {
+                    setTimeout((function() {
+                        el.keydown().keyup();
+                    }), 100);
+                }))
+                .on('change.mask', (function(){
+                    el.data('changed', true);
+                }))
+                .on('blur.mask', (function(){
+                    if (oldValue !== p.val() && !el.data('changed')) {
+                        el.trigger('change');
+                    }
+                    el.data('changed', false);
+                }))
+                // it's very important that this callback remains in this position
+                // otherwhise oldValue it's going to work buggy
+                .on('blur.mask', (function() {
+                    oldValue = p.val();
+                }))
+                // select all text on focus
+                .on('focus.mask', (function (e) {
+                    if (options.selectOnFocus === true) {
+                        $(e.target).select();
+                    }
+                }))
+                // clear the value if it not complete the mask
+                .on('focusout.mask', (function() {
+                    if (options.clearIfNotMatch && !regexMask.test(p.val())) {
+                       p.val('');
+                   }
+                }));
+            },
+            getRegexMask: function() {
+                var maskChunks = [], translation, pattern, optional, recursive, oRecursive, r;
+
+                for (var i = 0; i < mask.length; i++) {
+                    translation = jMask.translation[mask.charAt(i)];
+
+                    if (translation) {
+
+                        pattern = translation.pattern.toString().replace(/.{1}$|^.{1}/g, '');
+                        optional = translation.optional;
+                        recursive = translation.recursive;
+
+                        if (recursive) {
+                            maskChunks.push(mask.charAt(i));
+                            oRecursive = {digit: mask.charAt(i), pattern: pattern};
+                        } else {
+                            maskChunks.push(!optional && !recursive ? pattern : (pattern + '?'));
+                        }
+
+                    } else {
+                        maskChunks.push(mask.charAt(i).replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+                    }
+                }
+
+                r = maskChunks.join('');
+
+                if (oRecursive) {
+                    r = r.replace(new RegExp('(' + oRecursive.digit + '(.*' + oRecursive.digit + ')?)'), '($1)?')
+                         .replace(new RegExp(oRecursive.digit, 'g'), oRecursive.pattern);
+                }
+
+                return new RegExp(r);
+            },
+            destroyEvents: function() {
+                el.off(['input', 'keydown', 'keyup', 'paste', 'drop', 'blur', 'focusout', ''].join('.mask '));
+            },
+            val: function(v) {
+                var isInput = el.is('input'),
+                    method = isInput ? 'val' : 'text',
+                    r;
+
+                if (arguments.length > 0) {
+                    if (el[method]() !== v) {
+                        el[method](v);
+                    }
+                    r = el;
+                } else {
+                    r = el[method]();
+                }
+
+                return r;
+            },
+            calculateCaretPosition: function() {
+                var oldVal = el.data('mask-previus-value') || '',
+                    newVal = p.getMasked(),
+                    caretPosNew = p.getCaret();
+                if (oldVal !== newVal) {
+                    var caretPosOld = el.data('mask-previus-caret-pos') || 0,
+                        newValL = newVal.length,
+                        oldValL = oldVal.length,
+                        maskDigitsBeforeCaret = 0,
+                        maskDigitsAfterCaret = 0,
+                        maskDigitsBeforeCaretAll = 0,
+                        maskDigitsBeforeCaretAllOld = 0,
+                        i = 0;
+
+                    for (i = caretPosNew; i < newValL; i++) {
+                        if (!p.maskDigitPosMap[i]) {
+                            break;
+                        }
+                        maskDigitsAfterCaret++;
+                    }
+
+                    for (i = caretPosNew - 1; i >= 0; i--) {
+                        if (!p.maskDigitPosMap[i]) {
+                            break;
+                        }
+                        maskDigitsBeforeCaret++;
+                    }
+
+                    for (i = caretPosNew - 1; i >= 0; i--) {
+                        if (p.maskDigitPosMap[i]) {
+                            maskDigitsBeforeCaretAll++;
+                        }
+                    }
+
+                    for (i = caretPosOld - 1; i >= 0; i--) {
+                        if (p.maskDigitPosMapOld[i]) {
+                            maskDigitsBeforeCaretAllOld++;
+                        }
+                    }
+
+                    // if the cursor is at the end keep it there
+                    if (caretPosNew > oldValL) {
+                      caretPosNew = newValL * 10;
+                    } else if (caretPosOld >= caretPosNew && caretPosOld !== oldValL) {
+                        if (!p.maskDigitPosMapOld[caretPosNew])  {
+                          var caretPos = caretPosNew;
+                          caretPosNew -= maskDigitsBeforeCaretAllOld - maskDigitsBeforeCaretAll;
+                          caretPosNew -= maskDigitsBeforeCaret;
+                          if (p.maskDigitPosMap[caretPosNew])  {
+                            caretPosNew = caretPos;
+                          }
+                        }
+                    }
+                    else if (caretPosNew > caretPosOld) {
+                        caretPosNew += maskDigitsBeforeCaretAll - maskDigitsBeforeCaretAllOld;
+                        caretPosNew += maskDigitsAfterCaret;
+                    }
+                }
+                return caretPosNew;
+            },
+            behaviour: function(e) {
+                e = e || window.event;
+                p.invalid = [];
+
+                var keyCode = el.data('mask-keycode');
+
+                if ($.inArray(keyCode, jMask.byPassKeys) === -1) {
+                    var newVal = p.getMasked(),
+                        caretPos = p.getCaret();
+
+                    // this is a compensation to devices/browsers that don't compensate
+                    // caret positioning the right way
+                    setTimeout((function() {
+                      p.setCaret(p.calculateCaretPosition());
+                    }), $.jMaskGlobals.keyStrokeCompensation);
+
+                    p.val(newVal);
+                    p.setCaret(caretPos);
+                    return p.callbacks(e);
+                }
+            },
+            getMasked: function(skipMaskChars, val) {
+                var buf = [],
+                    value = val === undefined ? p.val() : val + '',
+                    m = 0, maskLen = mask.length,
+                    v = 0, valLen = value.length,
+                    offset = 1, addMethod = 'push',
+                    resetPos = -1,
+                    maskDigitCount = 0,
+                    maskDigitPosArr = [],
+                    lastMaskChar,
+                    check;
+
+                if (options.reverse) {
+                    addMethod = 'unshift';
+                    offset = -1;
+                    lastMaskChar = 0;
+                    m = maskLen - 1;
+                    v = valLen - 1;
+                    check = function () {
+                        return m > -1 && v > -1;
+                    };
+                } else {
+                    lastMaskChar = maskLen - 1;
+                    check = function () {
+                        return m < maskLen && v < valLen;
+                    };
+                }
+
+                var lastUntranslatedMaskChar;
+                while (check()) {
+                    var maskDigit = mask.charAt(m),
+                        valDigit = value.charAt(v),
+                        translation = jMask.translation[maskDigit];
+
+                    if (translation) {
+                        if (valDigit.match(translation.pattern)) {
+                            buf[addMethod](valDigit);
+                             if (translation.recursive) {
+                                if (resetPos === -1) {
+                                    resetPos = m;
+                                } else if (m === lastMaskChar && m !== resetPos) {
+                                    m = resetPos - offset;
+                                }
+
+                                if (lastMaskChar === resetPos) {
+                                    m -= offset;
+                                }
+                            }
+                            m += offset;
+                        } else if (valDigit === lastUntranslatedMaskChar) {
+                            // matched the last untranslated (raw) mask character that we encountered
+                            // likely an insert offset the mask character from the last entry; fall
+                            // through and only increment v
+                            maskDigitCount--;
+                            lastUntranslatedMaskChar = undefined;
+                        } else if (translation.optional) {
+                            m += offset;
+                            v -= offset;
+                        } else if (translation.fallback) {
+                            buf[addMethod](translation.fallback);
+                            m += offset;
+                            v -= offset;
+                        } else {
+                          p.invalid.push({p: v, v: valDigit, e: translation.pattern});
+                        }
+                        v += offset;
+                    } else {
+                        if (!skipMaskChars) {
+                            buf[addMethod](maskDigit);
+                        }
+
+                        if (valDigit === maskDigit) {
+                            maskDigitPosArr.push(v);
+                            v += offset;
+                        } else {
+                            lastUntranslatedMaskChar = maskDigit;
+                            maskDigitPosArr.push(v + maskDigitCount);
+                            maskDigitCount++;
+                        }
+
+                        m += offset;
+                    }
+                }
+
+                var lastMaskCharDigit = mask.charAt(lastMaskChar);
+                if (maskLen === valLen + 1 && !jMask.translation[lastMaskCharDigit]) {
+                    buf.push(lastMaskCharDigit);
+                }
+
+                var newVal = buf.join('');
+                p.mapMaskdigitPositions(newVal, maskDigitPosArr, valLen);
+                return newVal;
+            },
+            mapMaskdigitPositions: function(newVal, maskDigitPosArr, valLen) {
+              var maskDiff = options.reverse ? newVal.length - valLen : 0;
+              p.maskDigitPosMap = {};
+              for (var i = 0; i < maskDigitPosArr.length; i++) {
+                p.maskDigitPosMap[maskDigitPosArr[i] + maskDiff] = 1;
+              }
+            },
+            callbacks: function (e) {
+                var val = p.val(),
+                    changed = val !== oldValue,
+                    defaultArgs = [val, e, el, options],
+                    callback = function(name, criteria, args) {
+                        if (typeof options[name] === 'function' && criteria) {
+                            options[name].apply(this, args);
+                        }
+                    };
+
+                callback('onChange', changed === true, defaultArgs);
+                callback('onKeyPress', changed === true, defaultArgs);
+                callback('onComplete', val.length === mask.length, defaultArgs);
+                callback('onInvalid', p.invalid.length > 0, [val, e, el, p.invalid, options]);
+            }
+        };
+
+        el = $(el);
+        var jMask = this, oldValue = p.val(), regexMask;
+
+        mask = typeof mask === 'function' ? mask(p.val(), undefined, el,  options) : mask;
+
+        // public methods
+        jMask.mask = mask;
+        jMask.options = options;
+        jMask.remove = function() {
+            var caret = p.getCaret();
+            if (jMask.options.placeholder) {
+                el.removeAttr('placeholder');
+            }
+            if (el.data('mask-maxlength')) {
+                el.removeAttr('maxlength');
+            }
+            p.destroyEvents();
+            p.val(jMask.getCleanVal());
+            p.setCaret(caret);
+            return el;
+        };
+
+        // get value without mask
+        jMask.getCleanVal = function() {
+           return p.getMasked(true);
+        };
+
+        // get masked value without the value being in the input or element
+        jMask.getMaskedVal = function(val) {
+           return p.getMasked(false, val);
+        };
+
+       jMask.init = function(onlyMask) {
+            onlyMask = onlyMask || false;
+            options = options || {};
+
+            jMask.clearIfNotMatch  = $.jMaskGlobals.clearIfNotMatch;
+            jMask.byPassKeys       = $.jMaskGlobals.byPassKeys;
+            jMask.translation      = $.extend({}, $.jMaskGlobals.translation, options.translation);
+
+            jMask = $.extend(true, {}, jMask, options);
+
+            regexMask = p.getRegexMask();
+
+            if (onlyMask) {
+                p.events();
+                p.val(p.getMasked());
+            } else {
+                if (options.placeholder) {
+                    el.attr('placeholder' , options.placeholder);
+                }
+
+                // this is necessary, otherwise if the user submit the form
+                // and then press the "back" button, the autocomplete will erase
+                // the data. Works fine on IE9+, FF, Opera, Safari.
+                if (el.data('mask')) {
+                  el.attr('autocomplete', 'off');
+                }
+
+                // detect if is necessary let the user type freely.
+                // for is a lot faster than forEach.
+                for (var i = 0, maxlength = true; i < mask.length; i++) {
+                    var translation = jMask.translation[mask.charAt(i)];
+                    if (translation && translation.recursive) {
+                        maxlength = false;
+                        break;
+                    }
+                }
+
+                if (maxlength) {
+                    el.attr('maxlength', mask.length).data('mask-maxlength', true);
+                }
+
+                p.destroyEvents();
+                p.events();
+
+                var caret = p.getCaret();
+                p.val(p.getMasked());
+                p.setCaret(caret);
+            }
+        };
+
+        jMask.init(!el.is('input'));
+    };
+
+    $.maskWatchers = {};
+    var HTMLAttributes = function () {
+        var input = $(this),
+            options = {},
+            prefix = 'data-mask-',
+            mask = input.attr('data-mask');
+
+        if (input.attr(prefix + 'reverse')) {
+            options.reverse = true;
+        }
+
+        if (input.attr(prefix + 'clearifnotmatch')) {
+            options.clearIfNotMatch = true;
+        }
+
+        if (input.attr(prefix + 'selectonfocus') === 'true') {
+           options.selectOnFocus = true;
+        }
+
+        if (notSameMaskObject(input, mask, options)) {
+            return input.data('mask', new Mask(this, mask, options));
+        }
+    },
+    notSameMaskObject = function(field, mask, options) {
+        options = options || {};
+        var maskObject = $(field).data('mask'),
+            stringify = JSON.stringify,
+            value = $(field).val() || $(field).text();
+        try {
+            if (typeof mask === 'function') {
+                mask = mask(value);
+            }
+            return typeof maskObject !== 'object' || stringify(maskObject.options) !== stringify(options) || maskObject.mask !== mask;
+        } catch (e) {}
+    },
+    eventSupported = function(eventName) {
+        var el = document.createElement('div'), isSupported;
+
+        eventName = 'on' + eventName;
+        isSupported = (eventName in el);
+
+        if ( !isSupported ) {
+            el.setAttribute(eventName, 'return;');
+            isSupported = typeof el[eventName] === 'function';
+        }
+        el = null;
+
+        return isSupported;
+    };
+
+    $.fn.mask = function(mask, options) {
+        options = options || {};
+        var selector = this.selector,
+            globals = $.jMaskGlobals,
+            interval = globals.watchInterval,
+            watchInputs = options.watchInputs || globals.watchInputs,
+            maskFunction = function() {
+                if (notSameMaskObject(this, mask, options)) {
+                    return $(this).data('mask', new Mask(this, mask, options));
+                }
+            };
+
+        $(this).each(maskFunction);
+
+        if (selector && selector !== '' && watchInputs) {
+            clearInterval($.maskWatchers[selector]);
+            $.maskWatchers[selector] = setInterval((function(){
+                $(document).find(selector).each(maskFunction);
+            }), interval);
+        }
+        return this;
+    };
+
+    $.fn.masked = function(val) {
+        return this.data('mask').getMaskedVal(val);
+    };
+
+    $.fn.unmask = function() {
+        clearInterval($.maskWatchers[this.selector]);
+        delete $.maskWatchers[this.selector];
+        return this.each((function() {
+            var dataMask = $(this).data('mask');
+            if (dataMask) {
+                dataMask.remove().removeData('mask');
+            }
+        }));
+    };
+
+    $.fn.cleanVal = function() {
+        return this.data('mask').getCleanVal();
+    };
+
+    $.applyDataMask = function(selector) {
+        selector = selector || $.jMaskGlobals.maskElements;
+        var $selector = (selector instanceof $) ? selector : $(selector);
+        $selector.filter($.jMaskGlobals.dataMaskAttr).each(HTMLAttributes);
+    };
+
+    var globals = {
+        maskElements: 'input,td,span,div',
+        dataMaskAttr: '*[data-mask]',
+        dataMask: true,
+        watchInterval: 300,
+        watchInputs: true,
+        keyStrokeCompensation: 10,
+        // old versions of chrome dont work great with input event
+        useInput: !/Chrome\/[2-4][0-9]|SamsungBrowser/.test(window.navigator.userAgent) && eventSupported('input'),
+        watchDataMask: false,
+        byPassKeys: [9, 16, 17, 18, 36, 37, 38, 39, 40, 91],
+        translation: {
+            '0': {pattern: /\d/},
+            '9': {pattern: /\d/, optional: true},
+            '#': {pattern: /\d/, recursive: true},
+            'A': {pattern: /[a-zA-Z0-9]/},
+            'S': {pattern: /[a-zA-Z]/}
+        }
+    };
+
+    $.jMaskGlobals = $.jMaskGlobals || {};
+    globals = $.jMaskGlobals = $.extend(true, {}, globals, $.jMaskGlobals);
+
+    // looking for inputs with data-mask attribute
+    if (globals.dataMask) {
+        $.applyDataMask();
+    }
+
+    setInterval((function() {
+        if ($.jMaskGlobals.watchDataMask) {
+            $.applyDataMask();
+        }
+    }), globals.watchInterval);
+}), window.jQuery, window.Zepto));
 
 if (document.getElementById('map') !== null) {
     ymaps.ready(init);
@@ -44,14 +665,14 @@ if (document.getElementById('map') !== null) {
         var myGeoObject = new ymaps.GeoObject({
             geometry: {
                 type: "Point", // тип геометрии - точка
-                coordinates: [59.853531, 30.140566] // координаты точки
+                coordinates: [59.853460, 30.152206] // координаты точки
             }
         });
 
         var myMap = new ymaps.Map("map", {
-            center: [59.853531, 30.140566],
+            center: [59.853460, 30.152206],
             controls: [],
-            zoom: 16
+            zoom: 14
         });
 
         myMap.geoObjects.add(myGeoObject);
@@ -174,6 +795,11 @@ $registerButton.click((function() {
     $hiddenButtonsBlock.attr("style", "display: flex");
 }));
 
+$('#phone-input').mask('+7(000) 000 - 00 - 00', {
+    placeholder: "+7(___) ___ - __ - __"
+});
+
+
 if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     var stringToParse = location.search;
     stringToParse = decodeURI(stringToParse);
@@ -187,6 +813,16 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
 
     exitButton.addEventListener('click', (function() {
         var newPath = '/Dezar/dist/index.html?id=clear';
+        location.replace(newPath);
+    }));
+
+    // on next button click transfer name and phone onto the services page
+    var regButton = document.getElementsByClassName('register_button-name')[0];
+
+    regButton.addEventListener('click', (function(e) {
+        e.preventDefault();
+        var newPath = location.href;
+        newPath = newPath.replace('/registration.html', '/services.html');
         location.replace(newPath);
     }));
 }
@@ -236,11 +872,13 @@ $popupButton2.click((function() {
 }));
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
-    var minPrice = 0;
+    var currPrice = 0;
+    var summPrice = document.getElementsByClassName('footer__cost-price')[0];
+    var summTime = document.getElementsByClassName('footer__cost-time')[0];
+
 
     function timeAddition() {
         var selectedElements = document.getElementsByClassName('selected');
-        var summTime = document.getElementsByClassName('footer__cost-time')[0];
         var minTime = 0, maxTime = 0;
         
         for (var i = 0; i < selectedElements.length; i++) {
@@ -280,8 +918,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         }
 
         // price addition part
-        var summPrice = document.getElementsByClassName('footer__cost-price')[0];
-        var maxPrice = 0;
+        var maxPrice = 0, minPrice = 0;
 
         for (i = 0; i < selectedElements.length; i++) {
             if (!selectedElements[i].classList.contains('master-item')) {
@@ -289,7 +926,6 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
                 var price = $(selectedElements[i]).find('.service_price').html();
                 var parsedPrice = price.split(" ")[0];
                 parsedPrice = parsedPrice.split("-");
-
 
                 minPrice += +parsedPrice[0];
                 if(parsedPrice.length > 1) {
@@ -330,7 +966,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         if ($(e.currentTarget).parent().hasClass('selected')) {
             $(e.currentTarget).parent().removeClass('selected');
         } else {
-            $('.colorize-item').removeClass('selected');
+            // $('.colorize-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
         timeAddition();
@@ -362,7 +998,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         if ($(e.currentTarget).parent().hasClass('selected')) {
             $(e.currentTarget).parent().removeClass('selected');
         } else {
-            $('.care-item').removeClass('selected');
+            // $('.care-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
         timeAddition();
@@ -428,14 +1064,46 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         }
     };
 
-    $('.footer__next').click((function(e) {
-        var $mastersList = $('.master-item');
+    $('#services-button-next').click((function(e) {
+        e.preventDefault();
 
-        if (!$mastersList.hasClass('selected') && minPrice === 0) {
+        var $mastersList = $('.master-item');
+        var serv1 = '', serv2 = '', serv3 = '';
+
+        // taking services lists to check which one has 'selected' class
+        var services1 = $('.colorize-item');
+        var services2 = $('.care-item');
+        var services3 = $('.haircut-item');
+
+        for (var i = 0; i < services1.length; i++) {
+            if ($(services1[i]).hasClass('selected')) {
+                serv1 = serv1 + i.toString() + ',';
+            }
+        }
+        for (i = 0; i < services2.length; i++) {
+            if ($(services2[i]).hasClass('selected')) {
+                serv2 = serv2 + i.toString() + ',';
+            }
+        }
+        for (i = 0; i < services3.length; i++) {
+            if ($(services3[i]).hasClass('selected')) {
+                serv3 = serv3 + i.toString() + ',';
+            }
+        }
+
+        serv1 = 's1=' + serv1 + '&s2=' + serv2 + '&s3=' + serv3;
+        var currPrice = $('.footer__cost-time').html();
+
+        if (!$mastersList.hasClass('selected') || currPrice === '0 минут') {
             $('.popup__warning').toggleClass('visible_popup');
             $('.popup_blur').toggleClass('visible_popup');
             $('.wrapper_services').toggleClass('blur');
             e.preventDefault();
+        } else {
+            e.preventDefault();
+            var newPath = location.href + '&' + serv1 + '&sum=' + summPrice.innerHTML + '&time=' + summTime.innerHTML;
+            newPath = newPath.replace('/services.html', '/time.html');
+            location.replace(newPath);
         }
     }));
 
@@ -477,10 +1145,269 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         autoWidth: true
     });
 }
+
+var colorizeServices = {
+    0: {
+        name: 'Окрашивание в один тон на длинные волосы',
+        price1: 7000,
+        price2: 9000,
+        time1: 120,
+        time2: 0
+    },
+    1: {
+        name: 'Окрашивание в один тон на средние волосы',
+        price1: 6000,
+        price2: 7000,
+        time1: 120,
+        time2: 0
+    },
+    2: {
+        name: 'Окрашивание в один тон на короткие волосы',
+        price1: 5000,
+        price2: 6000,
+        time1: 120,
+        time2: 0
+    },
+    3: {
+        name: 'Любое сложное окрашивание на длинные волосы',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    4: {
+        name: 'Любое сложное окрашивание на средние волосы',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    5: {
+        name: 'Любое сложное окрашивание на короткие волосы',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    6: {
+        name: 'Сложное окрашивание на длинные волосы техника SURFBLOND',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    7: {
+        name: 'Сложное окрашивание на средние волосы техника SURFBLOND',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    8: {
+        name: 'Сложное окрашивание на короткие волосы техника SURFBLOND',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    9: {
+        name: 'Сложное окрашивание на длинные волосы техника AIRTOUCH',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    10: {
+        name: 'Сложное окрашивание на средние волосы техника AIRTOUCH',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    11: {
+        name: 'Сложное окрашивание на короткие волосы техника AIRTOUCH',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    12: {
+        name: 'Сложное окрашивание на длинные волосы техника SHATUSH',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    13: {
+        name: 'Сложное окрашивание на средние волосы техника SHATUSH',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    14: {
+        name: 'Сложное окрашивание на короткие волосы техника SHATUSH',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    15: {
+        name: 'Блондирование на короткие волосы (тотальный блонд)',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    16: {
+        name: 'Блондирование на средние волосы (тотальный блонд)',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    17: {
+        name: 'Блондирование на длинные волосы (тотальный блонд)',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    18: {
+        name: 'Сложное окрашивание на короткие волосы техника BALAYAGE(балаяж)',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    19: {
+        name: 'Сложное окрашивание на средние волосы техника BALAYAGE(балаяж)',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    20: {
+        name: 'Сложное окрашивание на длинные волосы техника BALAYAGE(балаяж)',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    21: {
+        name: 'Сложное окрашивание на короткие волосы техника BABYLIGHTS (Бейбиблонд)',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    22: {
+        name: 'Сложное окрашивание на средние волосы техника BABYLIGHTS (Бейбиблонд)',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    23: {
+        name: 'Сложное окрашивание на длинные волосы техника BABYLIGHTS (Бейбиблонд)',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    24: {
+        name: 'Сложное окрашивание на короткие волосы техника OMBRE',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    25: {
+        name: 'Сложное окрашивание на средние волосы техника OMBRE',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    26: {
+        name: 'Сложное окрашивание на длинные волосы техника OMBRE',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    27: {
+        name: 'Окрашивание корней с тонированием длины на длинные волосы',
+        price1: 7500,
+        price2: 8500,
+        time1: 120,
+        time2: 0
+    },
+    28: {
+        name: 'Сложное окрашивание на средние волосы техника OMBRE',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    29: {
+        name: 'Сложное окрашивание на длинные волосы техника OMBRE',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+};
 $('.datepicker__dates-date').click((function(e) {
     $(e.currentTarget).toggleClass('selected-date');
 }));
 
-$('.timepicker__block-time').click((function(e) {
-    $(e.currentTarget).toggleClass('selected-time-visible');
+var date = new Date();
+
+var months = {
+    0: 'Январь',
+    1: 'Февраль',
+    2: 'Март',
+    3: 'Апрель',
+    4: 'Май',
+    5: 'Июнь',
+    6: 'Июль',
+    7: 'Август',
+    8: 'Сентябрь',
+    9: 'Октябрь',
+    10: 'Ноябрь',
+    11: 'Декабрь'
+};
+
+var $timePickers = $('.timepicker__block-time');
+
+$('.datepicker__block-switcher-month').html(months[date.getMonth()] + ' ' + date.getFullYear());
+
+$timePickers.click((function(e) {
+    if ($(e.currentTarget).hasClass('selected-time-visible')) {
+        $timePickers.removeClass('selected-time-visible');
+    } else {
+        $timePickers.removeClass('selected-time-visible');
+        $(e.currentTarget).toggleClass('selected-time-visible');
+    }
+}));
+
+var uri = decodeURI(location.search);
+
+$('#time-cost').html(uri.slice(uri.indexOf('sum=') + 4, uri.indexOf('&', uri.indexOf('sum='))));
+if (uri[uri.length] === '&') {
+    $('#time-time').html(uri.slice(uri.indexOf('time=') + 5, uri.indexOf('&', uri.indexOf('time='))));
+} else {
+    $('#time-time').html(uri.slice(uri.indexOf('time=') + 5));
+}
+
+$('#time-footer-next').click((function(e) {
+    e.preventDefault();
+    if ($timePickers.hasClass('selected-time-visible')) {
+        if (uri.indexOf('&t=') === -1) {
+            location.replace(location.href.replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
+        } else {
+            location.replace(location.href.slice(0, uri.indexOf('&t=')).replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
+        }
+    }
 }));

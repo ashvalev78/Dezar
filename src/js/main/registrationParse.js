@@ -14,4 +14,14 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
         var newPath = '/Dezar/dist/index.html?id=clear';
         location.replace(newPath);
     });
+
+    // on next button click transfer name and phone onto the services page
+    var regButton = document.getElementsByClassName('register_button-name')[0];
+
+    regButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        var newPath = location.href;
+        newPath = newPath.replace('/registration.html', '/services.html');
+        location.replace(newPath);
+    });
 }

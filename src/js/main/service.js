@@ -1,10 +1,12 @@
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
-    var minPrice = 0;
+    var currPrice = 0;
+    var summPrice = document.getElementsByClassName('footer__cost-price')[0];
+    var summTime = document.getElementsByClassName('footer__cost-time')[0];
+
 
     function timeAddition() {
         var selectedElements = document.getElementsByClassName('selected');
-        var summTime = document.getElementsByClassName('footer__cost-time')[0];
         var minTime = 0, maxTime = 0;
         
         for (var i = 0; i < selectedElements.length; i++) {
@@ -44,8 +46,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         }
 
         // price addition part
-        var summPrice = document.getElementsByClassName('footer__cost-price')[0];
-        var maxPrice = 0;
+        var maxPrice = 0, minPrice = 0;
 
         for (i = 0; i < selectedElements.length; i++) {
             if (!selectedElements[i].classList.contains('master-item')) {
@@ -53,7 +54,6 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
                 var price = $(selectedElements[i]).find('.service_price').html();
                 var parsedPrice = price.split(" ")[0];
                 parsedPrice = parsedPrice.split("-");
-
 
                 minPrice += +parsedPrice[0];
                 if(parsedPrice.length > 1) {
@@ -94,7 +94,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         if ($(e.currentTarget).parent().hasClass('selected')) {
             $(e.currentTarget).parent().removeClass('selected');
         } else {
-            $('.colorize-item').removeClass('selected');
+            // $('.colorize-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
         timeAddition();
@@ -126,7 +126,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         if ($(e.currentTarget).parent().hasClass('selected')) {
             $(e.currentTarget).parent().removeClass('selected');
         } else {
-            $('.care-item').removeClass('selected');
+            // $('.care-item').removeClass('selected');
             $(e.currentTarget).parent().addClass('selected');
         }
         timeAddition();
@@ -192,14 +192,46 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         }
     };
 
-    $('.footer__next').click(function(e) {
-        var $mastersList = $('.master-item');
+    $('#services-button-next').click(function(e) {
+        e.preventDefault();
 
-        if (!$mastersList.hasClass('selected') && minPrice === 0) {
+        var $mastersList = $('.master-item');
+        var serv1 = '', serv2 = '', serv3 = '';
+
+        // taking services lists to check which one has 'selected' class
+        var services1 = $('.colorize-item');
+        var services2 = $('.care-item');
+        var services3 = $('.haircut-item');
+
+        for (var i = 0; i < services1.length; i++) {
+            if ($(services1[i]).hasClass('selected')) {
+                serv1 = serv1 + i.toString() + ',';
+            }
+        }
+        for (i = 0; i < services2.length; i++) {
+            if ($(services2[i]).hasClass('selected')) {
+                serv2 = serv2 + i.toString() + ',';
+            }
+        }
+        for (i = 0; i < services3.length; i++) {
+            if ($(services3[i]).hasClass('selected')) {
+                serv3 = serv3 + i.toString() + ',';
+            }
+        }
+
+        serv1 = 's1=' + serv1 + '&s2=' + serv2 + '&s3=' + serv3;
+        var currPrice = $('.footer__cost-time').html();
+
+        if (!$mastersList.hasClass('selected') || currPrice === '0 минут') {
             $('.popup__warning').toggleClass('visible_popup');
             $('.popup_blur').toggleClass('visible_popup');
             $('.wrapper_services').toggleClass('blur');
             e.preventDefault();
+        } else {
+            e.preventDefault();
+            var newPath = location.href + '&' + serv1 + '&sum=' + summPrice.innerHTML + '&time=' + summTime.innerHTML;
+            newPath = newPath.replace('/services.html', '/time.html');
+            location.replace(newPath);
         }
     });
 
@@ -241,3 +273,216 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
         autoWidth: true
     });
 }
+
+var colorizeServices = {
+    0: {
+        name: 'Окрашивание в один тон на длинные волосы',
+        price1: 7000,
+        price2: 9000,
+        time1: 120,
+        time2: 0
+    },
+    1: {
+        name: 'Окрашивание в один тон на средние волосы',
+        price1: 6000,
+        price2: 7000,
+        time1: 120,
+        time2: 0
+    },
+    2: {
+        name: 'Окрашивание в один тон на короткие волосы',
+        price1: 5000,
+        price2: 6000,
+        time1: 120,
+        time2: 0
+    },
+    3: {
+        name: 'Любое сложное окрашивание на длинные волосы',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    4: {
+        name: 'Любое сложное окрашивание на средние волосы',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    5: {
+        name: 'Любое сложное окрашивание на короткие волосы',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    6: {
+        name: 'Сложное окрашивание на длинные волосы техника SURFBLOND',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    7: {
+        name: 'Сложное окрашивание на средние волосы техника SURFBLOND',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    8: {
+        name: 'Сложное окрашивание на короткие волосы техника SURFBLOND',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    9: {
+        name: 'Сложное окрашивание на длинные волосы техника AIRTOUCH',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    10: {
+        name: 'Сложное окрашивание на средние волосы техника AIRTOUCH',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    11: {
+        name: 'Сложное окрашивание на короткие волосы техника AIRTOUCH',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    12: {
+        name: 'Сложное окрашивание на длинные волосы техника SHATUSH',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    13: {
+        name: 'Сложное окрашивание на средние волосы техника SHATUSH',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    14: {
+        name: 'Сложное окрашивание на короткие волосы техника SHATUSH',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    15: {
+        name: 'Блондирование на короткие волосы (тотальный блонд)',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    16: {
+        name: 'Блондирование на средние волосы (тотальный блонд)',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    17: {
+        name: 'Блондирование на длинные волосы (тотальный блонд)',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    18: {
+        name: 'Сложное окрашивание на короткие волосы техника BALAYAGE(балаяж)',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    19: {
+        name: 'Сложное окрашивание на средние волосы техника BALAYAGE(балаяж)',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    20: {
+        name: 'Сложное окрашивание на длинные волосы техника BALAYAGE(балаяж)',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    21: {
+        name: 'Сложное окрашивание на короткие волосы техника BABYLIGHTS (Бейбиблонд)',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    22: {
+        name: 'Сложное окрашивание на средние волосы техника BABYLIGHTS (Бейбиблонд)',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    23: {
+        name: 'Сложное окрашивание на длинные волосы техника BABYLIGHTS (Бейбиблонд)',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    24: {
+        name: 'Сложное окрашивание на короткие волосы техника OMBRE',
+        price1: 7000,
+        price2: 9000,
+        time1: 240,
+        time2: 300
+    },
+    25: {
+        name: 'Сложное окрашивание на средние волосы техника OMBRE',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    26: {
+        name: 'Сложное окрашивание на длинные волосы техника OMBRE',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+    27: {
+        name: 'Окрашивание корней с тонированием длины на длинные волосы',
+        price1: 7500,
+        price2: 8500,
+        time1: 120,
+        time2: 0
+    },
+    28: {
+        name: 'Сложное окрашивание на средние волосы техника OMBRE',
+        price1: 9000,
+        price2: 11000,
+        time1: 240,
+        time2: 300
+    },
+    29: {
+        name: 'Сложное окрашивание на длинные волосы техника OMBRE',
+        price1: 11000,
+        price2: 13000,
+        time1: 240,
+        time2: 300
+    },
+};

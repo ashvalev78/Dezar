@@ -1,11 +1,3 @@
-// function initMap() {
-//     var uluru = {lat: 59.853531, lng: 30.140566};
-//     var map = new google.maps.Map(
-//     document.getElementById('map'), {zoom: 14, center: uluru});
-//     var marker = new google.maps.Marker({position: uluru, map: map});
-// }
-
-
 if (document.getElementById('map') !== null) {
     ymaps.ready(init);
     function init(){ 
@@ -13,14 +5,14 @@ if (document.getElementById('map') !== null) {
         var myGeoObject = new ymaps.GeoObject({
             geometry: {
                 type: "Point", // тип геометрии - точка
-                coordinates: [59.853531, 30.140566] // координаты точки
+                coordinates: [59.853460, 30.152206] // координаты точки
             }
         });
 
         var myMap = new ymaps.Map("map", {
-            center: [59.853531, 30.140566],
+            center: [59.853460, 30.152206],
             controls: [],
-            zoom: 16
+            zoom: 14
         });
 
         myMap.geoObjects.add(myGeoObject);
