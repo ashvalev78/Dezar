@@ -9,8 +9,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
     console.log(nm + tel);
 
 
-    $('.back_button').click(function(e) {
-        e.preventDefault();
+    $('.back_button').click(function() {
         location.replace('/registration.html' + '?nm=' + nm + '&tel=' + tel);
     });
 

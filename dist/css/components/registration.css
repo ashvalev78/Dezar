@@ -1,0 +1,415 @@
+/*!
+ * project-name v0.0.1
+ * A description for your project.
+ * (c) 2019 YOUR NAME
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+/* line 1, src/sass/components/registration.scss */
+ul {
+  list-style-type: none;
+}
+
+@media (max-width: 360px) {
+  /* line 5, src/sass/components/registration.scss */
+  .registration-body {
+    overflow: visible;
+  }
+}
+
+/* line 11, src/sass/components/registration.scss */
+.reg_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 11, src/sass/components/registration.scss */
+  .reg_wrapper {
+    padding: remy(40) remy(50) 0 remy(50);
+  }
+}
+
+@media (min-height: 800px) {
+  /* line 11, src/sass/components/registration.scss */
+  .reg_wrapper {
+    padding-top: remy(40);
+  }
+}
+
+/* line 24, src/sass/components/registration.scss */
+.master {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: remy(18);
+  margin-bottom: remy(15);
+  margin-left: remy(40);
+}
+
+@media (min-width: 1020px) {
+  /* line 24, src/sass/components/registration.scss */
+  .master {
+    -ms-flex-item-align: unset;
+        align-self: unset;
+    margin-right: remy(500);
+  }
+}
+
+/* line 35, src/sass/components/registration.scss */
+.master_phone {
+  font-size: 12px;
+  color: #BB272D;
+}
+
+/* line 40, src/sass/components/registration.scss */
+.master_name {
+  font-size: remy(18);
+}
+
+/* line 45, src/sass/components/registration.scss */
+.register_button-name {
+  position: relative;
+  width: remy(300);
+  background: url(../svg/Image4.png) center;
+  background-size: cover;
+  height: remy(65);
+  color: white !important;
+  margin-bottom: remy(15);
+  border-radius: remy(10);
+  margin-bottom: remy(25);
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 45, src/sass/components/registration.scss */
+  .register_button-name {
+    width: remy(640);
+    margin-bottom: remy(30);
+  }
+}
+
+@media (min-width: 1020px) {
+  /* line 45, src/sass/components/registration.scss */
+  .register_button-name {
+    width: remy(640);
+    margin-bottom: remy(35);
+    font-weight: 500;
+  }
+}
+
+/* line 74, src/sass/components/registration.scss */
+.registrations_list_wrapper {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+@media (min-width: 1020px) {
+  /* line 74, src/sass/components/registration.scss */
+  .registrations_list_wrapper {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 83, src/sass/components/registration.scss */
+  .convertion_part {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    width: remy(650);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 91, src/sass/components/registration.scss */
+.convertion_part-cashback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1020px) {
+  /* line 91, src/sass/components/registration.scss */
+  .convertion_part-cashback {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500;
+  }
+}
+
+/* line 107, src/sass/components/registration.scss */
+.master_photo {
+  width: remy(276);
+}
+
+/* line 111, src/sass/components/registration.scss */
+.registration-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 115, src/sass/components/registration.scss */
+.registration_time, .registration_date {
+  color: #939393;
+}
+
+/* line 119, src/sass/components/registration.scss */
+.rub_img {
+  width: remy(12);
+  height: remy(15);
+}
+
+/* line 124, src/sass/components/registration.scss */
+.client_registrations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: remy(300);
+  height: remy(201);
+  border: solid 1px #6083BB;
+  border-radius: remy(15);
+  padding: remy(10) remy(15);
+  margin-bottom: remy(25);
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 124, src/sass/components/registration.scss */
+  .client_registrations {
+    height: remy(230);
+    width: remy(280);
+  }
+}
+
+@media (min-width: 1020px) {
+  /* line 124, src/sass/components/registration.scss */
+  .client_registrations {
+    width: remy(650);
+    height: remy(250);
+    margin-bottom: remy(35);
+  }
+}
+
+/* line 148, src/sass/components/registration.scss */
+.registration_title {
+  color: #BB272D;
+  font-size: remy(17);
+  margin-bottom: remy(10);
+}
+
+/* line 154, src/sass/components/registration.scss */
+.registrations_table {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 160, src/sass/components/registration.scss */
+.registration-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* line 166, src/sass/components/registration.scss */
+.cashback_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: remy(300);
+  border: solid 1px #6083BB;
+  border-radius: remy(15);
+  margin-bottom: remy(20);
+  padding: remy(10) remy(15);
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 166, src/sass/components/registration.scss */
+  .cashback_block {
+    height: remy(230);
+    width: remy(280);
+  }
+}
+
+@media (min-width: 1020px) {
+  /* line 166, src/sass/components/registration.scss */
+  .cashback_block {
+    width: remy(650);
+    height: remy(250);
+    margin-bottom: remy(35);
+    font-weight: 500;
+  }
+}
+
+/* line 189, src/sass/components/registration.scss */
+.cashback_title {
+  color: #BB272D;
+  margin-bottom: remy(19);
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 189, src/sass/components/registration.scss */
+  .cashback_title {
+    margin-bottom: remy(30);
+  }
+}
+
+@media (min-width: 1020px) {
+  /* line 189, src/sass/components/registration.scss */
+  .cashback_title {
+    margin-top: remy(20);
+  }
+}
+
+/* line 202, src/sass/components/registration.scss */
+.cashback_balance {
+  color: #BB272D;
+  font-size: remy(21);
+  margin-bottom: remy(20);
+}
+
+@media (min-width: 1020px) {
+  /* line 202, src/sass/components/registration.scss */
+  .cashback_balance {
+    width: remy(650);
+    height: remy(240);
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1019px) {
+  /* line 202, src/sass/components/registration.scss */
+  .cashback_balance {
+    margin-bottom: remy(30);
+  }
+}
+
+/* line 222, src/sass/components/registration.scss */
+.cashback_description {
+  text-align: center;
+  font-size: remy(14);
+  line-height: 1;
+}
+
+@media (min-width: 1020px) {
+  /* line 222, src/sass/components/registration.scss */
+  .cashback_description {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 100%;
+    font-size: remy(16);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/* line 237, src/sass/components/registration.scss */
+.exit_button {
+  color: #BB272D !important;
+  cursor: pointer;
+  margin-top: rem(20);
+}
+
+/* line 243, src/sass/components/registration.scss */
+.prev-link {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
