@@ -10,7 +10,7 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
 
     $('.back_button').click(function() {
-        location.replace('/registration.html' + '?nm=' + nm + '&tel=' + tel);
+        location.replace('/Dezar/dist/registration.html' + '?nm=' + nm + '&tel=' + tel);
     });
 
     var currPrice = 0;
