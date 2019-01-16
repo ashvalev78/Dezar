@@ -1,9 +1,22 @@
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
+
+
+    var nm, tel;
+    var url = location.search.split('=');
+    nm = url[1].split('&')[0];
+    tel = url[2];
+    console.log(nm + tel);
+
+
+    $('.back_button').click(function(e) {
+        e.preventDefault();
+        location.replace('/registration.html' + '?nm=' + nm + '&tel=' + tel);
+    });
+
     var currPrice = 0;
     var summPrice = document.getElementsByClassName('footer__cost-price')[0];
     var summTime = document.getElementsByClassName('footer__cost-time')[0];
-
 
     function timeAddition() {
         var selectedElements = document.getElementsByClassName('selected');
@@ -472,17 +485,38 @@ var colorizeServices = {
         time2: 0
     },
     28: {
-        name: 'Сложное окрашивание на средние волосы техника OMBRE',
-        price1: 9000,
-        price2: 11000,
-        time1: 240,
-        time2: 300
+        name: 'Окрашивание корней с тонированием длины на средние волосы',
+        price1: 6000,
+        price2: 7000,
+        time1: 120,
+        time2: 0
     },
     29: {
-        name: 'Сложное окрашивание на длинные волосы техника OMBRE',
-        price1: 11000,
-        price2: 13000,
-        time1: 240,
-        time2: 300
+        name: 'Окрашивание корней с тонированием длины на короткие волосы',
+        price1: 4500,
+        price2: 5500,
+        time1: 120,
+        time2: 0
+    },
+    30: {
+        name: 'Окрашивание корней с тонированием длины на длинные волосы',
+        price1: 7500,
+        price2: 8500,
+        time1: 120,
+        time2: 0
+    },
+    31: {
+        name: 'Окрашивание корней с тонированием длины на средние волосы',
+        price1: 6000,
+        price2: 7000,
+        time1: 120,
+        time2: 0
+    },
+    32: {
+        name: 'Окрашивание корней с тонированием длины на короткие волосы',
+        price1: 4500,
+        price2: 5500,
+        time1: 120,
+        time2: 0
     },
 };
