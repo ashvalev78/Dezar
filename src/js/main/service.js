@@ -242,9 +242,9 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
             e.preventDefault();
         } else {
             e.preventDefault();
-            var newPath = location.href + '&' + serv1 + '&sum=' + summPrice.innerHTML + '&time=' + summTime.innerHTML;
-            newPath = newPath.replace('/services.html', '/time.html');
-            location.replace(newPath);
+            // var newPath = location.href + '&' + serv1 + '&sum=' + summPrice.innerHTML + '&time=' + summTime.innerHTML;
+            // newPath = newPath.replace('/services.html', '/time.html');
+            location.replace('/Dezar/dist/time.html');
         }
     });
 
