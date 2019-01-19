@@ -22,9 +22,9 @@ function getURIValue(str, symb) {
 
 var uri = decodeURI(location.href);
 
-$('.finish__cost-price').html(getURIValue('sum=', '&'));
-$('.finish__cost-time').html(getURIValue('time=', '&'));
-$('.finish__date-time').html(uri.slice(uri.indexOf('t=') + 2));
+// $('.finish__cost-price').html(getURIValue('sum=', '&'));
+// $('.finish__cost-time').html(getURIValue('time=', '&'));
+// $('.finish__date-time').html(uri.slice(uri.indexOf('t=') + 2));
 
 $(document).ready(function($) {
 

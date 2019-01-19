@@ -1,12 +1,13 @@
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
-
-
     var nm, tel;
-    var url = location.search.split('=');
-    nm = url[1].split('&')[0];
-    tel = url[2];
-    console.log(nm + tel);
+    console.log(location.search === '');
+    if (location.search !== '') {
+        var url = location.search.split('=');
+        nm = url[1].split('&')[0];
+        tel = url[2];
+        console.log(nm + tel);
+    }
 
 
     $('.back_button').click(function() {

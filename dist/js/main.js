@@ -38,9 +38,9 @@ function getURIValue(str, symb) {
 
 var uri = decodeURI(location.href);
 
-$('.finish__cost-price').html(getURIValue('sum=', '&'));
-$('.finish__cost-time').html(getURIValue('time=', '&'));
-$('.finish__date-time').html(uri.slice(uri.indexOf('t=') + 2));
+// $('.finish__cost-price').html(getURIValue('sum=', '&'));
+// $('.finish__cost-time').html(getURIValue('time=', '&'));
+// $('.finish__date-time').html(uri.slice(uri.indexOf('t=') + 2));
 
 $(document).ready((function($) {
 
@@ -822,7 +822,7 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     regButton.addEventListener('click', (function(e) {
         e.preventDefault();
         var newPath = location.href;
-        newPath = newPath.replace('/registration.html', '/services.html');
+        newPath = newPath.replace('/Dezar/dist/registration.html', '/Dezar/dist/services.html');
         location.replace(newPath);
     }));
 }
@@ -872,13 +872,14 @@ $popupButton2.click((function() {
 }));
 if (document.getElementsByClassName('services__body')[0] !== undefined) {
 
-
-
     var nm, tel;
-    var url = location.search.split('=');
-    nm = url[1].split('&')[0];
-    tel = url[2];
-    console.log(nm + tel);
+    console.log(location.search === '');
+    if (location.search !== '') {
+        var url = location.search.split('=');
+        nm = url[1].split('&')[0];
+        tel = url[2];
+        console.log(nm + tel);
+    }
 
 
     $('.back_button').click((function() {
@@ -1412,6 +1413,11 @@ var months = {
     11: 'Декабрь'
 };
 
+$('.datepicker__block-table').click((function() {
+    var locSearch = location.search;
+    location.replace('/Dezar/dist/finish.html' + locSearch);
+}))
+
 var $timePickers = $('.timepicker__block-time');
 
 $('.datepicker__block-switcher-month').html(months[date.getMonth()] + ' ' + date.getFullYear());
@@ -1435,12 +1441,17 @@ if (uri[uri.length] === '&') {
 }
 
 $('#time-footer-next').click((function(e) {
-    e.preventDefault();
-    if ($timePickers.hasClass('selected-time-visible')) {
-        if (uri.indexOf('&t=') === -1) {
-            location.replace(location.href.replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
-        } else {
-            location.replace(location.href.slice(0, uri.indexOf('&t=')).replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
-        }
-    }
+    location.replace('/Dezar/dist/finish.html');
+    // e.preventDefault();
+    // if ($timePickers.hasClass('selected-time-visible')) {
+    //     if (uri.indexOf('&t=') === -1) {
+    //         location.replace(location.href.replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
+    //     } else {
+    //         location.replace(location.href.slice(0, uri.indexOf('&t=')).replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
+    //     }
+    // }
+}));
+
+$('.back_button-time').click((function() {
+    location.replace('/Dezar/dist/services.html');
 }));

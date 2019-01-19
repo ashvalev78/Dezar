@@ -19,6 +19,11 @@ var months = {
     11: 'Декабрь'
 };
 
+$('.datepicker__block-table').click(function() {
+    var locSearch = location.search;
+    location.replace('/Dezar/dist/finish.html' + locSearch);
+})
+
 var $timePickers = $('.timepicker__block-time');
 
 $('.datepicker__block-switcher-month').html(months[date.getMonth()] + ' ' + date.getFullYear());
@@ -42,12 +47,17 @@ if (uri[uri.length] === '&') {
 }
 
 $('#time-footer-next').click(function(e) {
-    e.preventDefault();
-    if ($timePickers.hasClass('selected-time-visible')) {
-        if (uri.indexOf('&t=') === -1) {
-            location.replace(location.href.replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
-        } else {
-            location.replace(location.href.slice(0, uri.indexOf('&t=')).replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
-        }
-    }
+    location.replace('/Dezar/dist/finish.html');
+    // e.preventDefault();
+    // if ($timePickers.hasClass('selected-time-visible')) {
+    //     if (uri.indexOf('&t=') === -1) {
+    //         location.replace(location.href.replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
+    //     } else {
+    //         location.replace(location.href.slice(0, uri.indexOf('&t=')).replace('/time.html', '/finish.html') + '&t=' + $($('.selected-time-visible').children()[0]).html());
+    //     }
+    // }
+});
+
+$('.back_button-time').click(function() {
+    location.replace('/Dezar/dist/services.html');
 });

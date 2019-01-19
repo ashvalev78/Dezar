@@ -21,7 +21,7 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     regButton.addEventListener('click', function(e) {
         e.preventDefault();
         var newPath = location.href;
-        newPath = newPath.replace('/registration.html', '/services.html');
+        newPath = newPath.replace('/Dezar/dist/registration.html', '/Dezar/dist/services.html');
         location.replace(newPath);
     });
 }
