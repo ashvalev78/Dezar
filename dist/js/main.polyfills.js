@@ -820,10 +820,9 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     var regButton = document.getElementsByClassName('register_button-name')[0];
 
     regButton.addEventListener('click', (function(e) {
-        e.preventDefault();
         var newPath = location.href;
-        newPath = newPath.replace('/Dezar/dist/registration.html', '/Dezar/dist/services.html');
-        location.replace(newPath);
+        newPath = newPath.replace('/Dezar/dist/services.html');
+        location.replace('/Dezar/dist/services.html');
     }));
 }
 var $popupButton1 = $('.rules_popup_button_open');
@@ -1114,9 +1113,9 @@ if (document.getElementsByClassName('services__body')[0] !== undefined) {
             e.preventDefault();
         } else {
             e.preventDefault();
-            var newPath = location.href + '&' + serv1 + '&sum=' + summPrice.innerHTML + '&time=' + summTime.innerHTML;
-            newPath = newPath.replace('/services.html', '/time.html');
-            location.replace(newPath);
+            // var newPath = location.href + '&' + serv1 + '&sum=' + summPrice.innerHTML + '&time=' + summTime.innerHTML;
+            // newPath = newPath.replace('/services.html', '/time.html');
+            location.replace('/Dezar/dist/time.html');
         }
     }));
 

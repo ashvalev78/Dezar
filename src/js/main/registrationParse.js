@@ -19,9 +19,8 @@ if (document.getElementsByClassName('registration-body')[0] !== undefined) {
     var regButton = document.getElementsByClassName('register_button-name')[0];
 
     regButton.addEventListener('click', function(e) {
-        e.preventDefault();
         var newPath = location.href;
-        newPath = newPath.replace('/Dezar/dist/registration.html', '/Dezar/dist/services.html');
-        location.replace(newPath);
+        newPath = newPath.replace('/Dezar/dist/services.html');
+        location.replace('/Dezar/dist/services.html');
     });
 }
